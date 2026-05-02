@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hey!%20Happy%20you%20stopped%20by,%20I'm%20Kevin%20Joshua&fontSize=35&animation=fadeIn&fontAlignY=35&desc=I%20push%20directly%20to%20main.%20(Just%20kidding,%20I%20use%20CI/CD%20pipelines%20like%20a%20responsible%20adult)&descSize=16&descAlignY=55&descAlign=50"/>
+  <img src="assets/header.svg" alt="Profile Header" width="100%" />
 </div>
 
 <div align="center">
