@@ -2,12 +2,27 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi%20there,%20I'm%20Kevin!%20👋&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Cloud%20&%20AI%20Infrastructure%20Engineer&descAlignY=55&descAlign=62"/>
 </div>
 
+<br>
 
+<div align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=kevinjosh10&theme=radical&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="Kevin's Trophies" />
+  </a>
+</div>
 
 ---
 
 ### 🚀 The 1000-Day Build Journey
+
 I am a passionate **1st-year Computer Science student** actively building Cloud-Native architectures, serverless workflows, and exploring AI Infrastructure. I believe in learning in public and tracking my progress every single day. I am currently on a **1000-Day Cloud & AI Build Journey**, aiming to bridge the gap between abstract computer science concepts and production-grade engineering.
+
+<div align="center">
+  <br>
+  <!-- JOURNEY_BAR_START -->
+  **[█░░░░░░░░░░░░░░░░░░░░░░░░] 0.0%**
+  <!-- JOURNEY_BAR_END -->
+  <br>
+</div>
 
 - 🔭 **Current Focus:** Mastering **AWS, Linux, and Boto3** for scalable infrastructure.
 - 💡 **Deep Dive:** Learning **Python Data Structures & System Design**.
@@ -33,7 +48,6 @@ I am a passionate **1st-year Computer Science student** actively building Cloud-
 
 ---
 
-
 ### 📂 Featured Architecture & Engineering Projects
 
 | Project | Description | Key Tech |
@@ -46,16 +60,29 @@ I am a passionate **1st-year Computer Science student** actively building Cloud-
 
 ---
 
+### 📡 Live Engineering Activity
 
-### 📊 Engineering Metrics
+<details open>
+  <summary><b>My Recent Commits & PRs</b></summary>
+  
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
+
+</details>
+
+---
+
+### 📊 Engineering Metrics & 3D Contributions
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=kevinjosh10&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" width="48%" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true" width="48%" />
 </div>
+
 <br>
+
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kevinjosh10&layout=compact&theme=radical&hide_border=true" width="50%" />
+  <img src="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" width="100%" />
 </div>
 
 ---
