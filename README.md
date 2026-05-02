@@ -10,17 +10,11 @@
 
 ---
 
-### 🧑‍💻 `kevin@aws:~$ cat about_me.txt`
-
-```json
-{
-  "name": "Kevin Joshua",
-  "status": "1st-year Computer Science Student",
-  "focus": ["AWS Architecture", "Serverless Workflows", "Linux", "Python System Design"],
-  "philosophy": "Learning in public, tracking progress every single day.",
-  "contact": "https://www.linkedin.com/in/kevin-josh10"
-}
-```
+### 👨‍💻 About Me
+*I am a 1st-year Computer Science student deeply focused on Cloud-Native architectures and serverless workflows.*
+- 🔭 **Core Focus:** AWS Architecture, Linux, and Python System Design.
+- 💡 **Philosophy:** Learning in public and tracking progress every single day.
+- 📫 **Connect:** [LinkedIn](https://www.linkedin.com/in/kevin-josh10)
 
 <div align="center">
   <br>
@@ -36,7 +30,7 @@
 
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=aws,linux,python,cpp,docker,kubernetes,git,githubactions,bash,firebase,js&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=aws,linux,python,cpp,c,java,docker,kubernetes,git,githubactions,bash,firebase,js&theme=dark" />
   </a>
 </div>
 
