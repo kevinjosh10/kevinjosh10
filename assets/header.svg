@@ -20,9 +20,10 @@
       <stop offset="100%" style="stop-color:#fbc2eb;stop-opacity:1" />
     </linearGradient>
 
-    <!-- Spotlight Gradient -->
-    <linearGradient id="spotlightGrad" x1="50%" y1="0%" x2="50%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3" />
+    <!-- Sweeping Spotlight Beam Gradient -->
+    <linearGradient id="spotlightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.3" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
 
@@ -42,7 +43,7 @@
 
     <!-- Sparkle Graphic -->
     <g id="sparkle" fill="#ffffff">
-      <path d="M 0,-15 L 3,-3 L 15,0 L 3,3 L 0,15 L -3,3 L -15,0 L -3,-3 Z" />
+      <path d="M 0,-12 L 2,-2 L 12,0 L 2,2 L 0,12 L -2,2 L -12,0 L -2,-2 Z" />
     </g>
 
     <style>
@@ -55,7 +56,7 @@
         to { opacity: 1; transform: translateY(0); }
       }
 
-      /* Infinite moving animations */
+      /* PROVEN: Infinite moving animations using ONLY translateX */
       .wave1 { animation: moveLeft 12s linear infinite; }
       .wave2 { animation: moveLeft 8s linear infinite; }
       .wave3 { animation: moveLeft 15s linear infinite; }
@@ -67,18 +68,17 @@
         100% { transform: translateX(-800px); }
       }
 
-      /* Swinging Spotlight Animation */
+      /* Spotlight Beam Sweeping Left to Right */
       .spotlight {
-        transform-origin: 400px 0px;
-        animation: swing 6s ease-in-out infinite alternate;
+        animation: sweepLight 5s linear infinite;
       }
-      @keyframes swing {
-        0% { transform: rotate(-25deg); opacity: 0.4; }
-        100% { transform: rotate(25deg); opacity: 1; }
+      @keyframes sweepLight {
+        0% { transform: translateX(-600px); }
+        100% { transform: translateX(1000px); }
       }
 
-      /* Sparkle Twinkle Animation */
-      .sp { opacity: 0; animation: twinkle 3s ease-in-out infinite; }
+      /* Sparkle Twinkle Animation (ONLY OPACITY, NO TRANSFORM TO AVOID SAFARI 0,0 BUG) */
+      .sp { animation: twinkle 3s ease-in-out infinite; }
       .sp1 { animation-delay: 0s; }
       .sp2 { animation-delay: 0.7s; }
       .sp3 { animation-delay: 1.4s; }
@@ -86,8 +86,8 @@
       .sp5 { animation-delay: 2.8s; }
       
       @keyframes twinkle {
-        0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
-        50% { opacity: 0.9; transform: scale(1.2) rotate(45deg); }
+        0%, 100% { opacity: 0; }
+        50% { opacity: 0.9; }
       }
     </style>
   </defs>
@@ -100,8 +100,9 @@
   
   <g clip-path="url(#clipBox)">
     
-    <!-- Swinging Spotlight from top center (400, 0) -->
-    <polygon points="400,-50 150,300 650,300" fill="url(#spotlightGrad)" class="spotlight" />
+    <!-- Sweeping Spotlight Beam (Using proven translateX) -->
+    <!-- The beam is slanted physically by drawing the polygon so we don't need CSS skew/rotate -->
+    <polygon points="100,-50 300,-50 150,300 -50,300" fill="url(#spotlightGrad)" class="spotlight" />
 
     <!-- Cloud Layers -->
     <g class="clouds" opacity="0.6">
@@ -134,16 +135,16 @@
   
   <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="#4a5568" stroke-width="1" rx="15px" />
   
+  <!-- Physical Sparkles Placed Using Attributes (NOT CSS TRANSFORM) -->
+  <use href="#sparkle" x="180" y="50" class="sp sp1" />
+  <use href="#sparkle" x="630" y="60" class="sp sp2" />
+  <use href="#sparkle" x="240" y="115" class="sp sp3" />
+  <use href="#sparkle" x="580" y="110" class="sp sp4" />
+  <use href="#sparkle" x="400" y="30" class="sp sp5" />
+
   <!-- Base Text -->
   <text x="50%" y="80" class="title">Hello, World! I'm Kevin 👨‍💻</text>
   <text x="50%" y="125" class="sub1">I push directly to main.</text>
   <text x="50%" y="155" class="sub2">(Just kidding, I use CI/CD pipelines like a responsible adult 🛠️)</text>
-
-  <!-- Physical Sparkles Scattered Around the Text -->
-  <g class="sp sp1" style="transform-origin: 200px 50px;"><use href="#sparkle" x="200" y="50" transform="scale(0.8)" /></g>
-  <g class="sp sp2" style="transform-origin: 620px 60px;"><use href="#sparkle" x="620" y="60" transform="scale(1.2)" /></g>
-  <g class="sp sp3" style="transform-origin: 260px 115px;"><use href="#sparkle" x="260" y="115" transform="scale(0.6)" /></g>
-  <g class="sp sp4" style="transform-origin: 550px 115px;"><use href="#sparkle" x="550" y="115" transform="scale(0.9)" /></g>
-  <g class="sp sp5" style="transform-origin: 400px 40px;"><use href="#sparkle" x="400" y="40" transform="scale(0.7)" /></g>
 
 </svg>
