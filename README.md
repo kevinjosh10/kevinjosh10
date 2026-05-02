@@ -2,12 +2,6 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi%20there,%20I'm%20Kevin!%20👋&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Cloud%20&%20AI%20Infrastructure%20Engineer&descAlignY=55&descAlign=62"/>
 </div>
 
-<div align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=38B2AC&center=true&vCenter=true&width=500&lines=1st+Year+CS+Student;Cloud+%26+DevOps+Enthusiast;AWS+Architecture+Builder;On+a+1000-Day+Build+Journey!🚀" alt="Typing SVG" />
-  </a>
-</div>
-
 <br>
 
 <div align="center">
@@ -43,6 +37,10 @@ I am a passionate **1st-year Computer Science student** actively building Cloud-
 
 ---
 
+<div align="center">
+  <img src="assets/arch_banner.png" alt="Architecture Banner" width="100%" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); margin-top: 15px; margin-bottom: 15px;"/>
+</div>
+
 ### 📂 Featured Architecture & Engineering Projects
 
 | Project | Description | Key Tech |
@@ -54,6 +52,10 @@ I am a passionate **1st-year Computer Science student** actively building Cloud-
 | **[EMG Sensor Firmware](https://github.com/kevinjosh10/emg-sensor)** | End-to-end IoT architecture bridging embedded firmware with modular backend telemetry routing and a monitoring dashboard. | `IoT`, `Hardware Arch` |
 
 ---
+
+<div align="center">
+  <img src="assets/metrics_banner.png" alt="Metrics Banner" width="100%" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); margin-top: 15px; margin-bottom: 15px;"/>
+</div>
 
 ### 📊 Engineering Metrics
 
