@@ -66,12 +66,7 @@
   </picture>
 </div>
 
-<div align="center">
-  <br>
-  <a href="https://readme-jokes.vercel.app">
-    <img src="https://readme-jokes.vercel.app/api?theme=radical&hideBorder=true" alt="Jokes Card" />
-  </a>
-</div>
+
 
 <div align="center">
   <br>
