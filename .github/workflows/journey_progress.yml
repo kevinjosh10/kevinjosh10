@@ -20,9 +20,13 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Run Journey Script
-        run: python scripts/update_journey.py
+      - name: Install dependencies
+        run: pip install requests
 
+      - name: Run Generators (Journey & Joke)
+        run: |
+          python scripts/update_journey.py
+          python scripts/generate_joke.py
       - name: Commit & Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

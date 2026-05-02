@@ -66,7 +66,10 @@
   </picture>
 </div>
 
-
+<div align="center">
+  <br>
+  <img src="assets/joke.svg" alt="Dev Joke of the Day" />
+</div>
 
 <div align="center">
   <br>
