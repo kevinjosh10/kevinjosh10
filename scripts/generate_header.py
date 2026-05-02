@@ -2,35 +2,73 @@ import os
 
 svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a202c" />
+      <stop offset="100%" stop-color="#2d3748" />
+    </linearGradient>
+
+    <!-- Wave Gradients -->
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#f6d365;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#fda085;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="waveGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#84fab0;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#8fd3f4;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="waveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a18cd1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbc2eb;stop-opacity:1" />
+    </linearGradient>
+
     <style>
-      .title { fill: #1a202c; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 42px; font-weight: 800; text-anchor: middle; animation: fadeIn 1s ease-out; }
-      .sub1 { fill: #2d3748; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 600; text-anchor: middle; opacity: 0.95; animation: fadeIn 1.5s ease-out; }
-      .sub2 { fill: #4a5568; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; font-style: italic; text-anchor: middle; opacity: 0.9; animation: fadeIn 2s ease-out; }
+      .title { fill: #f7fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 42px; font-weight: 800; text-anchor: middle; animation: fadeIn 1s ease-out; }
+      .sub1 { fill: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 600; text-anchor: middle; opacity: 0.95; animation: fadeIn 1.5s ease-out; }
+      .sub2 { fill: #cbd5e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; font-style: italic; text-anchor: middle; opacity: 0.9; animation: fadeIn 2s ease-out; }
+      
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(5px); }
         to { opacity: 1; transform: translateY(0); }
       }
+
+      /* Infinite moving wave animations */
+      .wave1 { animation: moveWave 12s linear infinite; }
+      .wave2 { animation: moveWave 8s linear infinite; }
+      .wave3 { animation: moveWave 15s linear infinite; }
+
+      @keyframes moveWave {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-800px); }
+      }
     </style>
   </defs>
   
-  <rect width="100%" height="100%" fill="#ffffff" rx="15px" />
+  <rect width="100%" height="100%" fill="url(#bg)" rx="15px" />
   
-  <!-- Colorful Wavy Background -->
-  <path d="M0,0 L0,180 C200,250 600,80 800,180 L800,0 Z" fill="url(#waveGrad)" opacity="0.6" />
-  <path d="M0,0 L0,150 C300,50 500,250 800,120 L800,0 Z" fill="url(#waveGrad2)" opacity="0.8" />
+  <!-- Clipping path to keep waves inside the rounded box -->
+  <clipPath id="clipBox">
+    <rect width="100%" height="100%" rx="15px" />
+  </clipPath>
+  
+  <g clip-path="url(#clipBox)">
+    <!-- The waves are 1600px wide (2x 800px) so they can animate left by 800px seamlessly -->
+    <!-- Wave 3 (Back) -->
+    <path class="wave3" d="M 0 160 Q 100 130 200 160 T 400 160 T 600 160 T 800 160 T 1000 160 T 1200 160 T 1400 160 T 1600 160 L 1600 250 L 0 250 Z" fill="url(#waveGrad3)" opacity="0.4" />
+    
+    <!-- Wave 2 (Middle) -->
+    <path class="wave2" d="M 0 180 Q 100 210 200 180 T 400 180 T 600 180 T 800 180 T 1000 180 T 1200 180 T 1400 180 T 1600 180 L 1600 250 L 0 250 Z" fill="url(#waveGrad2)" opacity="0.6" />
+    
+    <!-- Wave 1 (Front) -->
+    <path class="wave1" d="M 0 200 Q 100 170 200 200 T 400 200 T 600 200 T 800 200 T 1000 200 T 1200 200 T 1400 200 T 1600 200 L 1600 250 L 0 250 Z" fill="url(#waveGrad1)" opacity="0.8" />
+  </g>
+  
+  <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="#4a5568" stroke-width="1" rx="15px" />
   
   <!-- Text Overlay -->
-  <text x="50%" y="90" class="title">Hello, World! I'm Kevin 👨‍💻</text>
-  <text x="50%" y="145" class="sub1">I push directly to main.</text>
-  <text x="50%" y="180" class="sub2">(Just kidding, I use CI/CD pipelines like a responsible adult 🛠️)</text>
+  <text x="50%" y="80" class="title">Hello, World! I'm Kevin 👨‍💻</text>
+  <text x="50%" y="125" class="sub1">I push directly to main.</text>
+  <text x="50%" y="155" class="sub2">(Just kidding, I use CI/CD pipelines like a responsible adult 🛠️)</text>
 </svg>
 """
 
@@ -38,4 +76,4 @@ os.makedirs("assets", exist_ok=True)
 with open("assets/header.svg", "w", encoding="utf-8") as f:
     f.write(svg_content)
     
-print("Generated custom 3-line header SVG with colorful wavy background.")
+print("Generated custom header SVG with infinitely moving waves.")
