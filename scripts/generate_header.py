@@ -42,9 +42,9 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
     </g>
 
     <style>
-      .title { fill: url(#textGlow); filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 44px; font-weight: 900; text-anchor: middle; animation: fadeIn 1s ease-out; letter-spacing: -0.5px; }
-      .sub1 { fill: #ffffff; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 1.5s ease-out; letter-spacing: 0.5px; }
-      .sub2 { fill: #a0aec0; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 16px; font-style: italic; font-weight: 500; text-anchor: middle; animation: fadeIn 2s ease-out; }
+      .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 44px; font-weight: 900; text-anchor: middle; animation: fadeIn 1s ease-out; letter-spacing: -0.5px; }
+      .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 1.5s ease-out; letter-spacing: 0.5px; }
+      .sub2 { fill: #f7fafc; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 16px; font-style: italic; font-weight: 500; text-anchor: middle; animation: fadeIn 2s ease-out; }
       
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(5px); }
