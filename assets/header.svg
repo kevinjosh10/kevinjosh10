@@ -30,6 +30,16 @@
       <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.8"/>
     </filter>
 
+    <!-- Animated Glitter / Shine Gradient -->
+    <linearGradient id="shine" x1="-20%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+      <!-- Sweeps across then pauses before repeating -->
+      <animate attributeName="x1" values="-20%; 120%; 120%" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="0%; 140%; 140%" dur="4s" repeatCount="indefinite" />
+    </linearGradient>
+
     <!-- Cloud Graphic: Pure white so opacity handles visibility -->
     <g id="cloud" fill="#ffffff">
       <circle cx="30" cy="30" r="20" />
@@ -113,8 +123,12 @@
   
   <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="#4a5568" stroke-width="1" rx="15px" />
   
-  <!-- Text Overlay -->
+  <!-- Text Overlay Base Layer -->
   <text x="50%" y="80" class="title">Hello, World! I'm Kevin 👨‍💻</text>
   <text x="50%" y="125" class="sub1">I push directly to main.</text>
   <text x="50%" y="155" class="sub2">(Just kidding, I use CI/CD pipelines like a responsible adult 🛠️)</text>
+
+  <!-- Text Overlay Shine Layer (Exact same text, filled with sweeping gradient) -->
+  <text x="50%" y="80" class="title" fill="url(#shine)" filter="none">Hello, World! I'm Kevin 👨‍💻</text>
+  <text x="50%" y="125" class="sub1" fill="url(#shine)" filter="none">I push directly to main.</text>
 </svg>
