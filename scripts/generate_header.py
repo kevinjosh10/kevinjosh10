@@ -22,7 +22,13 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <stop offset="100%" style="stop-color:#fbc2eb;stop-opacity:1" />
     </linearGradient>
 
-    <!-- Deep Drop Shadow for extreme readability -->
+    <!-- Spotlight Gradient -->
+    <linearGradient id="spotlightGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Drop Shadow for Text -->
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.8"/>
     </filter>
@@ -36,21 +42,10 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <rect x="30" y="25" width="60" height="25" rx="10" />
     </g>
 
-    <!-- Texts for Clipping -->
-    <text id="mainTitle" x="50%" y="80" class="title">Hello, World! I'm Kevin 👨‍💻</text>
-    <text id="subText1" x="50%" y="125" class="sub1">I push directly to main.</text>
-    
-    <clipPath id="textClip">
-      <use href="#mainTitle" />
-      <use href="#subText1" />
-    </clipPath>
-
-    <!-- Beam Gradient -->
-    <linearGradient id="beam" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
-    </linearGradient>
+    <!-- Sparkle Graphic -->
+    <g id="sparkle" fill="#ffffff">
+      <path d="M 0,-15 L 3,-3 L 15,0 L 3,3 L 0,15 L -3,3 L -15,0 L -3,-3 Z" />
+    </g>
 
     <style>
       .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 44px; font-weight: 900; text-anchor: middle; animation: fadeIn 1s ease-out; letter-spacing: -0.5px; }
@@ -74,15 +69,27 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
         100% { transform: translateX(-800px); }
       }
 
-      /* Glitter / Shine Beam CSS Animation */
-      .shineBeam {
-        fill: url(#beam);
-        animation: sweep 4s infinite;
+      /* Swinging Spotlight Animation */
+      .spotlight {
+        transform-origin: 400px 0px;
+        animation: swing 6s ease-in-out infinite alternate;
       }
-      @keyframes sweep {
-        0% { transform: translateX(-200px) skewX(-25deg); }
-        35% { transform: translateX(1000px) skewX(-25deg); }
-        100% { transform: translateX(1000px) skewX(-25deg); }
+      @keyframes swing {
+        0% { transform: rotate(-25deg); opacity: 0.4; }
+        100% { transform: rotate(25deg); opacity: 1; }
+      }
+
+      /* Sparkle Twinkle Animation */
+      .sp { opacity: 0; animation: twinkle 3s ease-in-out infinite; }
+      .sp1 { animation-delay: 0s; }
+      .sp2 { animation-delay: 0.7s; }
+      .sp3 { animation-delay: 1.4s; }
+      .sp4 { animation-delay: 2.1s; }
+      .sp5 { animation-delay: 2.8s; }
+      
+      @keyframes twinkle {
+        0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+        50% { opacity: 0.9; transform: scale(1.2) rotate(45deg); }
       }
     </style>
   </defs>
@@ -95,7 +102,10 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
   
   <g clip-path="url(#clipBox)">
     
-    <!-- Cloud Layer 1 -->
+    <!-- Swinging Spotlight from top center (400, 0) -->
+    <polygon points="400,-50 150,300 650,300" fill="url(#spotlightGrad)" class="spotlight" />
+
+    <!-- Cloud Layers -->
     <g class="clouds" opacity="0.6">
       <use href="#cloud" transform="translate(50, -5) scale(0.8)" />
       <use href="#cloud" transform="translate(300, 20) scale(1.2)" />
@@ -107,7 +117,6 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <use href="#cloud" transform="translate(1520, 15) scale(0.9)" />
     </g>
 
-    <!-- Cloud Layer 2 -->
     <g class="clouds2" opacity="0.3">
       <use href="#cloud" transform="translate(150, 30) scale(1.0)" />
       <use href="#cloud" transform="translate(400, 5) scale(0.7)" />
@@ -127,13 +136,17 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
   
   <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="#4a5568" stroke-width="1" rx="15px" />
   
-  <!-- Render Base Text -->
-  <use href="#mainTitle" />
-  <use href="#subText1" />
+  <!-- Base Text -->
+  <text x="50%" y="80" class="title">Hello, World! I'm Kevin 👨‍💻</text>
+  <text x="50%" y="125" class="sub1">I push directly to main.</text>
   <text x="50%" y="155" class="sub2">(Just kidding, I use CI/CD pipelines like a responsible adult 🛠️)</text>
 
-  <!-- Render CSS Animated Shine Beam clipped precisely to the text shape -->
-  <rect x="0" y="0" width="100" height="250" class="shineBeam" clip-path="url(#textClip)" />
+  <!-- Physical Sparkles Scattered Around the Text -->
+  <g class="sp sp1" style="transform-origin: 200px 50px;"><use href="#sparkle" x="200" y="50" transform="scale(0.8)" /></g>
+  <g class="sp sp2" style="transform-origin: 620px 60px;"><use href="#sparkle" x="620" y="60" transform="scale(1.2)" /></g>
+  <g class="sp sp3" style="transform-origin: 260px 115px;"><use href="#sparkle" x="260" y="115" transform="scale(0.6)" /></g>
+  <g class="sp sp4" style="transform-origin: 550px 115px;"><use href="#sparkle" x="550" y="115" transform="scale(0.9)" /></g>
+  <g class="sp sp5" style="transform-origin: 400px 40px;"><use href="#sparkle" x="400" y="40" transform="scale(0.7)" /></g>
 
 </svg>
 """
@@ -142,4 +155,4 @@ os.makedirs("assets", exist_ok=True)
 with open("assets/header.svg", "w", encoding="utf-8") as f:
     f.write(svg_content)
     
-print("Generated custom header SVG with bulletproof CSS clip-path shine effect.")
+print("Generated custom header SVG with bulletproof swinging spotlight and physical sparkles.")
