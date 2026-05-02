@@ -2,14 +2,18 @@ import datetime
 import re
 
 # Configuration
-START_DATE = datetime.date(2026, 4, 15)  # The day the 1000-day journey started
+# Setting start date to March 1, 2026 so that May 2, 2026 is Day 62
+START_DATE = datetime.date(2026, 3, 1) 
 TOTAL_DAYS = 1000
 
 def generate_progress_bar(current, total, length=25):
     percent = current / total
     filled_length = int(length * percent)
     bar = '█' * filled_length + '░' * (length - filled_length)
-    return f"**[{bar}] {percent*100:.1f}%**"
+    
+    percent_to_go = 100.0 - (percent * 100)
+    
+    return f"**[{bar}] {current}/{total} — Just {percent_to_go:.1f}% to go! 🚀**"
 
 def main():
     today = datetime.date.today()
@@ -20,15 +24,13 @@ def main():
     
     progress_bar = generate_progress_bar(days_passed, TOTAL_DAYS)
     
-    status_text = f"**Day {days_passed} of {TOTAL_DAYS}** {progress_bar}"
-    
     # Read README.md
     with open("README.md", "r", encoding="utf-8") as f:
         content = f.read()
         
     # Replace the progress bar section
-    pattern = r"(<!-- JOURNEY_BAR_START -->\n)(.*)(\n<!-- JOURNEY_BAR_END -->)"
-    replacement = f"\\g<1>{status_text}\\g<3>"
+    pattern = r"(<!-- JOURNEY_BAR_START -->\n)(.*?)(\n<!-- JOURNEY_BAR_END -->)"
+    replacement = f"\\g<1>  {progress_bar}\\g<3>"
     
     new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
     
