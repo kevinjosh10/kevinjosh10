@@ -26,7 +26,7 @@
 <div align="center">
   <br>
   <!-- JOURNEY_BAR_START -->
-  **[█░░░░░░░░░░░░░░░░░░░░░░░░] 0.0%**
+  **[█░░░░░░░░░░░░░░░░░░░░░░░░] 62/1000 — Just 93.8% to go! 🚀**
   <!-- JOURNEY_BAR_END -->
   <br>
 </div>

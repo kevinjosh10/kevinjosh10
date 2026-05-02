@@ -28,9 +28,9 @@ def main():
     with open("README.md", "r", encoding="utf-8") as f:
         content = f.read()
         
-    # Replace the progress bar section
-    pattern = r"(<!-- JOURNEY_BAR_START -->\n)(.*?)(\n<!-- JOURNEY_BAR_END -->)"
-    replacement = f"\\g<1>  {progress_bar}\\g<3>"
+    # Replace the progress bar section, handling spaces carefully
+    pattern = r"(<!-- JOURNEY_BAR_START -->\n).*?(\n\s*<!-- JOURNEY_BAR_END -->)"
+    replacement = f"\\g<1>  {progress_bar}\\g<2>"
     
     new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
     
