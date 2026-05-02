@@ -22,6 +22,15 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <stop offset="100%" style="stop-color:#fbc2eb;stop-opacity:1" />
     </linearGradient>
 
+    <!-- Cloud Graphic -->
+    <g id="cloud" fill="#ffffff" opacity="0.12">
+      <circle cx="30" cy="30" r="20" />
+      <circle cx="50" cy="20" r="25" />
+      <circle cx="70" cy="25" r="20" />
+      <circle cx="90" cy="35" r="15" />
+      <rect x="30" y="25" width="60" height="25" rx="10" />
+    </g>
+
     <style>
       .title { fill: #f7fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 42px; font-weight: 800; text-anchor: middle; animation: fadeIn 1s ease-out; }
       .sub1 { fill: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 600; text-anchor: middle; opacity: 0.95; animation: fadeIn 1.5s ease-out; }
@@ -33,11 +42,15 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       }
 
       /* Infinite moving wave animations */
-      .wave1 { animation: moveWave 12s linear infinite; }
-      .wave2 { animation: moveWave 8s linear infinite; }
-      .wave3 { animation: moveWave 15s linear infinite; }
+      .wave1 { animation: moveLeft 12s linear infinite; }
+      .wave2 { animation: moveLeft 8s linear infinite; }
+      .wave3 { animation: moveLeft 15s linear infinite; }
 
-      @keyframes moveWave {
+      /* Infinite moving cloud animation */
+      .clouds { animation: moveLeft 30s linear infinite; }
+      .clouds2 { animation: moveLeft 45s linear infinite reverse; }
+
+      @keyframes moveLeft {
         0% { transform: translateX(0); }
         100% { transform: translateX(-800px); }
       }
@@ -46,12 +59,40 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
   
   <rect width="100%" height="100%" fill="url(#bg)" rx="15px" />
   
-  <!-- Clipping path to keep waves inside the rounded box -->
+  <!-- Clipping path to keep everything inside the rounded box -->
   <clipPath id="clipBox">
     <rect width="100%" height="100%" rx="15px" />
   </clipPath>
   
   <g clip-path="url(#clipBox)">
+    
+    <!-- Cloud Layer 1 (Moving Left) -->
+    <g class="clouds">
+      <!-- Set 1 -->
+      <use href="#cloud" transform="translate(50, -10) scale(0.8)" />
+      <use href="#cloud" transform="translate(300, 15) scale(1.2)" />
+      <use href="#cloud" transform="translate(550, -5) scale(0.6)" />
+      <use href="#cloud" transform="translate(720, 20) scale(0.9)" />
+      <!-- Set 2 (Offset by 800px for seamless loop) -->
+      <use href="#cloud" transform="translate(850, -10) scale(0.8)" />
+      <use href="#cloud" transform="translate(1100, 15) scale(1.2)" />
+      <use href="#cloud" transform="translate(1350, -5) scale(0.6)" />
+      <use href="#cloud" transform="translate(1520, 20) scale(0.9)" />
+    </g>
+
+    <!-- Cloud Layer 2 (Moving Right) -->
+    <g class="clouds2">
+      <use href="#cloud" transform="translate(-100, 30) scale(1.0)" opacity="0.6"/>
+      <use href="#cloud" transform="translate(200, 5) scale(0.7)" opacity="0.6"/>
+      <use href="#cloud" transform="translate(450, 40) scale(1.1)" opacity="0.6"/>
+      <use href="#cloud" transform="translate(680, 10) scale(0.8)" opacity="0.6"/>
+      
+      <use href="#cloud" transform="translate(700, 30) scale(1.0)" opacity="0.6"/>
+      <use href="#cloud" transform="translate(1000, 5) scale(0.7)" opacity="0.6"/>
+      <use href="#cloud" transform="translate(1250, 40) scale(1.1)" opacity="0.6"/>
+      <use href="#cloud" transform="translate(1480, 10) scale(0.8)" opacity="0.6"/>
+    </g>
+
     <!-- The waves are 1600px wide (2x 800px) so they can animate left by 800px seamlessly -->
     <!-- Wave 3 (Back) -->
     <path class="wave3" d="M 0 160 Q 100 130 200 160 T 400 160 T 600 160 T 800 160 T 1000 160 T 1200 160 T 1400 160 T 1600 160 L 1600 250 L 0 250 Z" fill="url(#waveGrad3)" opacity="0.4" />
@@ -76,4 +117,4 @@ os.makedirs("assets", exist_ok=True)
 with open("assets/header.svg", "w", encoding="utf-8") as f:
     f.write(svg_content)
     
-print("Generated custom header SVG with infinitely moving waves.")
+print("Generated custom header SVG with infinitely moving waves and majestic clouds.")
