@@ -22,8 +22,8 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <stop offset="100%" style="stop-color:#fbc2eb;stop-opacity:1" />
     </linearGradient>
 
-    <!-- Cloud Graphic -->
-    <g id="cloud" fill="#ffffff" opacity="0.12">
+    <!-- Cloud Graphic: Pure white so opacity handles visibility -->
+    <g id="cloud" fill="#ffffff">
       <circle cx="30" cy="30" r="20" />
       <circle cx="50" cy="20" r="25" />
       <circle cx="70" cy="25" r="20" />
@@ -48,7 +48,7 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
 
       /* Infinite moving cloud animation */
       .clouds { animation: moveLeft 30s linear infinite; }
-      .clouds2 { animation: moveLeft 45s linear infinite reverse; }
+      .clouds2 { animation: moveLeft 45s linear infinite; }
 
       @keyframes moveLeft {
         0% { transform: translateX(0); }
@@ -59,41 +59,40 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
   
   <rect width="100%" height="100%" fill="url(#bg)" rx="15px" />
   
-  <!-- Clipping path to keep everything inside the rounded box -->
   <clipPath id="clipBox">
     <rect width="100%" height="100%" rx="15px" />
   </clipPath>
   
   <g clip-path="url(#clipBox)">
     
-    <!-- Cloud Layer 1 (Moving Left) -->
-    <g class="clouds">
+    <!-- Cloud Layer 1 (Moving Left, Medium Speed, High Opacity) -->
+    <g class="clouds" opacity="0.6">
       <!-- Set 1 -->
-      <use href="#cloud" transform="translate(50, -10) scale(0.8)" />
-      <use href="#cloud" transform="translate(300, 15) scale(1.2)" />
-      <use href="#cloud" transform="translate(550, -5) scale(0.6)" />
-      <use href="#cloud" transform="translate(720, 20) scale(0.9)" />
-      <!-- Set 2 (Offset by 800px for seamless loop) -->
-      <use href="#cloud" transform="translate(850, -10) scale(0.8)" />
-      <use href="#cloud" transform="translate(1100, 15) scale(1.2)" />
-      <use href="#cloud" transform="translate(1350, -5) scale(0.6)" />
-      <use href="#cloud" transform="translate(1520, 20) scale(0.9)" />
+      <use href="#cloud" transform="translate(50, -5) scale(0.8)" />
+      <use href="#cloud" transform="translate(300, 20) scale(1.2)" />
+      <use href="#cloud" transform="translate(550, -10) scale(0.6)" />
+      <use href="#cloud" transform="translate(720, 15) scale(0.9)" />
+      <!-- Set 2 (Offset by 800px) -->
+      <use href="#cloud" transform="translate(850, -5) scale(0.8)" />
+      <use href="#cloud" transform="translate(1100, 20) scale(1.2)" />
+      <use href="#cloud" transform="translate(1350, -10) scale(0.6)" />
+      <use href="#cloud" transform="translate(1520, 15) scale(0.9)" />
     </g>
 
-    <!-- Cloud Layer 2 (Moving Right) -->
-    <g class="clouds2">
-      <use href="#cloud" transform="translate(-100, 30) scale(1.0)" opacity="0.6"/>
-      <use href="#cloud" transform="translate(200, 5) scale(0.7)" opacity="0.6"/>
-      <use href="#cloud" transform="translate(450, 40) scale(1.1)" opacity="0.6"/>
-      <use href="#cloud" transform="translate(680, 10) scale(0.8)" opacity="0.6"/>
-      
-      <use href="#cloud" transform="translate(700, 30) scale(1.0)" opacity="0.6"/>
-      <use href="#cloud" transform="translate(1000, 5) scale(0.7)" opacity="0.6"/>
-      <use href="#cloud" transform="translate(1250, 40) scale(1.1)" opacity="0.6"/>
-      <use href="#cloud" transform="translate(1480, 10) scale(0.8)" opacity="0.6"/>
+    <!-- Cloud Layer 2 (Moving Left, Slower Speed, Lower Opacity) -->
+    <g class="clouds2" opacity="0.3">
+      <!-- Set 1 -->
+      <use href="#cloud" transform="translate(150, 30) scale(1.0)" />
+      <use href="#cloud" transform="translate(400, 5) scale(0.7)" />
+      <use href="#cloud" transform="translate(650, 40) scale(1.1)" />
+      <use href="#cloud" transform="translate(780, 10) scale(0.8)" />
+      <!-- Set 2 (Offset by 800px) -->
+      <use href="#cloud" transform="translate(950, 30) scale(1.0)" />
+      <use href="#cloud" transform="translate(1200, 5) scale(0.7)" />
+      <use href="#cloud" transform="translate(1450, 40) scale(1.1)" />
+      <use href="#cloud" transform="translate(1580, 10) scale(0.8)" />
     </g>
 
-    <!-- The waves are 1600px wide (2x 800px) so they can animate left by 800px seamlessly -->
     <!-- Wave 3 (Back) -->
     <path class="wave3" d="M 0 160 Q 100 130 200 160 T 400 160 T 600 160 T 800 160 T 1000 160 T 1200 160 T 1400 160 T 1600 160 L 1600 250 L 0 250 Z" fill="url(#waveGrad3)" opacity="0.4" />
     
@@ -117,4 +116,4 @@ os.makedirs("assets", exist_ok=True)
 with open("assets/header.svg", "w", encoding="utf-8") as f:
     f.write(svg_content)
     
-print("Generated custom header SVG with infinitely moving waves and majestic clouds.")
+print("Generated custom header SVG with visibly fixed opacity clouds.")
