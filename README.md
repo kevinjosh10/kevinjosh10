@@ -2,11 +2,7 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi%20there,%20I'm%20Kevin!%20👋&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Cloud%20&%20AI%20Infrastructure%20Engineer&descAlignY=55&descAlign=62"/>
 </div>
 
-<br>
 
-<div align="center">
-  <img src="assets/banner.png" alt="Futuristic Cloud AI Banner" width="100%" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.5);"/>
-</div>
 
 ---
 
@@ -37,9 +33,6 @@ I am a passionate **1st-year Computer Science student** actively building Cloud-
 
 ---
 
-<div align="center">
-  <img src="assets/arch_banner.png" alt="Architecture Banner" width="100%" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); margin-top: 15px; margin-bottom: 15px;"/>
-</div>
 
 ### 📂 Featured Architecture & Engineering Projects
 
@@ -53,9 +46,6 @@ I am a passionate **1st-year Computer Science student** actively building Cloud-
 
 ---
 
-<div align="center">
-  <img src="assets/metrics_banner.png" alt="Metrics Banner" width="100%" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); margin-top: 15px; margin-bottom: 15px;"/>
-</div>
 
 ### 📊 Engineering Metrics
 
