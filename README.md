@@ -1,20 +1,27 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi%20there,%20I'm%20Kevin!%20👋&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Cloud%20&%20AI%20Infrastructure%20Engineer&descAlignY=55&descAlign=62"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Welcome%20to%20my%20Cloud%20☁️&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Where%20code%20meets%20infrastructure%20%26%20caffeine%20☕&descAlignY=55&descAlign=62"/>
 </div>
 
-<br>
-
 <div align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=kevinjosh10&theme=radical&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="Kevin's Trophies" />
-  </a>
+  <br>
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Quote of the Day" />
+  <br>
 </div>
 
 ---
 
-### 🚀 The 1000-Day Build Journey
+### 🧑‍💻 `kevin@aws:~$ cat about_me.txt`
 
-I am a passionate **1st-year Computer Science student** actively building Cloud-Native architectures, serverless workflows, and exploring AI Infrastructure. I believe in learning in public and tracking my progress every single day. I am currently on a **1000-Day Cloud & AI Build Journey**, aiming to bridge the gap between abstract computer science concepts and production-grade engineering.
+```json
+{
+  "name": "Kevin Joshua",
+  "status": "1st-year Computer Science Student",
+  "mission": "1000-Day Cloud & AI Build Journey",
+  "focus": ["AWS Architecture", "Serverless Workflows", "Linux", "Python System Design"],
+  "philosophy": "Learning in public, tracking progress every single day.",
+  "contact": "https://www.linkedin.com/in/kevin-josh10"
+}
+```
 
 <div align="center">
   <br>
@@ -24,26 +31,14 @@ I am a passionate **1st-year Computer Science student** actively building Cloud-
   <br>
 </div>
 
-- 🔭 **Current Focus:** Mastering **AWS, Linux, and Boto3** for scalable infrastructure.
-- 💡 **Deep Dive:** Learning **Python Data Structures & System Design**.
-- 🏆 **Goal:** Build robust, highly-available systems and automate everything.
-- 📫 **Let's Connect:** [LinkedIn](https://www.linkedin.com/in/kevin-josh10)
-
 ---
 
-### 🛠️ Elite Tech Stack
+### 🛠️ `kevin@aws:~$ ls /usr/local/skills`
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
-  <br>
-  <img src="https://img.shields.io/badge/Boto3-D32128?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Serverless-FD5750?style=for-the-badge&logo=serverless&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=aws,linux,python,cpp,docker,kubernetes,git,githubactions,bash,firebase,js&theme=dark" />
+  </a>
 </div>
 
 ---
@@ -95,6 +90,13 @@ I am a passionate **1st-year Computer Science student** actively building Cloud-
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/assets/github-contribution-grid-snake.svg">
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/assets/github-contribution-grid-snake.svg">
   </picture>
+</div>
+
+<div align="center">
+  <br>
+  <a href="https://readme-jokes.vercel.app">
+    <img src="https://readme-jokes.vercel.app/api?theme=radical&hideBorder=true" alt="Jokes Card" />
+  </a>
 </div>
 
 <div align="center">
