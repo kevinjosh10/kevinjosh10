@@ -1,8 +1,8 @@
 import datetime
 import os
 
-# Configuration
-START_DATE = datetime.date(2026, 3, 1) 
+# Setting start date to March 4, 2026
+START_DATE = datetime.date(2026, 3, 4) 
 TOTAL_DAYS = 1000
 
 def generate_svg(days_passed, total_days):
