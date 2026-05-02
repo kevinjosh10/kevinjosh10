@@ -1,43 +1,56 @@
 import datetime
-import re
+import os
 
 # Configuration
-# Setting start date to March 1, 2026 so that May 2, 2026 is Day 62
 START_DATE = datetime.date(2026, 3, 1) 
 TOTAL_DAYS = 1000
 
-def generate_progress_bar(current, total, length=25):
-    percent = current / total
-    filled_length = int(length * percent)
-    bar = '█' * filled_length + '░' * (length - filled_length)
-    
+def generate_svg(days_passed, total_days):
+    percent = min(1.0, max(0.0, days_passed / total_days))
     percent_to_go = 100.0 - (percent * 100)
+    percent_str = f"{percent*100:.1f}"
     
-    return f"**[{bar}] {current}/{total} — Just {percent_to_go:.1f}% to go! 🚀**"
+    # SVG Template with CSS animation
+    svg_content = f"""<svg width="600" height="60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38B2AC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4299E1;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .bg {{ fill: #1a202c; rx: 15px; }}
+      .bar {{ fill: url(#glow); rx: 15px; animation: fillBar 1.5s ease-out forwards; }}
+      .text {{ fill: #f7fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: bold; dominant-baseline: middle; text-anchor: middle; }}
+      @keyframes fillBar {{
+        from {{ width: 0; }}
+        to {{ width: {percent * 100}%; }}
+      }}
+    </style>
+  </defs>
+  <!-- Background Bar -->
+  <rect class="bg" width="100%" height="30" y="15" />
+  <!-- Animated Progress Bar -->
+  <rect class="bar" height="30" y="15" />
+  <!-- Text Overlay -->
+  <text class="text" x="50%" y="32">Day {days_passed} of {total_days} — Just {percent_to_go:.1f}% to go! 🚀</text>
+</svg>
+"""
+    return svg_content
 
 def main():
     today = datetime.date.today()
     days_passed = (today - START_DATE).days
-    
-    # Cap between 0 and 1000
     days_passed = max(0, min(days_passed, TOTAL_DAYS))
     
-    progress_bar = generate_progress_bar(days_passed, TOTAL_DAYS)
+    svg = generate_svg(days_passed, TOTAL_DAYS)
     
-    # Read README.md
-    with open("README.md", "r", encoding="utf-8") as f:
-        content = f.read()
+    # Ensure assets directory exists
+    os.makedirs("assets", exist_ok=True)
+    
+    with open("assets/progress.svg", "w", encoding="utf-8") as f:
+        f.write(svg)
         
-    # Replace the progress bar section, handling spaces carefully
-    pattern = r"(<!-- JOURNEY_BAR_START -->\n).*?(\n\s*<!-- JOURNEY_BAR_END -->)"
-    replacement = f"\\g<1>  {progress_bar}\\g<2>"
-    
-    new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
-    
-    with open("README.md", "w", encoding="utf-8") as f:
-        f.write(new_content)
-        
-    print(f"Updated journey progress to Day {days_passed}")
+    print(f"Generated animated progress SVG for Day {days_passed}")
 
 if __name__ == "__main__":
     main()

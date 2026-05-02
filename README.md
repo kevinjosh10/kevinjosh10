@@ -1,5 +1,9 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Welcome%20to%20my%20Cloud&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Where%20code%20meets%20infrastructure%20and%20caffeine&descAlignY=55&descAlign=62"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hey!%20Happy%20you%20stopped%20by,%20I'm%20Kevin%20Joshua&fontSize=40&animation=fadeIn&fontAlignY=38&desc=I%20push%20directly%20to%20main.&descAlignY=55&descAlign=62"/>
+</div>
+
+<div align="center">
+  <blockquote><i>(Just kidding, I use CI/CD pipelines like a responsible adult 🛠️)</i></blockquote>
 </div>
 
 <div align="center">
@@ -16,7 +20,6 @@
 {
   "name": "Kevin Joshua",
   "status": "1st-year Computer Science Student",
-  "mission": "1000-Day Cloud & AI Build Journey",
   "focus": ["AWS Architecture", "Serverless Workflows", "Linux", "Python System Design"],
   "philosophy": "Learning in public, tracking progress every single day.",
   "contact": "https://www.linkedin.com/in/kevin-josh10"
@@ -25,9 +28,9 @@
 
 <div align="center">
   <br>
-  <!-- JOURNEY_BAR_START -->
-  **[█░░░░░░░░░░░░░░░░░░░░░░░░] 62/1000 — Just 93.8% to go! 🚀**
-  <!-- JOURNEY_BAR_END -->
+  <h3>🚀 The 1000-Day Mission</h3>
+  <p><i>I am currently on a public, 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design. This is a daily commitment to building production-grade systems and bridging the gap between theory and real-world engineering.</i></p>
+  <img src="assets/progress.svg" alt="Animated Progress Bar" />
   <br>
 </div>
 
@@ -50,34 +53,15 @@
 | **[Production-Grade S3 Backup Tool](https://github.com/kevinjosh10/s3-backup-tool)** | A resilient, industry-standard CLI utility for metadata-based incremental synchronization, AWS encryption, and lifecycle automation. | `Python`, `AWS S3`, `Boto3` |
 | **[CloudMorph Serverless](https://github.com/kevinjosh10/CloudMorph)** | A serverless file intelligence platform deployed on AWS. Handles secure cross-origin uploads and pre-signed URL generation via Lambda. | `AWS Lambda`, `API Gateway` |
 | **[Cryptexa & JCE Hub](https://github.com/kevinjosh10/Cryptexa)** | Modular, full-stack community platforms built with modern web architecture, featuring decoupled frontend/backend services. | `Web Arch`, `Serverless` |
-| **[CSE-A Social Engine](https://github.com/kevinjosh10/cse-a-hub)** | A mobile-first social hub with passwordless Firestore login flows, interactive 2D canvas game engines, and seamless state management. | `Firebase`, `Canvas API` |
 | **[EMG Sensor Firmware](https://github.com/kevinjosh10/emg-sensor)** | End-to-end IoT architecture bridging embedded firmware with modular backend telemetry routing and a monitoring dashboard. | `IoT`, `Hardware Arch` |
 
 ---
 
-### 📡 Live Engineering Activity
-
-<details open>
-  <summary><b>My Recent Commits & PRs</b></summary>
-  
-<!--START_SECTION:activity-->
-<!--END_SECTION:activity-->
-
-</details>
-
----
-
-### 📊 Engineering Metrics & 3D Contributions
+### 📊 Engineering Metrics
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=kevinjosh10&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" width="48%" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true" width="48%" />
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" width="100%" />
 </div>
 
 ---
