@@ -74,10 +74,6 @@
       <polygon points="0,0 4,10 1,10 5,22 -2,12 1,12 -3,0" fill="#fbbf24" filter="url(#lightningGlow)" />
     </g>
 
-    <!-- Sparkle Graphic -->
-    <g id="sparkle" fill="#ffffff">
-      <path d="M 0,-12 L 2,-2 L 12,0 L 2,2 L 0,12 L -2,2 L -12,0 L -2,-2 Z" />
-    </g>
 
     <style>
       .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 44px; font-weight: 900; text-anchor: middle; animation: fadeIn 1s ease-out; letter-spacing: -0.5px; }
@@ -110,18 +106,6 @@
         100% { transform: translateX(1000px); }
       }
 
-      /* Sparkle Twinkle Animation (ONLY OPACITY, NO TRANSFORM TO AVOID SAFARI 0,0 BUG) */
-      .sp { animation: twinkle 3s ease-in-out infinite; }
-      .sp1 { animation-delay: 0s; }
-      .sp2 { animation-delay: 0.7s; }
-      .sp3 { animation-delay: 1.4s; }
-      .sp4 { animation-delay: 2.1s; }
-      .sp5 { animation-delay: 2.8s; }
-      
-      @keyframes twinkle {
-        0%, 100% { opacity: 0; }
-        50% { opacity: 0.9; }
-      }
 
       /* === LIGHTNING FLASH === */
       .lightning { animation: flash 4s ease-in-out infinite; }
@@ -272,12 +256,6 @@
   
   <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="#4a5568" stroke-width="1" rx="15px" />
   
-  <!-- Physical Sparkles Placed Using Attributes (NOT CSS TRANSFORM) -->
-  <use href="#sparkle" x="180" y="50" class="sp sp1" />
-  <use href="#sparkle" x="630" y="60" class="sp sp2" />
-  <use href="#sparkle" x="240" y="115" class="sp sp3" />
-  <use href="#sparkle" x="580" y="110" class="sp sp4" />
-  <use href="#sparkle" x="400" y="30" class="sp sp5" />
 
   <!-- Base Text -->
   <text x="50%" y="80" class="title">Hello, World! I'm Kevin 👨‍💻</text>
