@@ -353,15 +353,6 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
 
 
 
-    <!-- === DRIFTING FOG/MIST LAYERS (atmospheric depth) === -->
-    <g class="mist1">
-      <ellipse cx="400" cy="130" rx="500" ry="20" fill="url(#mistGrad)" />
-      <ellipse cx="1200" cy="130" rx="500" ry="20" fill="url(#mistGrad)" />
-    </g>
-    <g class="mist2">
-      <ellipse cx="300" cy="145" rx="450" ry="16" fill="url(#mistGrad2)" />
-      <ellipse cx="1100" cy="145" rx="450" ry="16" fill="url(#mistGrad2)" />
-    </g>
 
     <!-- Waves -->
     <path class="wave3" d="M 0 160 Q 100 130 200 160 T 400 160 T 600 160 T 800 160 T 1000 160 T 1200 160 T 1400 160 T 1600 160 L 1600 250 L 0 250 Z" fill="url(#waveGrad3)" opacity="0.4" />
