@@ -37,7 +37,11 @@ def generate_svg(days_passed, total_days):
     return svg_content
 
 def main():
-    today = datetime.date.today()
+    # Use UTC time and convert to IST (UTC +5:30)
+    utc_now = datetime.datetime.utcnow()
+    ist_now = utc_now + datetime.timedelta(hours=5, minutes=30)
+    today = ist_now.date()
+    
     days_passed = (today - START_DATE).days
     days_passed = max(0, min(days_passed, TOTAL_DAYS))
     
