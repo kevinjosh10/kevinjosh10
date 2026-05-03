@@ -37,6 +37,28 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <stop offset="100%" stop-color="#475569" />
     </linearGradient>
 
+    <!-- Fog/Mist Gradient -->
+    <linearGradient id="mistGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" stop-opacity="0" />
+      <stop offset="30%" stop-color="#94a3b8" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="#cbd5e1" stop-opacity="0.18" />
+      <stop offset="70%" stop-color="#94a3b8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#94a3b8" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="mistGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0" />
+      <stop offset="40%" stop-color="#818cf8" stop-opacity="0.08" />
+      <stop offset="60%" stop-color="#a5b4fc" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Neon Border Gradient -->
+    <linearGradient id="neonBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
     <!-- Lightning Glow Filter -->
     <filter id="lightningGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="3" result="blur" />
@@ -46,18 +68,27 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       </feMerge>
     </filter>
 
-    <!-- Drop Shadow for Text -->
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.8"/>
-    </filter>
-
-    <!-- Rain Drop Glow -->
-    <filter id="rainGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="1" result="blur" />
+    <!-- Neon Border Glow Filter -->
+    <filter id="neonGlow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
+    </filter>
+
+    <!-- Text Electric Glow Filter -->
+    <filter id="electricGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Drop Shadow for Text -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.8"/>
     </filter>
 
     <!-- Storm Cloud Graphic (Darker, puffier) -->
@@ -70,12 +101,6 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <!-- Dark underbelly -->
       <rect x="25" y="38" width="75" height="12" rx="6" fill="#374151" opacity="0.6" />
     </g>
-
-    <!-- Small Lightning Bolt Shape -->
-    <g id="bolt">
-      <polygon points="0,0 4,10 1,10 5,22 -2,12 1,12 -3,0" fill="#fbbf24" filter="url(#lightningGlow)" />
-    </g>
-
 
     <style>
       .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 44px; font-weight: 900; text-anchor: middle; animation: fadeIn 1s ease-out; letter-spacing: -0.5px; }
@@ -108,7 +133,6 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
         100% { transform: translateX(1000px); }
       }
 
-
       /* === LIGHTNING FLASH === */
       .lightning { animation: flash 4s ease-in-out infinite; }
       .lightning1 { animation-delay: 0s; }
@@ -123,6 +147,19 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
         6% { opacity: 0; }
         8% { opacity: 0.8; }
         10% { opacity: 0; }
+      }
+
+      /* === HORIZONTAL CLOUD-TO-CLOUD LIGHTNING === */
+      .hLightning { animation: hFlash 6s ease-in-out infinite; }
+      .hLightning1 { animation-delay: 1.2s; }
+      .hLightning2 { animation-delay: 4.0s; }
+
+      @keyframes hFlash {
+        0%, 100% { opacity: 0; }
+        3% { opacity: 0.9; }
+        4.5% { opacity: 0; }
+        5.5% { opacity: 0.7; }
+        7% { opacity: 0; }
       }
 
       /* === RAIN DROPS FALLING === */
@@ -162,6 +199,30 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
         8% { opacity: 0.05; }
         10% { opacity: 0; }
       }
+
+      /* === DRIFTING FOG/MIST === */
+      .mist1 { animation: moveLeft 40s linear infinite; }
+      .mist2 { animation: moveLeft 55s linear infinite; }
+
+      /* === NEON BORDER PULSE === */
+      .neonBorderRect { animation: borderPulse 4s ease-in-out infinite; }
+
+      @keyframes borderPulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.9; }
+      }
+
+      /* === TEXT GLOW ON LIGHTNING (synced with flash) === */
+      .titleGlow { animation: textElectric 4s ease-in-out infinite; }
+      .titleGlow1 { animation-delay: 0s; }
+
+      @keyframes textElectric {
+        0%, 100% { opacity: 0; }
+        4% { opacity: 0.6; }
+        6% { opacity: 0; }
+        8% { opacity: 0.4; }
+        10% { opacity: 0; }
+      }
     </style>
   </defs>
   
@@ -178,7 +239,6 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
     <rect width="100%" height="100%" fill="#93c5fd" class="skyFlash skyFlash2" />
 
     <!-- Sweeping Spotlight Beam (Using proven translateX) -->
-    <!-- The beam is slanted physically by drawing the polygon so we don't need CSS skew/rotate -->
     <polygon points="100,-50 300,-50 150,300 -50,300" fill="url(#spotlightGrad)" class="spotlight" />
 
     <!-- === RAIN STREAKS (placed across the whole scene) === -->
@@ -223,31 +283,39 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
     </g>
 
     <!-- === LIGHTNING BOLTS (positioned under specific clouds) === -->
-    <!-- Bolt 1: Under the large cloud at ~350 -->
     <g class="lightning lightning1">
       <polygon points="355,48 361,62 357,62 365,82 353,66 357,66 351,48" fill="#fbbf24" filter="url(#lightningGlow)" />
     </g>
-
-    <!-- Bolt 2: Under cloud at ~100 -->
     <g class="lightning lightning2">
       <polygon points="105,40 110,52 107,52 114,68 103,55 107,55 102,40" fill="#fde68a" filter="url(#lightningGlow)" />
     </g>
-
-    <!-- Bolt 3: Under cloud at ~580, bigger bolt with fork -->
     <g class="lightning lightning3">
       <polygon points="585,38 592,56 588,56 598,80 584,60 588,60 582,38" fill="#fbbf24" filter="url(#lightningGlow)" />
-      <!-- Fork -->
       <polygon points="592,56 598,62 596,62 602,72 594,64 596,64 590,56" fill="#fde68a" filter="url(#lightningGlow)" />
     </g>
-
-    <!-- Bolt 4: Under cloud at ~720, small crackle -->
     <g class="lightning lightning4">
       <polygon points="735,42 739,54 737,54 743,66 733,56 736,56 732,42" fill="#fde68a" filter="url(#lightningGlow)" />
     </g>
-
-    <!-- Bolt 5: Under cloud at ~250 -->
     <g class="lightning lightning5">
       <polygon points="255,45 260,58 257,58 264,74 254,60 257,60 252,45" fill="#fbbf24" filter="url(#lightningGlow)" />
+    </g>
+
+    <!-- === HORIZONTAL CLOUD-TO-CLOUD LIGHTNING (electric arcs between clouds) === -->
+    <g class="hLightning hLightning1">
+      <polyline points="160,28 185,22 210,30 240,18 265,26 290,20 315,28" stroke="#fbbf24" stroke-width="2" fill="none" filter="url(#lightningGlow)" stroke-linejoin="bevel" />
+    </g>
+    <g class="hLightning hLightning2">
+      <polyline points="480,24 510,18 535,28 560,15 585,22 610,16 640,25" stroke="#fde68a" stroke-width="1.5" fill="none" filter="url(#lightningGlow)" stroke-linejoin="bevel" />
+    </g>
+
+    <!-- === DRIFTING FOG/MIST LAYERS (atmospheric depth) === -->
+    <g class="mist1">
+      <ellipse cx="400" cy="130" rx="500" ry="20" fill="url(#mistGrad)" />
+      <ellipse cx="1200" cy="130" rx="500" ry="20" fill="url(#mistGrad)" />
+    </g>
+    <g class="mist2">
+      <ellipse cx="300" cy="145" rx="450" ry="16" fill="url(#mistGrad2)" />
+      <ellipse cx="1100" cy="145" rx="450" ry="16" fill="url(#mistGrad2)" />
     </g>
 
     <!-- Waves -->
@@ -256,13 +324,16 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
     <path class="wave1" d="M 0 200 Q 100 170 200 200 T 400 200 T 600 200 T 800 200 T 1000 200 T 1200 200 T 1400 200 T 1600 200 L 1600 250 L 0 250 Z" fill="url(#waveGrad1)" opacity="0.8" />
   </g>
   
-  <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="#4a5568" stroke-width="1" rx="15px" />
+  <!-- === NEON GLOWING BORDER (replaces boring grey) === -->
+  <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="url(#neonBorder)" stroke-width="1.5" rx="15px" filter="url(#neonGlow)" class="neonBorderRect" />
   
+  <!-- === TEXT ELECTRIC GLOW (ghost text behind main text, synced with lightning) === -->
+  <text x="50%" y="80" fill="#00f2fe" filter="url(#electricGlow)" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="44px" font-weight="900" text-anchor="middle" class="titleGlow titleGlow1">Hello, World! I'm Kevin &#x1F468;&#x200D;&#x1F4BB;</text>
 
   <!-- Base Text -->
-  <text x="50%" y="80" class="title">Hello, World! I'm Kevin 👨‍💻</text>
+  <text x="50%" y="80" class="title">Hello, World! I'm Kevin &#x1F468;&#x200D;&#x1F4BB;</text>
   <text x="50%" y="125" class="sub1">I push directly to main.</text>
-  <text x="50%" y="155" class="sub2">(Just kidding, I use CI/CD pipelines like a responsible adult 🛠️)</text>
+  <text x="50%" y="155" class="sub2">(Just kidding, I use CI/CD pipelines like a responsible adult &#x1F6E0;&#xFE0F;)</text>
 
 </svg>
 """
@@ -271,4 +342,4 @@ os.makedirs("assets", exist_ok=True)
 with open("assets/header.svg", "w", encoding="utf-8") as f:
     f.write(svg_content)
     
-print("Generated storm header SVG with lightning bolts, rain, and cloud animations.")
+print("Generated elite storm header with neon border, fog, cloud-to-cloud lightning, and text glow.")
