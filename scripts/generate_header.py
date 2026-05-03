@@ -104,25 +104,33 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
 
     <style>
       .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: -0.5px; }
-      .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 1.5s ease-out; letter-spacing: 0.5px; }
-      .sub2 { fill: #f7fafc; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 16px; font-style: italic; font-weight: 500; text-anchor: middle; animation: fadeIn 2s ease-out; }
+      .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 0.5s ease-out 1.8s forwards; opacity: 0; letter-spacing: 0.5px; }
+      .sub2 { fill: #f7fafc; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 16px; font-style: italic; font-weight: 500; text-anchor: middle; animation: fadeIn 0.5s ease-out 2.2s forwards; opacity: 0; }
       
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(5px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
-      /* === DECRYPT ANIMATION === */
-      .decryptText { fill: #00f2fe; filter: url(#shadow); font-family: 'Courier New', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: 2px; }
-      .dec1 { animation: d1 1.2s forwards; opacity: 0; }
-      .dec2 { animation: d2 1.2s forwards; opacity: 0; }
-      .dec3 { animation: d3 1.2s forwards; opacity: 0; }
-      .finalReveal { animation: d4 1.2s forwards; opacity: 0; }
+      /* === DECRYPT ANIMATION (1.8s shifting sequence) === */
+      .decryptText { fill: #00f2fe; filter: url(#shadow); font-family: 'Courier New', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: 0px; }
+      .dec1 { animation: d1 1.8s forwards; opacity: 0; }
+      .dec2 { animation: d2 1.8s forwards; opacity: 0; }
+      .dec3 { animation: d3 1.8s forwards; opacity: 0; }
+      .dec4 { animation: d4 1.8s forwards; opacity: 0; }
+      .dec5 { animation: d5 1.8s forwards; opacity: 0; }
+      .dec6 { animation: d6 1.8s forwards; opacity: 0; }
+      .dec7 { animation: d7 1.8s forwards; opacity: 0; }
+      .finalReveal { animation: d8 1.8s forwards; opacity: 0; }
 
-      @keyframes d1 { 0%, 20% { opacity: 1; } 20.1%, 100% { opacity: 0; } }
-      @keyframes d2 { 0%, 20% { opacity: 0; } 20.1%, 40% { opacity: 1; } 40.1%, 100% { opacity: 0; } }
-      @keyframes d3 { 0%, 40% { opacity: 0; } 40.1%, 60% { opacity: 1; } 60.1%, 100% { opacity: 0; } }
-      @keyframes d4 { 0%, 60% { opacity: 0; } 60.1%, 100% { opacity: 1; } }
+      @keyframes d1 { 0%, 12% { opacity: 1; } 12.1%, 100% { opacity: 0; } }
+      @keyframes d2 { 0%, 12% { opacity: 0; } 12.1%, 25% { opacity: 1; } 25.1%, 100% { opacity: 0; } }
+      @keyframes d3 { 0%, 25% { opacity: 0; } 25.1%, 37% { opacity: 1; } 37.1%, 100% { opacity: 0; } }
+      @keyframes d4 { 0%, 37% { opacity: 0; } 37.1%, 50% { opacity: 1; } 50.1%, 100% { opacity: 0; } }
+      @keyframes d5 { 0%, 50% { opacity: 0; } 50.1%, 62% { opacity: 1; } 62.1%, 100% { opacity: 0; } }
+      @keyframes d6 { 0%, 62% { opacity: 0; } 62.1%, 75% { opacity: 1; } 75.1%, 100% { opacity: 0; } }
+      @keyframes d7 { 0%, 75% { opacity: 0; } 75.1%, 87% { opacity: 1; } 87.1%, 100% { opacity: 0; } }
+      @keyframes d8 { 0%, 87% { opacity: 0; } 87.1%, 100% { opacity: 1; } }
 
       /* PROVEN: Infinite moving animations using ONLY translateX */
       .wave1 { animation: moveLeft 12s linear infinite; }
@@ -364,10 +372,14 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
   <!-- === NEON GLOWING BORDER (replaces boring grey) === -->
   <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="url(#neonBorder)" stroke-width="1.5" rx="15px" filter="url(#neonGlow)" class="neonBorderRect" />
   
-  <!-- === HACKER DECRYPT SEQUENCE === -->
-  <text x="50%" y="80" class="decryptText dec1">0x8F4B2A9C7D1E5F3A</text>
-  <text x="50%" y="80" class="decryptText dec2">H@l&amp;o, W%r1d! 0xK#v</text>
-  <text x="50%" y="80" class="decryptText dec3">H3llo, W0rld! I'm K3v!n</text>
+  <!-- === HACKER DECRYPT SEQUENCE (1.8s shifting sequence) === -->
+  <text x="50%" y="80" class="decryptText dec1">0x8F4B2A9C7D1E5F3A8B1C</text>
+  <text x="50%" y="80" class="decryptText dec2">X#9a!z_ Q$m*p! %'bY8x@p</text>
+  <text x="50%" y="80" class="decryptText dec3">H@x$9, %Q*p! 0xK#v1nZ2!</text>
+  <text x="50%" y="80" class="decryptText dec4">H3!&amp;o, W%rLd_ 1"m k3v1n</text>
+  <text x="50%" y="80" class="decryptText dec5">He[lo, W0r]d! I'x K?vin</text>
+  <text x="50%" y="80" class="decryptText dec6">Hell0, Wor1d! I'm Kev!n</text>
+  <text x="50%" y="80" class="decryptText dec7">Hello, World! I'm Kevin</text>
 
   <g class="finalReveal">
     <!-- === GLITCH GHOST COPIES (RGB split behind main text) === -->
