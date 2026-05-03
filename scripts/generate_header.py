@@ -103,7 +103,7 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
     </g>
 
     <style>
-      .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 44px; font-weight: 900; text-anchor: middle; animation: fadeIn 1s ease-out; letter-spacing: -0.5px; }
+      .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: -0.5px; }
       .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 1.5s ease-out; letter-spacing: 0.5px; }
       .sub2 { fill: #f7fafc; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 16px; font-style: italic; font-weight: 500; text-anchor: middle; animation: fadeIn 2s ease-out; }
       
@@ -111,6 +111,18 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
         from { opacity: 0; transform: translateY(5px); }
         to { opacity: 1; transform: translateY(0); }
       }
+
+      /* === DECRYPT ANIMATION === */
+      .decryptText { fill: #00f2fe; filter: url(#shadow); font-family: 'Courier New', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: 2px; }
+      .dec1 { animation: d1 1.2s forwards; opacity: 0; }
+      .dec2 { animation: d2 1.2s forwards; opacity: 0; }
+      .dec3 { animation: d3 1.2s forwards; opacity: 0; }
+      .finalReveal { animation: d4 1.2s forwards; opacity: 0; }
+
+      @keyframes d1 { 0%, 20% { opacity: 1; } 20.1%, 100% { opacity: 0; } }
+      @keyframes d2 { 0%, 20% { opacity: 0; } 20.1%, 40% { opacity: 1; } 40.1%, 100% { opacity: 0; } }
+      @keyframes d3 { 0%, 40% { opacity: 0; } 40.1%, 60% { opacity: 1; } 60.1%, 100% { opacity: 0; } }
+      @keyframes d4 { 0%, 60% { opacity: 0; } 60.1%, 100% { opacity: 1; } }
 
       /* PROVEN: Infinite moving animations using ONLY translateX */
       .wave1 { animation: moveLeft 12s linear infinite; }
@@ -352,12 +364,19 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
   <!-- === NEON GLOWING BORDER (replaces boring grey) === -->
   <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="url(#neonBorder)" stroke-width="1.5" rx="15px" filter="url(#neonGlow)" class="neonBorderRect" />
   
-  <!-- === GLITCH GHOST COPIES (RGB split behind main text) === -->
-  <text x="50%" y="80" class="glitchR">Hello, World! I'm Kevin 👨‍💻</text>
-  <text x="50%" y="80" class="glitchL">Hello, World! I'm Kevin 👨‍💻</text>
+  <!-- === HACKER DECRYPT SEQUENCE === -->
+  <text x="50%" y="80" class="decryptText dec1">0x8F4B2A9C7D1E5F3A</text>
+  <text x="50%" y="80" class="decryptText dec2">H@l&amp;o, W%r1d! 0xK#v</text>
+  <text x="50%" y="80" class="decryptText dec3">H3llo, W0rld! I'm K3v!n</text>
 
-  <!-- Base Text -->
-  <text x="50%" y="80" class="title">Hello, World! I'm Kevin 👨‍💻</text>
+  <g class="finalReveal">
+    <!-- === GLITCH GHOST COPIES (RGB split behind main text) === -->
+    <text x="50%" y="80" class="glitchR">Hello, World! I'm Kevin 👨‍💻</text>
+    <text x="50%" y="80" class="glitchL">Hello, World! I'm Kevin 👨‍💻</text>
+
+    <!-- Base Text -->
+    <text x="50%" y="80" class="title">Hello, World! I'm Kevin 👨‍💻</text>
+  </g>
   <text x="50%" y="125" class="sub1">I push directly to main.</text>
   <text x="50%" y="155" class="sub2">(Just kidding, I use CI/CD pipelines like a responsible adult 🛠️)</text>
 
