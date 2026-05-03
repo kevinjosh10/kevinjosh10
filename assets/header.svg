@@ -102,24 +102,24 @@
 
     <style>
       .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: -0.5px; }
-      .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 0.5s ease-out 1.8s forwards; opacity: 0; letter-spacing: 0.5px; }
-      .sub2 { fill: #f7fafc; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 16px; font-style: italic; font-weight: 500; text-anchor: middle; animation: fadeIn 0.5s ease-out 2.2s forwards; opacity: 0; }
+      .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 0.5s ease-out 3.8s forwards; opacity: 0; letter-spacing: 0.5px; }
+      .sub2 { fill: #f7fafc; filter: url(#shadow); font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 16px; font-style: italic; font-weight: 500; text-anchor: middle; animation: fadeIn 0.5s ease-out 4.2s forwards; opacity: 0; }
       
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(5px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
-      /* === DECRYPT ANIMATION (1.8s shifting sequence) === */
+      /* === DECRYPT ANIMATION (3.8s shifting sequence) === */
       .decryptText { fill: #00f2fe; filter: url(#shadow); font-family: 'Courier New', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: 0px; }
-      .dec1 { animation: d1 1.8s forwards; opacity: 0; }
-      .dec2 { animation: d2 1.8s forwards; opacity: 0; }
-      .dec3 { animation: d3 1.8s forwards; opacity: 0; }
-      .dec4 { animation: d4 1.8s forwards; opacity: 0; }
-      .dec5 { animation: d5 1.8s forwards; opacity: 0; }
-      .dec6 { animation: d6 1.8s forwards; opacity: 0; }
-      .dec7 { animation: d7 1.8s forwards; opacity: 0; }
-      .finalReveal { animation: d8 1.8s forwards; opacity: 0; }
+      .dec1 { animation: d1 3.8s forwards; opacity: 0; }
+      .dec2 { animation: d2 3.8s forwards; opacity: 0; }
+      .dec3 { animation: d3 3.8s forwards; opacity: 0; }
+      .dec4 { animation: d4 3.8s forwards; opacity: 0; }
+      .dec5 { animation: d5 3.8s forwards; opacity: 0; }
+      .dec6 { animation: d6 3.8s forwards; opacity: 0; }
+      .dec7 { animation: d7 3.8s forwards; opacity: 0; }
+      .finalReveal { animation: d8 3.8s forwards; opacity: 0; }
 
       @keyframes d1 { 0%, 12% { opacity: 1; } 12.1%, 100% { opacity: 0; } }
       @keyframes d2 { 0%, 12% { opacity: 0; } 12.1%, 25% { opacity: 1; } 25.1%, 100% { opacity: 0; } }
@@ -370,7 +370,7 @@
   <!-- === NEON GLOWING BORDER (replaces boring grey) === -->
   <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="url(#neonBorder)" stroke-width="1.5" rx="15px" filter="url(#neonGlow)" class="neonBorderRect" />
   
-  <!-- === HACKER DECRYPT SEQUENCE (1.8s shifting sequence) === -->
+  <!-- === HACKER DECRYPT SEQUENCE (3.8s shifting sequence) === -->
   <text x="50%" y="80" class="decryptText dec1">0x8F4B2A9C7D1E5F3A8B1C</text>
   <text x="50%" y="80" class="decryptText dec2">X#9a!z_ Q$m*p! %'bY8x@p</text>
   <text x="50%" y="80" class="decryptText dec3">H@x$9, %Q*p! 0xK#v1nZ2!</text>
