@@ -102,33 +102,31 @@
 
     <style>
       .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: -0.5px; }
-      .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 0.5s ease-out 3.8s forwards; opacity: 0; letter-spacing: 0.5px; }
-      .sub2 { fill: #f7fafc; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 16px; font-style: italic; font-weight: 500; text-anchor: middle; animation: fadeIn 0.5s ease-out 4.2s forwards; opacity: 0; }
+      .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 0.5s ease-out 5s forwards; opacity: 0; letter-spacing: 0.5px; }
+      .sub2 { fill: #f7fafc; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 16px; font-style: italic; font-weight: 500; text-anchor: middle; animation: fadeIn 0.5s ease-out 5.4s forwards; opacity: 0; }
       
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(5px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
-      /* === DECRYPT ANIMATION (3.8s shifting sequence) === */
-      .decryptText { fill: #00f2fe; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: 0px; }
-      .dec1 { animation: d1 3.8s forwards; opacity: 0; }
-      .dec2 { animation: d2 3.8s forwards; opacity: 0; }
-      .dec3 { animation: d3 3.8s forwards; opacity: 0; }
-      .dec4 { animation: d4 3.8s forwards; opacity: 0; }
-      .dec5 { animation: d5 3.8s forwards; opacity: 0; }
-      .dec6 { animation: d6 3.8s forwards; opacity: 0; }
-      .dec7 { animation: d7 3.8s forwards; opacity: 0; }
-      .finalReveal { animation: d8 3.8s forwards; opacity: 0; }
+      /* === DECRYPT ANIMATION (5s FAST TWITCHING) === */
+      .decryptText { fill: #00f2fe; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: 0px; opacity: 0; }
+      .dec1 { animation: cycle 0.7s infinite; animation-delay: 0.0s; }
+      .dec2 { animation: cycle 0.7s infinite; animation-delay: 0.1s; }
+      .dec3 { animation: cycle 0.7s infinite; animation-delay: 0.2s; }
+      .dec4 { animation: cycle 0.7s infinite; animation-delay: 0.3s; }
+      .dec5 { animation: cycle 0.7s infinite; animation-delay: 0.4s; }
+      .dec6 { animation: cycle 0.7s infinite; animation-delay: 0.5s; }
+      .dec7 { animation: cycle 0.7s infinite; animation-delay: 0.6s; }
 
-      @keyframes d1 { 0%, 12% { opacity: 1; } 12.1%, 100% { opacity: 0; } }
-      @keyframes d2 { 0%, 12% { opacity: 0; } 12.1%, 25% { opacity: 1; } 25.1%, 100% { opacity: 0; } }
-      @keyframes d3 { 0%, 25% { opacity: 0; } 25.1%, 37% { opacity: 1; } 37.1%, 100% { opacity: 0; } }
-      @keyframes d4 { 0%, 37% { opacity: 0; } 37.1%, 50% { opacity: 1; } 50.1%, 100% { opacity: 0; } }
-      @keyframes d5 { 0%, 50% { opacity: 0; } 50.1%, 62% { opacity: 1; } 62.1%, 100% { opacity: 0; } }
-      @keyframes d6 { 0%, 62% { opacity: 0; } 62.1%, 75% { opacity: 1; } 75.1%, 100% { opacity: 0; } }
-      @keyframes d7 { 0%, 75% { opacity: 0; } 75.1%, 87% { opacity: 1; } 87.1%, 100% { opacity: 0; } }
-      @keyframes d8 { 0%, 87% { opacity: 0; } 87.1%, 100% { opacity: 1; } }
+      @keyframes cycle { 0%, 14.2% { opacity: 1; } 14.3%, 100% { opacity: 0; } }
+
+      .decryptWrapper { animation: hideWrapper 5s forwards; }
+      @keyframes hideWrapper { 0%, 99.9% { opacity: 1; } 100% { opacity: 0; } }
+
+      .finalReveal { animation: showFinal 5s forwards; opacity: 0; }
+      @keyframes showFinal { 0%, 99.9% { opacity: 0; } 100% { opacity: 1; } }
 
       /* PROVEN: Infinite moving animations using ONLY translateX */
       .wave1 { animation: moveLeft 12s linear infinite; }
@@ -361,14 +359,16 @@
   <!-- === NEON GLOWING BORDER (replaces boring grey) === -->
   <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="url(#neonBorder)" stroke-width="1.5" rx="15px" filter="url(#neonGlow)" class="neonBorderRect" />
   
-  <!-- === HACKER DECRYPT SEQUENCE (3.8s shifting sequence) === -->
-  <text x="50%" y="80" class="decryptText dec1">0x8F4B2A9C7D1E5F3A8B1C</text>
-  <text x="50%" y="80" class="decryptText dec2">X#9a!z_ Q$m*p! %'bY8x@p</text>
-  <text x="50%" y="80" class="decryptText dec3">H@x$9, %Q*p! 0xK#v1nZ2!</text>
-  <text x="50%" y="80" class="decryptText dec4">H3!&amp;o, W%rLd_ 1"m k3v1n</text>
-  <text x="50%" y="80" class="decryptText dec5">He[lo, W0r]d! I'x K?vin</text>
-  <text x="50%" y="80" class="decryptText dec6">Hell0, Wor1d! I'm Kev!n</text>
-  <text x="50%" y="80" class="decryptText dec7">Hello, World! I'm Kevin</text>
+  <!-- === HACKER DECRYPT SEQUENCE (5s FAST TWITCHING) === -->
+  <g class="decryptWrapper">
+    <text x="50%" y="80" class="decryptText dec1">0x8F4B2A9C7D1E5F3A8B1C</text>
+    <text x="50%" y="80" class="decryptText dec2">X#9a!z_ Q$m*p! %'bY8x@p</text>
+    <text x="50%" y="80" class="decryptText dec3">H@x$9, %Q*p! 0xK#v1nZ2!</text>
+    <text x="50%" y="80" class="decryptText dec4">H3!&amp;o, W%rLd_ 1"m k3v1n</text>
+    <text x="50%" y="80" class="decryptText dec5">He[lo, W0r]d! I'x K?vin</text>
+    <text x="50%" y="80" class="decryptText dec6">Hell0, Wor1d! I'm Kev!n</text>
+    <text x="50%" y="80" class="decryptText dec7">Hello, World! I'm Kevin</text>
+  </g>
 
   <g class="finalReveal">
     <!-- === GLITCH GHOST COPIES (RGB split behind main text) === -->
