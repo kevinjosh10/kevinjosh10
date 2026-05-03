@@ -1,9 +1,10 @@
 <svg width="800" height="250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
+    <!-- Background Gradient (Darker stormy sky) -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a202c" />
-      <stop offset="100%" stop-color="#2d3748" />
+      <stop offset="0%" stop-color="#0f1624" />
+      <stop offset="50%" stop-color="#1a1e36" />
+      <stop offset="100%" stop-color="#1e293b" />
     </linearGradient>
 
     <!-- Wave Gradients -->
@@ -23,22 +24,54 @@
     <!-- Sweeping Spotlight Beam Gradient -->
     <linearGradient id="spotlightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.15" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
+
+    <!-- Storm Cloud Gradient -->
+    <linearGradient id="stormCloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="60%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <!-- Lightning Glow Filter -->
+    <filter id="lightningGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
 
     <!-- Drop Shadow for Text -->
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.8"/>
     </filter>
 
-    <!-- Cloud Graphic -->
-    <g id="cloud" fill="#ffffff">
-      <circle cx="30" cy="30" r="20" />
-      <circle cx="50" cy="20" r="25" />
-      <circle cx="70" cy="25" r="20" />
-      <circle cx="90" cy="35" r="15" />
-      <rect x="30" y="25" width="60" height="25" rx="10" />
+    <!-- Rain Drop Glow -->
+    <filter id="rainGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="1" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Storm Cloud Graphic (Darker, puffier) -->
+    <g id="stormCloud">
+      <circle cx="25" cy="32" r="22" fill="url(#stormCloudGrad)" />
+      <circle cx="50" cy="18" r="28" fill="url(#stormCloudGrad)" />
+      <circle cx="78" cy="22" r="24" fill="url(#stormCloudGrad)" />
+      <circle cx="100" cy="32" r="18" fill="url(#stormCloudGrad)" />
+      <rect x="20" y="28" width="85" height="22" rx="10" fill="url(#stormCloudGrad)" />
+      <!-- Dark underbelly -->
+      <rect x="25" y="38" width="75" height="12" rx="6" fill="#374151" opacity="0.6" />
+    </g>
+
+    <!-- Small Lightning Bolt Shape -->
+    <g id="bolt">
+      <polygon points="0,0 4,10 1,10 5,22 -2,12 1,12 -3,0" fill="#fbbf24" filter="url(#lightningGlow)" />
     </g>
 
     <!-- Sparkle Graphic -->
@@ -89,6 +122,60 @@
         0%, 100% { opacity: 0; }
         50% { opacity: 0.9; }
       }
+
+      /* === LIGHTNING FLASH === */
+      .lightning { animation: flash 4s ease-in-out infinite; }
+      .lightning1 { animation-delay: 0s; }
+      .lightning2 { animation-delay: 1.8s; }
+      .lightning3 { animation-delay: 3.2s; }
+      .lightning4 { animation-delay: 0.6s; }
+      .lightning5 { animation-delay: 2.5s; }
+
+      @keyframes flash {
+        0%, 100% { opacity: 0; }
+        4% { opacity: 1; }
+        6% { opacity: 0; }
+        8% { opacity: 0.8; }
+        10% { opacity: 0; }
+      }
+
+      /* === RAIN DROPS FALLING === */
+      .rain { animation: fall 1.2s linear infinite; }
+      .rain1 { animation-delay: 0s; }
+      .rain2 { animation-delay: 0.15s; }
+      .rain3 { animation-delay: 0.3s; }
+      .rain4 { animation-delay: 0.45s; }
+      .rain5 { animation-delay: 0.6s; }
+      .rain6 { animation-delay: 0.75s; }
+      .rain7 { animation-delay: 0.9s; }
+      .rain8 { animation-delay: 1.05s; }
+      .rain9 { animation-delay: 0.2s; }
+      .rain10 { animation-delay: 0.5s; }
+      .rain11 { animation-delay: 0.35s; }
+      .rain12 { animation-delay: 0.8s; }
+      .rain13 { animation-delay: 0.1s; }
+      .rain14 { animation-delay: 0.55s; }
+      .rain15 { animation-delay: 0.7s; }
+      .rain16 { animation-delay: 0.25s; }
+
+      @keyframes fall {
+        0% { transform: translateY(0); opacity: 0.7; }
+        80% { opacity: 0.4; }
+        100% { transform: translateY(200px); opacity: 0; }
+      }
+
+      /* === SKY FLASH (ambient glow during lightning) === */
+      .skyFlash { animation: ambientFlash 4s ease-in-out infinite; }
+      .skyFlash1 { animation-delay: 0s; }
+      .skyFlash2 { animation-delay: 1.8s; }
+
+      @keyframes ambientFlash {
+        0%, 100% { opacity: 0; }
+        4% { opacity: 0.08; }
+        6% { opacity: 0; }
+        8% { opacity: 0.05; }
+        10% { opacity: 0; }
+      }
     </style>
   </defs>
   
@@ -100,31 +187,81 @@
   
   <g clip-path="url(#clipBox)">
     
+    <!-- Ambient Sky Flash (lights up the whole sky during lightning) -->
+    <rect width="100%" height="100%" fill="#c4b5fd" class="skyFlash skyFlash1" />
+    <rect width="100%" height="100%" fill="#93c5fd" class="skyFlash skyFlash2" />
+
     <!-- Sweeping Spotlight Beam (Using proven translateX) -->
     <!-- The beam is slanted physically by drawing the polygon so we don't need CSS skew/rotate -->
     <polygon points="100,-50 300,-50 150,300 -50,300" fill="url(#spotlightGrad)" class="spotlight" />
 
-    <!-- Cloud Layers -->
-    <g class="clouds" opacity="0.6">
-      <use href="#cloud" transform="translate(50, -5) scale(0.8)" />
-      <use href="#cloud" transform="translate(300, 20) scale(1.2)" />
-      <use href="#cloud" transform="translate(550, -10) scale(0.6)" />
-      <use href="#cloud" transform="translate(720, 15) scale(0.9)" />
-      <use href="#cloud" transform="translate(850, -5) scale(0.8)" />
-      <use href="#cloud" transform="translate(1100, 20) scale(1.2)" />
-      <use href="#cloud" transform="translate(1350, -10) scale(0.6)" />
-      <use href="#cloud" transform="translate(1520, 15) scale(0.9)" />
+    <!-- === RAIN STREAKS (placed across the whole scene) === -->
+    <line x1="80" y1="30" x2="78" y2="50" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" opacity="0.5" class="rain rain1" />
+    <line x1="155" y1="25" x2="153" y2="45" stroke="#93c5fd" stroke-width="1" stroke-linecap="round" opacity="0.4" class="rain rain2" />
+    <line x1="230" y1="35" x2="228" y2="55" stroke="#a5b4fc" stroke-width="1.5" stroke-linecap="round" opacity="0.5" class="rain rain3" />
+    <line x1="310" y1="28" x2="308" y2="48" stroke="#93c5fd" stroke-width="1" stroke-linecap="round" opacity="0.35" class="rain rain4" />
+    <line x1="385" y1="32" x2="383" y2="52" stroke="#a5b4fc" stroke-width="1.5" stroke-linecap="round" opacity="0.45" class="rain rain5" />
+    <line x1="460" y1="26" x2="458" y2="46" stroke="#93c5fd" stroke-width="1" stroke-linecap="round" opacity="0.4" class="rain rain6" />
+    <line x1="530" y1="38" x2="528" y2="58" stroke="#a5b4fc" stroke-width="1.5" stroke-linecap="round" opacity="0.5" class="rain rain7" />
+    <line x1="600" y1="30" x2="598" y2="50" stroke="#93c5fd" stroke-width="1" stroke-linecap="round" opacity="0.35" class="rain rain8" />
+    <line x1="120" y1="40" x2="118" y2="60" stroke="#a5b4fc" stroke-width="1" stroke-linecap="round" opacity="0.3" class="rain rain9" />
+    <line x1="270" y1="22" x2="268" y2="42" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" opacity="0.45" class="rain rain10" />
+    <line x1="350" y1="36" x2="348" y2="56" stroke="#a5b4fc" stroke-width="1" stroke-linecap="round" opacity="0.35" class="rain rain11" />
+    <line x1="500" y1="28" x2="498" y2="48" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" opacity="0.4" class="rain rain12" />
+    <line x1="670" y1="34" x2="668" y2="54" stroke="#a5b4fc" stroke-width="1" stroke-linecap="round" opacity="0.3" class="rain rain13" />
+    <line x1="735" y1="30" x2="733" y2="50" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" opacity="0.45" class="rain rain14" />
+    <line x1="195" y1="42" x2="193" y2="62" stroke="#a5b4fc" stroke-width="1" stroke-linecap="round" opacity="0.35" class="rain rain15" />
+    <line x1="425" y1="20" x2="423" y2="40" stroke="#93c5fd" stroke-width="1" stroke-linecap="round" opacity="0.3" class="rain rain16" />
+
+    <!-- Storm Cloud Layers (Darker, moodier) -->
+    <g class="clouds" opacity="0.75">
+      <use href="#stormCloud" transform="translate(50, -8) scale(0.9)" />
+      <use href="#stormCloud" transform="translate(300, 12) scale(1.3)" />
+      <use href="#stormCloud" transform="translate(550, -12) scale(0.7)" />
+      <use href="#stormCloud" transform="translate(720, 8) scale(1.0)" />
+      <use href="#stormCloud" transform="translate(850, -8) scale(0.9)" />
+      <use href="#stormCloud" transform="translate(1100, 12) scale(1.3)" />
+      <use href="#stormCloud" transform="translate(1350, -12) scale(0.7)" />
+      <use href="#stormCloud" transform="translate(1520, 8) scale(1.0)" />
     </g>
 
-    <g class="clouds2" opacity="0.3">
-      <use href="#cloud" transform="translate(150, 30) scale(1.0)" />
-      <use href="#cloud" transform="translate(400, 5) scale(0.7)" />
-      <use href="#cloud" transform="translate(650, 40) scale(1.1)" />
-      <use href="#cloud" transform="translate(780, 10) scale(0.8)" />
-      <use href="#cloud" transform="translate(950, 30) scale(1.0)" />
-      <use href="#cloud" transform="translate(1200, 5) scale(0.7)" />
-      <use href="#cloud" transform="translate(1450, 40) scale(1.1)" />
-      <use href="#cloud" transform="translate(1580, 10) scale(0.8)" />
+    <g class="clouds2" opacity="0.45">
+      <use href="#stormCloud" transform="translate(150, 22) scale(1.1)" />
+      <use href="#stormCloud" transform="translate(400, -2) scale(0.8)" />
+      <use href="#stormCloud" transform="translate(650, 30) scale(1.2)" />
+      <use href="#stormCloud" transform="translate(780, 5) scale(0.9)" />
+      <use href="#stormCloud" transform="translate(950, 22) scale(1.1)" />
+      <use href="#stormCloud" transform="translate(1200, -2) scale(0.8)" />
+      <use href="#stormCloud" transform="translate(1450, 30) scale(1.2)" />
+      <use href="#stormCloud" transform="translate(1580, 5) scale(0.9)" />
+    </g>
+
+    <!-- === LIGHTNING BOLTS (positioned under specific clouds) === -->
+    <!-- Bolt 1: Under the large cloud at ~350 -->
+    <g class="lightning lightning1">
+      <polygon points="355,48 361,62 357,62 365,82 353,66 357,66 351,48" fill="#fbbf24" filter="url(#lightningGlow)" />
+    </g>
+
+    <!-- Bolt 2: Under cloud at ~100 -->
+    <g class="lightning lightning2">
+      <polygon points="105,40 110,52 107,52 114,68 103,55 107,55 102,40" fill="#fde68a" filter="url(#lightningGlow)" />
+    </g>
+
+    <!-- Bolt 3: Under cloud at ~580, bigger bolt with fork -->
+    <g class="lightning lightning3">
+      <polygon points="585,38 592,56 588,56 598,80 584,60 588,60 582,38" fill="#fbbf24" filter="url(#lightningGlow)" />
+      <!-- Fork -->
+      <polygon points="592,56 598,62 596,62 602,72 594,64 596,64 590,56" fill="#fde68a" filter="url(#lightningGlow)" />
+    </g>
+
+    <!-- Bolt 4: Under cloud at ~720, small crackle -->
+    <g class="lightning lightning4">
+      <polygon points="735,42 739,54 737,54 743,66 733,56 736,56 732,42" fill="#fde68a" filter="url(#lightningGlow)" />
+    </g>
+
+    <!-- Bolt 5: Under cloud at ~250 -->
+    <g class="lightning lightning5">
+      <polygon points="255,45 260,58 257,58 264,74 254,60 257,60 252,45" fill="#fbbf24" filter="url(#lightningGlow)" />
     </g>
 
     <!-- Waves -->
