@@ -147,18 +147,7 @@
         10% { opacity: 0; }
       }
 
-      /* === HORIZONTAL CLOUD-TO-CLOUD LIGHTNING === */
-      .hLightning { animation: hFlash 6s ease-in-out infinite; }
-      .hLightning1 { animation-delay: 1.2s; }
-      .hLightning2 { animation-delay: 4.0s; }
 
-      @keyframes hFlash {
-        0%, 100% { opacity: 0; }
-        3% { opacity: 0.9; }
-        4.5% { opacity: 0; }
-        5.5% { opacity: 0.7; }
-        7% { opacity: 0; }
-      }
 
       /* === RAIN DROPS FALLING === */
       .rain { animation: fall 1.2s linear infinite; }
@@ -210,16 +199,58 @@
         50% { opacity: 0.9; }
       }
 
-      /* === TEXT GLOW ON LIGHTNING (synced with flash) === */
-      .titleGlow { animation: textElectric 4s ease-in-out infinite; }
-      .titleGlow1 { animation-delay: 0s; }
+      /* === GLITCH / HACKER TEXT EFFECT (RGB channel split) === */
+      .glitchR {
+        animation: glitchRight 3s steps(1, end) infinite;
+        fill: #ff0040;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        font-size: 44px;
+        font-weight: 900;
+        text-anchor: middle;
+      }
+      .glitchL {
+        animation: glitchLeft 3s steps(1, end) infinite;
+        fill: #00f2fe;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        font-size: 44px;
+        font-weight: 900;
+        text-anchor: middle;
+      }
 
-      @keyframes textElectric {
-        0%, 100% { opacity: 0; }
-        4% { opacity: 0.6; }
-        6% { opacity: 0; }
-        8% { opacity: 0.4; }
-        10% { opacity: 0; }
+      @keyframes glitchRight {
+        0%, 100% { opacity: 0; transform: translateX(0); }
+        7% { opacity: 0.7; transform: translateX(3px); }
+        8% { opacity: 0.7; transform: translateX(-2px); }
+        9% { opacity: 0; transform: translateX(0); }
+        32% { opacity: 0; transform: translateX(0); }
+        33% { opacity: 0.5; transform: translateX(4px); }
+        34% { opacity: 0.6; transform: translateX(-1px); }
+        35% { opacity: 0; transform: translateX(0); }
+        54% { opacity: 0; transform: translateX(0); }
+        55% { opacity: 0.8; transform: translateX(2px); }
+        56% { opacity: 0; transform: translateX(0); }
+        78% { opacity: 0; transform: translateX(0); }
+        79% { opacity: 0.6; transform: translateX(-3px); }
+        80% { opacity: 0.5; transform: translateX(2px); }
+        81% { opacity: 0; transform: translateX(0); }
+      }
+
+      @keyframes glitchLeft {
+        0%, 100% { opacity: 0; transform: translateX(0); }
+        7% { opacity: 0.5; transform: translateX(-3px); }
+        8% { opacity: 0.6; transform: translateX(2px); }
+        9% { opacity: 0; transform: translateX(0); }
+        32% { opacity: 0; transform: translateX(0); }
+        33% { opacity: 0.6; transform: translateX(-4px); }
+        34% { opacity: 0.4; transform: translateX(1px); }
+        35% { opacity: 0; transform: translateX(0); }
+        54% { opacity: 0; transform: translateX(0); }
+        55% { opacity: 0.6; transform: translateX(-2px); }
+        56% { opacity: 0; transform: translateX(0); }
+        78% { opacity: 0; transform: translateX(0); }
+        79% { opacity: 0.5; transform: translateX(3px); }
+        80% { opacity: 0.7; transform: translateX(-2px); }
+        81% { opacity: 0; transform: translateX(0); }
       }
     </style>
   </defs>
@@ -298,13 +329,7 @@
       <polygon points="255,45 260,58 257,58 264,74 254,60 257,60 252,45" fill="#fbbf24" filter="url(#lightningGlow)" />
     </g>
 
-    <!-- === HORIZONTAL CLOUD-TO-CLOUD LIGHTNING (electric arcs between clouds) === -->
-    <g class="hLightning hLightning1">
-      <polyline points="160,28 185,22 210,30 240,18 265,26 290,20 315,28" stroke="#fbbf24" stroke-width="2" fill="none" filter="url(#lightningGlow)" stroke-linejoin="bevel" />
-    </g>
-    <g class="hLightning hLightning2">
-      <polyline points="480,24 510,18 535,28 560,15 585,22 610,16 640,25" stroke="#fde68a" stroke-width="1.5" fill="none" filter="url(#lightningGlow)" stroke-linejoin="bevel" />
-    </g>
+
 
     <!-- === DRIFTING FOG/MIST LAYERS (atmospheric depth) === -->
     <g class="mist1">
@@ -325,8 +350,9 @@
   <!-- === NEON GLOWING BORDER (replaces boring grey) === -->
   <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="url(#neonBorder)" stroke-width="1.5" rx="15px" filter="url(#neonGlow)" class="neonBorderRect" />
   
-  <!-- === TEXT ELECTRIC GLOW (ghost text behind main text, synced with lightning) === -->
-  <text x="50%" y="80" fill="#00f2fe" filter="url(#electricGlow)" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="44px" font-weight="900" text-anchor="middle" class="titleGlow titleGlow1">Hello, World! I'm Kevin 👨‍💻</text>
+  <!-- === GLITCH GHOST COPIES (RGB split behind main text) === -->
+  <text x="50%" y="80" class="glitchR">Hello, World! I'm Kevin 👨‍💻</text>
+  <text x="50%" y="80" class="glitchL">Hello, World! I'm Kevin 👨‍💻</text>
 
   <!-- Base Text -->
   <text x="50%" y="80" class="title">Hello, World! I'm Kevin 👨‍💻</text>
