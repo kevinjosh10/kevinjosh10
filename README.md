@@ -51,7 +51,7 @@
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=kevinjosh10&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true&v=1" width="48%" />
 </div>
 
 ---
