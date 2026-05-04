@@ -10,7 +10,7 @@
       .text { fill: #f7fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: bold; dominant-baseline: middle; text-anchor: middle; }
       @keyframes fillBar {
         from { width: 0; }
-        to { width: 6.3%; }
+        to { width: 6.4%; }
       }
     </style>
   </defs>
@@ -19,5 +19,5 @@
   <!-- Animated Progress Bar -->
   <rect class="bar" height="30" y="15" />
   <!-- Text Overlay -->
-  <text class="text" x="50%" y="32">Day 63 of 1000 — Just 93.7% to go! 🚀</text>
+  <text class="text" x="50%" y="32">Day 64 of 1000 — Just 93.6% to go! 🚀</text>
 </svg>
