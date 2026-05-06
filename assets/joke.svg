@@ -16,8 +16,8 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">Programming is 10% science, 20% ingenuity,</text>
-<text x="50%" y="85" class="text">and 70% getting the ingenuity to work with</text>
-<text x="50%" y="110" class="text">the science.</text>
+  <text x="50%" y="60" class="text">Have a great weekend! I hope your code</text>
+<text x="50%" y="85" class="text">behaves the same on Monday as it did on</text>
+<text x="50%" y="110" class="text">Friday.</text>
 
 </svg>
