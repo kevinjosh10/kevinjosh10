@@ -15,7 +15,7 @@
 ---
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/assets/about_me.svg?v=1" alt="About Me" width="100%" />
+  <img src="assets/about_me.svg?v=2" alt="About Me" width="100%" />
 </div>
 
 <div align="left">
@@ -31,7 +31,7 @@
   <br>
   <h3>🚀 The 1000-Day Mission</h3>
   <p><i>I am currently on a public, 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design. This is a daily commitment to building production-grade systems and bridging the gap between theory and real-world engineering.</i></p>
-  <img src="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/assets/progress.svg" alt="Animated Wave Progress Bar" />
+  <img src="assets/progress.svg?v=1" alt="Animated Wave Progress Bar" />
   <br>
 </div>
 
