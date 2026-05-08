@@ -32,10 +32,8 @@
 
 <div align="center">
   <br>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=800&size=30&duration=3000&pause=1500&color=FE428E&center=true&vCenter=true&width=650&lines=🚀+THE+1000-DAY+MISSION" alt="1000 Day Mission Title" />
-  <br>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=500&size=16&duration=4000&pause=1000&color=F8FAFC&center=true&vCenter=true&width=750&lines=A+public+1000-day+journey+to+master+Cloud+Infrastructure,+AWS,+%26+Backend+Design.;Daily+commitment+to+building+production-grade+systems.;Bridging+the+gap+between+theory+and+real-world+engineering." alt="Mission Description" />
-  <br>
+  <h2>🚀 THE 1000-DAY MISSION</h2>
+  <p><i>A public 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design.<br>Daily commitment to building production-grade systems—bridging the gap between theory and real-world engineering.</i></p>
   <img src="assets/progress.svg?v=1" alt="Animated Wave Progress Bar" />
   <br>
 </div>
