@@ -6,14 +6,22 @@
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
 <defs>
-          <linearGradient id="movingGradient" x1="0%" y1="0%" x2="200%" y2="0%">
-            <stop offset="0%" stop-color="#fe428e" stop-opacity="0.3"/>
-            <stop offset="25%" stop-color="#a855f7" stop-opacity="0.8"/>
-            <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.8"/>
-            <stop offset="75%" stop-color="#a855f7" stop-opacity="0.8"/>
-            <stop offset="100%" stop-color="#fe428e" stop-opacity="0.3"/>
-            <animate attributeName="x1" values="0%; -200%" dur="3s" repeatCount="indefinite" />
-            <animate attributeName="x2" values="200%; 0%" dur="3s" repeatCount="indefinite" />
+          <linearGradient id="movingGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-opacity="0.95">
+              <animate attributeName="stop-color" values="#ff0055;#ffee00;#00ff55;#00ffff;#0055ff;#aa00ff;#ff0055" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="25%" stop-opacity="0.95">
+              <animate attributeName="stop-color" values="#ffee00;#00ff55;#00ffff;#0055ff;#aa00ff;#ff0055;#ffee00" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" stop-opacity="0.95">
+              <animate attributeName="stop-color" values="#00ff55;#00ffff;#0055ff;#aa00ff;#ff0055;#ffee00;#00ff55" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="75%" stop-opacity="0.95">
+              <animate attributeName="stop-color" values="#00ffff;#0055ff;#aa00ff;#ff0055;#ffee00;#00ff55;#00ffff" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stop-opacity="0.95">
+              <animate attributeName="stop-color" values="#0055ff;#aa00ff;#ff0055;#ffee00;#00ff55;#00ffff;#0055ff" dur="3s" repeatCount="indefinite" />
+            </stop>
           </linearGradient>
         </defs>
             <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg"
