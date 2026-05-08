@@ -15,7 +15,7 @@
 ---
 
 <div align="center">
-  <img src="assets/about_me.svg" alt="About Me Terminal" width="100%" />
+  <img src="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/assets/about_me.svg?v=1" alt="About Me" width="100%" />
 </div>
 
 <div align="left">
