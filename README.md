@@ -15,13 +15,10 @@
 ---
 
 <div align="center">
-  <h3>👨‍💻 About Me</h3>
-  <img src="https://img.shields.io/badge/🎓_1st--Year_CS_Student-00f2fe?style=for-the-badge&labelColor=0d1117" />
-  <img src="https://img.shields.io/badge/☁️_Cloud--Native_Architect_in_Training-a855f7?style=for-the-badge&labelColor=0d1117" />
-  <img src="https://img.shields.io/badge/⚡_Powered_by_Caffeine_&_Curiosity-fbbf24?style=for-the-badge&labelColor=0d1117" />
-  <br><br>
-  <b>I don't just learn cloud—I build production-grade systems with it.</b><br>
-  <i>AWS architecture, serverless pipelines, and backend engineering—one commit at a time.</i>
+  <h2>👨‍💻 About Me</h2>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=700&size=24&duration=3000&pause=800&color=00F2FE&center=true&vCenter=true&width=700&lines=🎓+1st-Year+CS+Student+at+Jerusalem+College+of+Engineering;☁️+Cloud-Native+Architect+in+Training;✝️+Faith+Driven+•+God+First;🔥+1000-Day+Commitment+•+No+Excuses;🧠+Born+to+Master+Cloud;💪+Discipline+Over+Motivation" alt="About Me Typing" />
+  <br>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=18&duration=4000&pause=1000&color=A855F7&center=true&vCenter=true&width=700&lines=I+don't+just+learn+cloud—I+build+production-grade+systems+with+it.;AWS+architecture,+serverless+pipelines,+and+backend+engineering.;Building+in+public+•+Learning+out+loud+•+Every+single+day." alt="Subtitle Typing" />
   <br><br>
   <a href="https://www.linkedin.com/in/kevin-josh10">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -29,27 +26,16 @@
   <a href="mailto:kingkevinjosh7@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
-</div>
-
-<div align="center">
-  <br>
-  <h3>⚡ Who is Kevin?</h3>
-  <img src="https://img.shields.io/badge/🏫_Jerusalem_College_of_Engineering-00f2fe?style=for-the-badge&labelColor=0d1117" />
-  <img src="https://img.shields.io/badge/✝️_Faith_Driven_•_God_First-f8fafc?style=for-the-badge&labelColor=0d1117" />
-  <br>
-  <img src="https://img.shields.io/badge/🔥_1000--Day_Commitment_•_No_Excuses-fe428e?style=for-the-badge&labelColor=0d1117" />
-  <img src="https://img.shields.io/badge/🧠_Born_to_Master_Cloud-06b6d4?style=for-the-badge&labelColor=0d1117" />
-  <br>
-  <img src="https://img.shields.io/badge/💪_Discipline_Over_Motivation-a855f7?style=for-the-badge&labelColor=0d1117" />
-  <img src="https://img.shields.io/badge/🌍_Building_in_Public_•_Learning_Out_Loud-22c55e?style=for-the-badge&labelColor=0d1117" />
   <br><br>
   <i>"Most people quit at Day 10. I chose to go 1000. That's not motivation—that's conviction."</i>
 </div>
 
 <div align="center">
   <br>
-  <h3>🚀 The 1000-Day Mission</h3>
-  <p><i>I am currently on a public, 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design. This is a daily commitment to building production-grade systems and bridging the gap between theory and real-world engineering.</i></p>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=800&size=30&duration=3000&pause=1500&color=FE428E&center=true&vCenter=true&width=650&lines=🚀+THE+1000-DAY+MISSION" alt="1000 Day Mission Title" />
+  <br>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=500&size=16&duration=4000&pause=1000&color=F8FAFC&center=true&vCenter=true&width=750&lines=A+public+1000-day+journey+to+master+Cloud+Infrastructure,+AWS,+%26+Backend+Design.;Daily+commitment+to+building+production-grade+systems.;Bridging+the+gap+between+theory+and+real-world+engineering." alt="Mission Description" />
+  <br>
   <img src="assets/progress.svg?v=1" alt="Animated Wave Progress Bar" />
   <br>
 </div>
