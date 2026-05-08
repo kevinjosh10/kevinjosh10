@@ -15,10 +15,14 @@
 ---
 
 <div align="center">
-  <img src="assets/about_me.svg?v=2" alt="About Me" width="100%" />
-</div>
-
-<div align="left">
+  <h3>👨‍💻 About Me</h3>
+  <img src="https://img.shields.io/badge/🎓_1st--Year_CS_Student-00f2fe?style=for-the-badge&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/☁️_Cloud--Native_Architect_in_Training-a855f7?style=for-the-badge&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/⚡_Powered_by_Caffeine_&_Curiosity-fbbf24?style=for-the-badge&labelColor=0d1117" />
+  <br><br>
+  <b>I don't just learn cloud—I build production-grade systems with it.</b><br>
+  <i>AWS architecture, serverless pipelines, and backend engineering—one commit at a time.</i>
+  <br><br>
   <a href="https://www.linkedin.com/in/kevin-josh10">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
