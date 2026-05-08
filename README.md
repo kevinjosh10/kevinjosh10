@@ -51,14 +51,14 @@
 
 <div align="center">
   <a href="https://github.com/kevinjosh10">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true&v=20260508" width="60%" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true&v=2026050820" width="60%" />
   </a>
 </div>
 
 <div align="center">
   <br>
   <a href="https://github.com/kevinjosh10">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=kevinjosh10&theme=redical&hide_border=true&area=true&custom_title=Contribution%20Activity" width="98%" />
+    <img src="assets/activity.svg" width="98%" alt="Contribution Activity Graph" />
   </a>
 </div>
 

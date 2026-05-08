@@ -1,6 +1,7 @@
 import datetime
 import os
 import re
+import urllib.request
 
 START_DATE = datetime.date(2026, 3, 1) 
 TOTAL_DAYS = 1000
@@ -129,6 +130,42 @@ def update_readme_cache_buster(ist_now):
     except FileNotFoundError:
         print("README.md not found, skipping cache buster update.")
 
+def update_activity_graph():
+    """Downloads the activity graph and injects SMIL animations for GitHub rendering."""
+    print("Generating animated activity graph...")
+    url = 'https://github-readme-activity-graph.vercel.app/graph?username=kevinjosh10&theme=redical&hide_border=true&area=true&custom_title=Contribution%20Activity'
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req) as response:
+            svg_data = response.read().decode('utf-8')
+
+        # Line animation
+        svg_data = re.sub(
+            r'(<path[^>]*class="ct-line"[^>]*)></path>',
+            r'\1><animate attributeName="stroke-dashoffset" from="5000" to="0" dur="3s" fill="freeze" /></path>',
+            svg_data
+        )
+        
+        # Area animation (fade in)
+        svg_data = re.sub(
+            r'(<path[^>]*class="ct-area"[^>]*)></path>',
+            r'\1 opacity="0"><animate attributeName="opacity" values="0;0.5" dur="2s" begin="2s" fill="freeze" /></path>',
+            svg_data
+        )
+
+        # Point animation
+        svg_data = re.sub(
+            r'(<line[^>]*class="ct-point"[^>]*)></line>',
+            r'\1 opacity="0"><animate attributeName="opacity" values="0;1" dur="1s" begin="1.5s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="-20 0" to="0 0" dur="1s" begin="1.5s" fill="freeze" /></line>',
+            svg_data
+        )
+
+        with open('assets/activity.svg', 'w', encoding='utf-8') as f:
+            f.write(svg_data)
+        print("Successfully generated assets/activity.svg")
+    except Exception as e:
+        print(f"Failed to generate animated activity graph: {e}")
+
 def main():
     # Use UTC time and convert to IST (UTC +5:30)
     utc_now = datetime.datetime.utcnow()
@@ -150,6 +187,9 @@ def main():
     
     # Update README cache buster
     update_readme_cache_buster(ist_now)
+    
+    # Generate Animated Activity Graph
+    update_activity_graph()
 
 if __name__ == "__main__":
     main()
