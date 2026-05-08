@@ -16,7 +16,7 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">Schrödinger's cat walks into a bar and</text>
-<text x="50%" y="85" class="text">doesn't.</text>
+  <text x="50%" y="60" class="text">"Knock, knock." "Who's there?"  [very long</text>
+<text x="50%" y="85" class="text">pause]  "Java."</text>
 
 </svg>
