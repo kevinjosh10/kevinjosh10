@@ -14,10 +14,9 @@
 
 ---
 
-### 👨‍💻 About Me
-*I am a 1st-year Computer Science student deeply focused on Cloud-Native architectures and serverless workflows.*
-- 🔭 **Core Focus:** AWS Architecture, Linux, and Python System Design.
-- 💡 **Philosophy:** Learning in public and tracking progress every single day.
+<div align="center">
+  <img src="assets/about_me.svg" alt="About Me Terminal" width="100%" />
+</div>
 
 <div align="left">
   <a href="https://www.linkedin.com/in/kevin-josh10">
@@ -60,12 +59,6 @@
 ---
 
 ### 📊 Engineering Metrics
-
-<div align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=kevinjosh10&theme=radical&no-frame=true&no-bg=true&margin-w=15" alt="GitHub Trophies" />
-  </a>
-</div>
 
 <div align="center">
   <br>

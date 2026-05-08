@@ -1,0 +1,50 @@
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Drop Shadow for Text -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00f2fe" flood-opacity="0.5"/>
+    </filter>
+
+    <style>
+      .terminal-text {
+        fill: #00f2fe;
+        font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      
+      .cursor {
+        fill: #00f2fe;
+        animation: blink 1s step-end infinite;
+      }
+
+      /* Line typing animations */
+      .line1 { opacity: 0; animation: typeLine 0.1s forwards 0.5s; }
+      .line2 { opacity: 0; animation: typeLine 0.1s forwards 1.5s; }
+      .line3 { opacity: 0; animation: typeLine 0.1s forwards 2.5s; }
+      .line4 { opacity: 0; animation: typeLine 0.1s forwards 3.5s; }
+      .line5 { opacity: 0; animation: typeLine 0.1s forwards 4.5s; }
+      
+      @keyframes typeLine {
+        to { opacity: 1; }
+      }
+
+      @keyframes blink {
+        50% { opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <rect width="100%" height="100%" fill="transparent" />
+
+  <!-- Terminal Window Content -->
+  <g transform="translate(20, 30)">
+    <text x="0" y="20" class="terminal-text line1">kevin@cloud-terminal:~$ whoami</text>
+    
+    <text x="0" y="50" class="terminal-text line2">> 1st-year CS Student & Cloud-Native Architect in training.</text>
+    <text x="0" y="80" class="terminal-text line3">> 🔭 Core Focus: AWS Architecture, Linux, & Python System Design.</text>
+    <text x="0" y="110" class="terminal-text line4">> 💡 Philosophy: Learning in public and tracking progress every single day.</text>
+    
+    <text x="0" y="150" class="terminal-text line5">kevin@cloud-terminal:~$ <tspan class="cursor">█</tspan></text>
+  </g>
+</svg>

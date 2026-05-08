@@ -25,7 +25,9 @@ jobs:
 
       - name: Run Generators (Journey & Joke)
         run: |
+          python scripts/generate_about_me.py
           python scripts/update_journey.py
+          python scripts/generate_header.py
           python scripts/generate_joke.py
       - name: Commit & Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
