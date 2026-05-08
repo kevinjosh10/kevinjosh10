@@ -107,28 +107,7 @@ def generate_svg(days_passed, total_days):
 """
     return svg_content
 
-def update_readme_cache_buster(ist_now):
-    """Updates the cache-busting version on the streak stats URL in README.md."""
-    try:
-        with open("README.md", "r", encoding="utf-8") as f:
-            content = f.read()
-        
-        # We will use the format v=YYYYMMDDHH
-        version_str = ist_now.strftime("%Y%m%d%H")
-        
-        # Regex to find the streak URL and update its version parameter
-        new_content = re.sub(
-            r"(github-readme-streak-stats\.herokuapp\.com/\?user=kevinjosh10&theme=radical&hide_border=true&v=)\d+",
-            r"\g<1>" + version_str,
-            content
-        )
-        
-        if content != new_content:
-            with open("README.md", "w", encoding="utf-8") as f:
-                f.write(new_content)
-            print(f"Updated README.md streak stats cache version to {version_str}")
-    except FileNotFoundError:
-        print("README.md not found, skipping cache buster update.")
+
 
 def update_activity_graph():
     """Downloads the activity graph and injects SMIL animations for GitHub rendering."""
@@ -184,9 +163,6 @@ def main():
         f.write(svg)
         
     print(f"Generated animated progress SVG for Day {days_passed}")
-    
-    # Update README cache buster
-    update_readme_cache_buster(ist_now)
     
     # Generate Animated Activity Graph
     update_activity_graph()
