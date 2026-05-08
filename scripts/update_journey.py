@@ -118,16 +118,16 @@ def update_activity_graph():
         with urllib.request.urlopen(req) as response:
             svg_data = response.read().decode('utf-8')
 
-        # Add <defs> for the moving gradient
+        # Add <defs> for the highly visible moving gradient
         defs = """<defs>
           <linearGradient id="movingGradient" x1="0%" y1="0%" x2="200%" y2="0%">
-            <stop offset="0%" stop-color="#fe428e" stop-opacity="0.1"/>
-            <stop offset="25%" stop-color="#ff9eb5" stop-opacity="0.6"/>
-            <stop offset="50%" stop-color="#fe428e" stop-opacity="0.1"/>
-            <stop offset="75%" stop-color="#ff9eb5" stop-opacity="0.6"/>
-            <stop offset="100%" stop-color="#fe428e" stop-opacity="0.1"/>
-            <animate attributeName="x1" values="0%; -200%" dur="4s" repeatCount="indefinite" />
-            <animate attributeName="x2" values="200%; 0%" dur="4s" repeatCount="indefinite" />
+            <stop offset="0%" stop-color="#fe428e" stop-opacity="0.3"/>
+            <stop offset="25%" stop-color="#a855f7" stop-opacity="0.8"/>
+            <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.8"/>
+            <stop offset="75%" stop-color="#a855f7" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#fe428e" stop-opacity="0.3"/>
+            <animate attributeName="x1" values="0%; -200%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="x2" values="200%; 0%" dur="3s" repeatCount="indefinite" />
           </linearGradient>
         </defs>"""
         
