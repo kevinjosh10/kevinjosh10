@@ -275,7 +275,7 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
     </style>
   </defs>
   
-  <rect width="100%" height="100%" fill="url(#bg)" rx="15px" />
+  <rect width="100%" height="100%" fill="transparent" rx="15px" />
   
   <clipPath id="clipBox">
     <rect width="100%" height="100%" rx="15px" />

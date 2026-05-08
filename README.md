@@ -51,7 +51,7 @@
 
 <div align="center">
   <a href="https://github.com/kevinjosh10">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true" width="60%" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true&bg_color=00000000" width="60%" />
   </a>
 </div>
 

@@ -46,7 +46,7 @@ def generate_svg(days_passed, total_days):
   </defs>
 
   <!-- ========== BACKGROUND TRACK ========== -->
-  <rect x="10" y="16" width="580" height="30" rx="15" fill="#1e293b"/>
+  <rect x="10" y="16" width="580" height="30" rx="15" fill="#1e293b" fill-opacity="0.3"/>
 
   <!-- ========== GLOW LAYER (behind bar) ========== -->
   <rect x="10" y="16" width="{bar_px:.1f}" height="30" rx="15" fill="url(#g1)" filter="url(#gf)" opacity="0.5">
@@ -142,6 +142,9 @@ def update_activity_graph():
         # Inject defs right after <svg ...>
         svg_data = re.sub(r'(<svg[^>]*>)', r'\1\n' + defs, svg_data, count=1)
 
+        # Remove the solid background card
+        svg_data = re.sub(r'<rect[^>]*id="cardBg"[^>]*>', '', svg_data)
+        
         # Line animation - continuous drawing trace and pulse
         svg_data = re.sub(
             r'(<path[^>]*class="ct-line"[^>]*)></path>',

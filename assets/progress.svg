@@ -22,7 +22,7 @@
   </defs>
 
   <!-- ========== BACKGROUND TRACK ========== -->
-  <rect x="10" y="16" width="580" height="30" rx="15" fill="#1e293b"/>
+  <rect x="10" y="16" width="580" height="30" rx="15" fill="#1e293b" fill-opacity="0.3"/>
 
   <!-- ========== GLOW LAYER (behind bar) ========== -->
   <rect x="10" y="16" width="39.4" height="30" rx="15" fill="url(#g1)" filter="url(#gf)" opacity="0.5">
