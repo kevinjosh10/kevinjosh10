@@ -118,24 +118,24 @@ def update_activity_graph():
         with urllib.request.urlopen(req) as response:
             svg_data = response.read().decode('utf-8')
 
-        # Line animation
+        # Line animation - continuous drawing trace and pulse
         svg_data = re.sub(
             r'(<path[^>]*class="ct-line"[^>]*)></path>',
-            r'\1><animate attributeName="stroke-dashoffset" from="5000" to="0" dur="3s" fill="freeze" /></path>',
+            r'\1><animate attributeName="stroke-dashoffset" from="5000" to="0" dur="5s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" /></path>',
             svg_data
         )
         
-        # Area animation (fade in)
+        # Area animation - continuous breathing
         svg_data = re.sub(
             r'(<path[^>]*class="ct-area"[^>]*)></path>',
-            r'\1 opacity="0"><animate attributeName="opacity" values="0;0.5" dur="2s" begin="2s" fill="freeze" /></path>',
+            r'\1 opacity="0.2"><animate attributeName="opacity" values="0.1;0.35;0.1" dur="4s" repeatCount="indefinite" /></path>',
             svg_data
         )
 
-        # Point animation
+        # Point animation - continuous bouncing and fading
         svg_data = re.sub(
             r'(<line[^>]*class="ct-point"[^>]*)></line>',
-            r'\1 opacity="0"><animate attributeName="opacity" values="0;1" dur="1s" begin="1.5s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="-20 0" to="0 0" dur="1s" begin="1.5s" fill="freeze" /></line>',
+            r'\1><animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="2s" repeatCount="indefinite" /></line>',
             svg_data
         )
 
