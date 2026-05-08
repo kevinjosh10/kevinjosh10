@@ -20,7 +20,7 @@
   <br>
   <h3>🚀 The 1000-Day Mission</h3>
   <p><i>I am currently on a public, 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design. This is a daily commitment to building production-grade systems and bridging the gap between theory and real-world engineering.</i></p>
-  <img src="assets/progress.svg?v=2" alt="Animated Wave Progress Bar" />
+  <img src="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/assets/progress.svg" alt="Animated Wave Progress Bar" />
   <br>
 </div>
 
@@ -51,7 +51,24 @@
 
 <div align="center">
   <a href="https://github.com/kevinjosh10">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true&v=1" width="48%" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true" width="48%" />
+  </a>
+  <a href="https://github.com/kevinjosh10">
+    <img src="https://github-readme-stats.vercel.app/api?username=kevinjosh10&show_icons=true&theme=radical&hide_border=true&count_private=true&include_all_commits=true" width="48%" />
+  </a>
+</div>
+
+<div align="center">
+  <br>
+  <a href="https://github.com/kevinjosh10">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=kevinjosh10&theme=redical&hide_border=true&area=true&custom_title=Contribution%20Activity" width="98%" />
+  </a>
+</div>
+
+<div align="center">
+  <br>
+  <a href="https://github.com/kevinjosh10">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kevinjosh10&layout=compact&theme=radical&hide_border=true&langs_count=8" width="40%" />
   </a>
 </div>
 
