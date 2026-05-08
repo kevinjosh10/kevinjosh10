@@ -33,6 +33,21 @@
 
 <div align="center">
   <br>
+  <h3>⚡ Who is Kevin?</h3>
+  <img src="https://img.shields.io/badge/🏫_Jerusalem_College_of_Engineering-00f2fe?style=for-the-badge&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/✝️_Faith_Driven_•_God_First-f8fafc?style=for-the-badge&labelColor=0d1117" />
+  <br>
+  <img src="https://img.shields.io/badge/🔥_1000--Day_Commitment_•_No_Excuses-fe428e?style=for-the-badge&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/🧠_Born_to_Master_Cloud-06b6d4?style=for-the-badge&labelColor=0d1117" />
+  <br>
+  <img src="https://img.shields.io/badge/💪_Discipline_Over_Motivation-a855f7?style=for-the-badge&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/🌍_Building_in_Public_•_Learning_Out_Loud-22c55e?style=for-the-badge&labelColor=0d1117" />
+  <br><br>
+  <i>"Most people quit at Day 10. I chose to go 1000. That's not motivation—that's conviction."</i>
+</div>
+
+<div align="center">
+  <br>
   <h3>🚀 The 1000-Day Mission</h3>
   <p><i>I am currently on a public, 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design. This is a daily commitment to building production-grade systems and bridging the gap between theory and real-world engineering.</i></p>
   <img src="assets/progress.svg?v=1" alt="Animated Wave Progress Bar" />
