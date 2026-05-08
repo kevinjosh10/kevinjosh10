@@ -16,9 +16,9 @@
 
 <div align="center">
   <h2>👨‍💻 About Me</h2>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=700&size=24&duration=3000&pause=800&color=00F2FE&center=true&vCenter=true&width=700&lines=🎓+1st-Year+CS+Student+at+Jerusalem+College+of+Engineering;☁️+Cloud-Native+Architect+in+Training;✝️+Faith+Driven+•+God+First;🔥+1000-Day+Commitment+•+No+Excuses;🧠+Born+to+Master+Cloud;💪+Discipline+Over+Motivation" alt="About Me Typing" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=700&size=24&duration=3000&pause=800&color=39FF14&center=true&vCenter=true&width=700&lines=🎓+1st-Year+CS+Student+at+Jerusalem+College+of+Engineering;☁️+Cloud-Native+Architect+in+Training;✝️+Faith+Driven+•+God+First;🔥+1000-Day+Commitment+•+No+Excuses;🧠+Born+to+Master+Cloud;💪+Discipline+Over+Motivation" alt="About Me Typing" />
   <br>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=18&duration=4000&pause=1000&color=A855F7&center=true&vCenter=true&width=700&lines=I+don't+just+learn+cloud—I+build+production-grade+systems+with+it.;AWS+architecture,+serverless+pipelines,+and+backend+engineering.;Building+in+public+•+Learning+out+loud+•+Every+single+day." alt="Subtitle Typing" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=18&duration=4000&pause=1000&color=FF3131&center=true&vCenter=true&width=700&lines=I+don't+just+learn+cloud—I+build+production-grade+systems+with+it.;AWS+architecture,+serverless+pipelines,+and+backend+engineering.;Building+in+public+•+Learning+out+loud+•+Every+single+day." alt="Subtitle Typing" />
   <br><br>
   <a href="https://www.linkedin.com/in/kevin-josh10">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -32,7 +32,8 @@
 
 <div align="center">
   <br>
-  <h2>🚀 THE 1000-DAY MISSION</h2>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=900&size=32&duration=1&pause=9999999&color=FE428E&center=true&vCenter=true&repeat=false&width=650&lines=🚀+THE+1000-DAY+MISSION" alt="1000 Day Mission Title" />
+  <br>
   <p><i>A public 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design.<br>Daily commitment to building production-grade systems—bridging the gap between theory and real-world engineering.</i></p>
   <img src="assets/progress.svg?v=1" alt="Animated Wave Progress Bar" />
   <br>
