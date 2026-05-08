@@ -99,14 +99,6 @@ def generate_svg(days_passed, total_days):
     <animate attributeName="stroke-width" values="1;2.5;1" dur="2s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- ========== PERCENTAGE BADGE ========== -->
-  <g>
-    <rect x="{badge_x:.0f}" y="2" width="36" height="15" rx="7.5" fill="#6366f1" opacity="0.9">
-      <animate attributeName="opacity" values="0.75;1;0.75" dur="2s" repeatCount="indefinite"/>
-    </rect>
-    <text x="{badge_text_x:.0f}" y="12" fill="#f8fafc" font-family="Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle">{bar_width_pct:.1f}%</text>
-  </g>
-
   <!-- ========== LABEL ========== -->
   <text x="300" y="65" fill="#94a3b8" font-family="Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Day {days_passed} / {total_days}  ·  {percent_to_go:.1f}% remaining  🚀</text>
 </svg>

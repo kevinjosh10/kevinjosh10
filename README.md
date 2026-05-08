@@ -54,7 +54,7 @@
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true" width="48%" />
   </a>
   <a href="https://github.com/kevinjosh10">
-    <img src="https://github-readme-stats.vercel.app/api?username=kevinjosh10&show_icons=true&theme=radical&hide_border=true&count_private=true&include_all_commits=true" width="48%" />
+    <img src="https://github-readme-stats.vercel.app/api?username=kevinjosh10&theme=radical&hide_border=true&count_private=true&include_all_commits=true" width="48%" />
   </a>
 </div>
 
@@ -72,17 +72,6 @@
   </a>
 </div>
 
----
-
-### 🐍 The Code Journey (Automated Contribution Snake)
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/assets/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/assets/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/kevinjosh10/kevinjosh10/main/assets/github-contribution-grid-snake.svg">
-  </picture>
-</div>
 
 <div align="center">
   <br>
