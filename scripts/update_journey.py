@@ -118,6 +118,22 @@ def update_activity_graph():
         with urllib.request.urlopen(req) as response:
             svg_data = response.read().decode('utf-8')
 
+        # Add <defs> for the moving gradient
+        defs = """<defs>
+          <linearGradient id="movingGradient" x1="0%" y1="0%" x2="200%" y2="0%">
+            <stop offset="0%" stop-color="#fe428e" stop-opacity="0.1"/>
+            <stop offset="25%" stop-color="#ff9eb5" stop-opacity="0.6"/>
+            <stop offset="50%" stop-color="#fe428e" stop-opacity="0.1"/>
+            <stop offset="75%" stop-color="#ff9eb5" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#fe428e" stop-opacity="0.1"/>
+            <animate attributeName="x1" values="0%; -200%" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="x2" values="200%; 0%" dur="4s" repeatCount="indefinite" />
+          </linearGradient>
+        </defs>"""
+        
+        # Inject defs right after <svg ...>
+        svg_data = re.sub(r'(<svg[^>]*>)', r'\1\n' + defs, svg_data, count=1)
+
         # Line animation - continuous drawing trace and pulse
         svg_data = re.sub(
             r'(<path[^>]*class="ct-line"[^>]*)></path>',
@@ -125,10 +141,10 @@ def update_activity_graph():
             svg_data
         )
         
-        # Area animation - continuous breathing
+        # Area animation - moving gradient fill!
         svg_data = re.sub(
             r'(<path[^>]*class="ct-area"[^>]*)></path>',
-            r'\1 opacity="0.2"><animate attributeName="opacity" values="0.1;0.35;0.1" dur="4s" repeatCount="indefinite" /></path>',
+            r'\1 style="fill: url(#movingGradient) !important;" opacity="1"></path>',
             svg_data
         )
 
