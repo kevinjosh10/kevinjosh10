@@ -20,7 +20,7 @@
   <br>
   <h3>🚀 The 1000-Day Mission</h3>
   <p><i>I am currently on a public, 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design. This is a daily commitment to building production-grade systems and bridging the gap between theory and real-world engineering.</i></p>
-  <img src="assets/progress.svg?v=1" alt="Animated Progress Bar" />
+  <img src="assets/progress.svg?v=2" alt="Animated Wave Progress Bar" />
   <br>
 </div>
 
