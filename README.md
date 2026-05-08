@@ -3,6 +3,10 @@
 </div>
 
 <div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Consolas&weight=700&size=22&duration=4000&pause=1000&color=00F2FE&center=true&vCenter=true&width=600&lines=Cloud+Infrastructure+Engineer;AWS+Architecture+%7C+Serverless;Building+Production-Grade+Systems;Learning+in+Public+Every+Day" alt="Typing SVG" />
+</div>
+
+<div align="center">
   <br>
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Quote of the Day" />
   <br>
@@ -14,7 +18,15 @@
 *I am a 1st-year Computer Science student deeply focused on Cloud-Native architectures and serverless workflows.*
 - 🔭 **Core Focus:** AWS Architecture, Linux, and Python System Design.
 - 💡 **Philosophy:** Learning in public and tracking progress every single day.
-- 📫 **Connect:** [LinkedIn](https://www.linkedin.com/in/kevin-josh10)
+
+<div align="left">
+  <a href="https://www.linkedin.com/in/kevin-josh10">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="mailto:kingkevinjosh7@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+</div>
 
 <div align="center">
   <br>
@@ -50,6 +62,13 @@
 ### 📊 Engineering Metrics
 
 <div align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=kevinjosh10&theme=radical&no-frame=true&no-bg=true&margin-w=15" alt="GitHub Trophies" />
+  </a>
+</div>
+
+<div align="center">
+  <br>
   <a href="https://github.com/kevinjosh10">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=kevinjosh10&theme=radical&hide_border=true&bg_color=00000000" width="60%" />
   </a>

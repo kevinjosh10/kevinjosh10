@@ -44,7 +44,6 @@ def generate_svg(joke_text):
   </defs>
   
   <rect width="100%" height="100%" fill="transparent" rx="12px" />
-  <rect width="99%" height="98%" x="2" y="1" class="border" />
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
