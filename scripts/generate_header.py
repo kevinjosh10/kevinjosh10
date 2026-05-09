@@ -453,6 +453,40 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
         100% { transform: translate(700px, 194px) scaleX(1); opacity: 0.85; }
       }
 
+      .sharkFin3 {
+        animation: finPatrol3 26s linear infinite;
+        animation-delay: -5s;
+        transform-origin: 20px 20px;
+      }
+      @keyframes finPatrol3 {
+        /* Swim left: Start at x=850 (far right) */
+        0%   { transform: translate(850px, 196px) scale(0.85, 0.85); opacity: 0.8; }
+        45%  { transform: translate(450px, 196px) scale(0.85, 0.85); opacity: 0.8; }
+        /* Turn around */
+        50%  { transform: translate(430px, 196px) scale(-0.85, 0.85); opacity: 0.8; }
+        /* Swim right */
+        95%  { transform: translate(830px, 196px) scale(-0.85, 0.85); opacity: 0.8; }
+        /* Turn around */
+        100% { transform: translate(850px, 196px) scale(0.85, 0.85); opacity: 0.8; }
+      }
+
+      .sharkFin4 {
+        animation: finPatrol4 42s linear infinite;
+        animation-delay: -20s;
+        transform-origin: 20px 20px;
+      }
+      @keyframes finPatrol4 {
+        /* Swim left: Start at x=350 */
+        0%   { transform: translate(350px, 189px) scale(0.7, 0.7); opacity: 0.7; }
+        45%  { transform: translate(-50px, 189px) scale(0.7, 0.7); opacity: 0.7; }
+        /* Turn around */
+        50%  { transform: translate(-70px, 189px) scale(-0.7, 0.7); opacity: 0.7; }
+        /* Swim right */
+        95%  { transform: translate(330px, 189px) scale(-0.7, 0.7); opacity: 0.7; }
+        /* Turn around */
+        100% { transform: translate(350px, 189px) scale(0.7, 0.7); opacity: 0.7; }
+      }
+
       /* === GLITCH / HACKER TEXT EFFECT (RGB channel split) === */
       .glitchR {
         animation: glitchRight 3s steps(1, end) infinite;
@@ -644,6 +678,16 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
 
     <!-- Shark Fin 2: Patrols right side -->
     <g class="sharkFin2">
+      <use href="#sharkFin" />
+    </g>
+
+    <!-- Shark Fin 3: Far right, slightly smaller -->
+    <g class="sharkFin3">
+      <use href="#sharkFin" />
+    </g>
+
+    <!-- Shark Fin 4: Deep background left, very slow and small -->
+    <g class="sharkFin4">
       <use href="#sharkFin" />
     </g>
 
