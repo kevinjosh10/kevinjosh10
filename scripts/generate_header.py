@@ -9,19 +9,56 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <stop offset="100%" stop-color="#1e293b" />
     </linearGradient>
 
-    <!-- Wave Gradients -->
-    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#f6d365;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#fda085;stop-opacity:1" />
+    <!-- =============================================
+         REALISTIC OCEAN WATER GRADIENTS
+         Deep navy depths → dark teal → surface cyan
+         ============================================= -->
+
+    <!-- Deepest water layer (ocean floor visible through water) -->
+    <linearGradient id="waterDeep" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#0c4a6e" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#082f49" stop-opacity="0.98" />
+      <stop offset="100%" stop-color="#0a1628" stop-opacity="1"   />
     </linearGradient>
-    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#84fab0;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8fd3f4;stop-opacity:1" />
+
+    <!-- Mid-depth water -->
+    <linearGradient id="waterMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#155e75" stop-opacity="0.7"  />
+      <stop offset="40%" stop-color="#0e7490" stop-opacity="0.8"  />
+      <stop offset="100%" stop-color="#0c4a6e" stop-opacity="0.9" />
     </linearGradient>
-    <linearGradient id="waveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#a18cd1;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#fbc2eb;stop-opacity:1" />
+
+    <!-- Surface water (catches sky light) -->
+    <linearGradient id="waterSurface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#22d3ee" stop-opacity="0.35" />
+      <stop offset="30%" stop-color="#06b6d4" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0.55" />
     </linearGradient>
+
+    <!-- Foam / whitecap highlight -->
+    <linearGradient id="waterFoam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#e0f2fe" stop-opacity="0.6"  />
+      <stop offset="30%" stop-color="#bae6fd" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0"   />
+    </linearGradient>
+
+    <!-- Surface shimmer (light reflection) -->
+    <linearGradient id="waterShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0"    />
+      <stop offset="15%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0"    />
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0"    />
+      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"   />
+    </linearGradient>
+
+    <!-- Soft radial highlight for foam particles -->
+    <radialGradient id="foamDot">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0.7"  />
+      <stop offset="40%" stop-color="#e0f2fe" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#bae6fd" stop-opacity="0"   />
+    </radialGradient>
 
     <!-- Sweeping Spotlight Beam Gradient -->
     <linearGradient id="spotlightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -30,46 +67,155 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Realistic Cloud Gradients -->
-    <radialGradient id="cloudRadial1" cx="50%" cy="30%" r="60%" fx="45%" fy="25%">
-      <stop offset="0%" stop-color="#b8c5d6" stop-opacity="0.95" />
-      <stop offset="25%" stop-color="#8a9ab5" stop-opacity="0.9" />
-      <stop offset="55%" stop-color="#6b7a94" stop-opacity="0.85" />
-      <stop offset="80%" stop-color="#4a5568" stop-opacity="0.75" />
-      <stop offset="100%" stop-color="#2d3748" stop-opacity="0.6" />
-    </radialGradient>
-    <radialGradient id="cloudRadial2" cx="55%" cy="25%" r="65%" fx="50%" fy="20%">
-      <stop offset="0%" stop-color="#a0aec0" stop-opacity="0.9" />
-      <stop offset="30%" stop-color="#718096" stop-opacity="0.85" />
-      <stop offset="60%" stop-color="#4a5568" stop-opacity="0.7" />
-      <stop offset="100%" stop-color="#2d3748" stop-opacity="0.5" />
-    </radialGradient>
-    <radialGradient id="cloudHighlight" cx="40%" cy="15%" r="50%">
-      <stop offset="0%" stop-color="#e2e8f0" stop-opacity="0.6" />
-      <stop offset="40%" stop-color="#cbd5e1" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#94a3b8" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="cloudUnderbelly" cx="50%" cy="85%" r="60%">
-      <stop offset="0%" stop-color="#1a202c" stop-opacity="0.7" />
-      <stop offset="50%" stop-color="#2d3748" stop-opacity="0.4" />
-      <stop offset="100%" stop-color="#4a5568" stop-opacity="0" />
-    </radialGradient>
-    <linearGradient id="stormCloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#94a3b8" />
-      <stop offset="60%" stop-color="#64748b" />
-      <stop offset="100%" stop-color="#475569" />
-    </linearGradient>
+    <!-- =============================================
+         SOFT-EDGE CLOUD GRADIENTS (GitHub-safe)
+         Each puff uses a radial gradient that fades
+         to fully transparent at the edge — no blur
+         filters needed. This is the ONLY reliable
+         technique for soft clouds on GitHub.
+         ============================================= -->
 
-    <!-- Cloud Softness Filters -->
-    <filter id="cloudSoft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
-    </filter>
-    <filter id="cloudSoftLight" x="-25%" y="-25%" width="150%" height="150%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
-    </filter>
-    <filter id="cloudEdge" x="-15%" y="-15%" width="130%" height="130%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1.8" />
-    </filter>
+    <!-- Bright puff (upper cloud highlights) -->
+    <radialGradient id="puffBright">
+      <stop offset="0%"  stop-color="#c8d3e2" stop-opacity="0.85" />
+      <stop offset="35%" stop-color="#a8b7cc" stop-opacity="0.6"  />
+      <stop offset="70%" stop-color="#7e8da4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#5a6a80" stop-opacity="0"   />
+    </radialGradient>
+
+    <!-- Mid-tone puff (main body) -->
+    <radialGradient id="puffMid">
+      <stop offset="0%"  stop-color="#8e9db3" stop-opacity="0.8"  />
+      <stop offset="30%" stop-color="#6e7f96" stop-opacity="0.6"  />
+      <stop offset="65%" stop-color="#556173" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#3d4a5c" stop-opacity="0"   />
+    </radialGradient>
+
+    <!-- Dark puff (underbelly / shadow) -->
+    <radialGradient id="puffDark">
+      <stop offset="0%"  stop-color="#3a4556" stop-opacity="0.75" />
+      <stop offset="30%" stop-color="#2e3a4a" stop-opacity="0.55" />
+      <stop offset="65%" stop-color="#1f2937" stop-opacity="0.2"  />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0"   />
+    </radialGradient>
+
+    <!-- Very dark core (deepest shadow) -->
+    <radialGradient id="puffDeep">
+      <stop offset="0%"  stop-color="#1a202c" stop-opacity="0.7"  />
+      <stop offset="40%" stop-color="#111827" stop-opacity="0.4"  />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"   />
+    </radialGradient>
+
+    <!-- White highlight (top-lit puff) -->
+    <radialGradient id="puffWhite">
+      <stop offset="0%"  stop-color="#e2e8f0" stop-opacity="0.55" />
+      <stop offset="30%" stop-color="#cbd5e1" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#94a3b8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#64748b" stop-opacity="0"   />
+    </radialGradient>
+
+    <!-- Subtle wisp (very faint atmosphere) -->
+    <radialGradient id="puffWisp">
+      <stop offset="0%"  stop-color="#94a3b8" stop-opacity="0.3"  />
+      <stop offset="50%" stop-color="#64748b" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#475569" stop-opacity="0"   />
+    </radialGradient>
+
+    <!-- =============================================
+         CLOUD TYPE A: LARGE CUMULONIMBUS
+         Built from ~25 overlapping soft ellipses.
+         Bright top, dark underbelly, wispy edges.
+         ============================================= -->
+    <g id="stormCloud">
+      <!-- === ATMOSPHERIC HAZE (outermost layer) === -->
+      <ellipse cx="70" cy="35" rx="85" ry="40" fill="url(#puffWisp)" opacity="0.5" />
+      <ellipse cx="60" cy="40" rx="90" ry="35" fill="url(#puffWisp)" opacity="0.35" />
+
+      <!-- === DARK UNDERBELLY (bottom layer) === -->
+      <ellipse cx="40" cy="52" rx="38" ry="14" fill="url(#puffDeep)" opacity="0.9" />
+      <ellipse cx="70" cy="55" rx="45" ry="16" fill="url(#puffDeep)" opacity="0.85" />
+      <ellipse cx="100" cy="52" rx="35" ry="13" fill="url(#puffDeep)" opacity="0.8" />
+      <ellipse cx="55" cy="50" rx="50" ry="12" fill="url(#puffDark)" opacity="0.7" />
+      <ellipse cx="85" cy="48" rx="42" ry="14" fill="url(#puffDark)" opacity="0.65" />
+
+      <!-- === MAIN BODY (mid layer — bulk of the cloud) === -->
+      <ellipse cx="30" cy="40" rx="28" ry="18" fill="url(#puffMid)" opacity="0.85" />
+      <ellipse cx="55" cy="35" rx="32" ry="22" fill="url(#puffMid)" opacity="0.9" />
+      <ellipse cx="80" cy="32" rx="30" ry="20" fill="url(#puffMid)" opacity="0.85" />
+      <ellipse cx="105" cy="38" rx="26" ry="16" fill="url(#puffMid)" opacity="0.8" />
+      <ellipse cx="45" cy="42" rx="35" ry="16" fill="url(#puffMid)" opacity="0.7" />
+      <ellipse cx="90" cy="42" rx="32" ry="15" fill="url(#puffMid)" opacity="0.65" />
+
+      <!-- === UPPER PUFFS (bright tops catch light) === -->
+      <ellipse cx="35" cy="28" rx="22" ry="15" fill="url(#puffBright)" opacity="0.9" />
+      <ellipse cx="58" cy="22" rx="26" ry="17" fill="url(#puffBright)" opacity="0.95" />
+      <ellipse cx="82" cy="20" rx="24" ry="16" fill="url(#puffBright)" opacity="0.9" />
+      <ellipse cx="100" cy="26" rx="20" ry="13" fill="url(#puffBright)" opacity="0.8" />
+      <ellipse cx="48" cy="26" rx="18" ry="12" fill="url(#puffBright)" opacity="0.7" />
+      <ellipse cx="72" cy="24" rx="20" ry="14" fill="url(#puffBright)" opacity="0.75" />
+
+      <!-- === WHITE HIGHLIGHTS (light catches top edges) === -->
+      <ellipse cx="50" cy="16" rx="16" ry="10" fill="url(#puffWhite)" opacity="0.9" />
+      <ellipse cx="72" cy="14" rx="14" ry="9"  fill="url(#puffWhite)" opacity="0.85" />
+      <ellipse cx="38" cy="20" rx="12" ry="8"  fill="url(#puffWhite)" opacity="0.7" />
+      <ellipse cx="90" cy="18" rx="13" ry="8"  fill="url(#puffWhite)" opacity="0.65" />
+
+      <!-- === WISPY EDGES (feathered dissolve into sky) === -->
+      <ellipse cx="8"   cy="44" rx="16" ry="10" fill="url(#puffWisp)" opacity="0.6" />
+      <ellipse cx="125" cy="40" rx="14" ry="10" fill="url(#puffWisp)" opacity="0.5" />
+      <ellipse cx="15"  cy="36" rx="12" ry="8"  fill="url(#puffWisp)" opacity="0.4" />
+      <ellipse cx="118" cy="34" rx="11" ry="7"  fill="url(#puffWisp)" opacity="0.35" />
+    </g>
+
+    <!-- =============================================
+         CLOUD TYPE B: MEDIUM STORM CLOUD
+         ============================================= -->
+    <g id="stormCloudB">
+      <!-- Haze -->
+      <ellipse cx="52" cy="30" rx="62" ry="30" fill="url(#puffWisp)" opacity="0.4" />
+      <!-- Dark base -->
+      <ellipse cx="35" cy="44" rx="30" ry="11" fill="url(#puffDeep)" opacity="0.8" />
+      <ellipse cx="60" cy="46" rx="35" ry="12" fill="url(#puffDeep)" opacity="0.75" />
+      <ellipse cx="80" cy="44" rx="25" ry="10" fill="url(#puffDark)" opacity="0.7" />
+      <!-- Body -->
+      <ellipse cx="30" cy="34" rx="24" ry="15" fill="url(#puffMid)" opacity="0.85" />
+      <ellipse cx="55" cy="30" rx="28" ry="18" fill="url(#puffMid)" opacity="0.9" />
+      <ellipse cx="78" cy="32" rx="22" ry="14" fill="url(#puffMid)" opacity="0.8" />
+      <ellipse cx="42" cy="36" rx="26" ry="13" fill="url(#puffMid)" opacity="0.65" />
+      <!-- Bright tops -->
+      <ellipse cx="38" cy="22" rx="18" ry="12" fill="url(#puffBright)" opacity="0.9" />
+      <ellipse cx="58" cy="18" rx="20" ry="14" fill="url(#puffBright)" opacity="0.95" />
+      <ellipse cx="76" cy="22" rx="16" ry="11" fill="url(#puffBright)" opacity="0.8" />
+      <!-- Highlights -->
+      <ellipse cx="50" cy="12" rx="12" ry="8"  fill="url(#puffWhite)" opacity="0.85" />
+      <ellipse cx="66" cy="14" rx="10" ry="7"  fill="url(#puffWhite)" opacity="0.7" />
+      <!-- Wispy edges -->
+      <ellipse cx="8"  cy="38" rx="12" ry="8"  fill="url(#puffWisp)" opacity="0.5" />
+      <ellipse cx="96" cy="36" rx="10" ry="7"  fill="url(#puffWisp)" opacity="0.4" />
+    </g>
+
+    <!-- =============================================
+         CLOUD TYPE C: SMALL WISPY CLOUD
+         ============================================= -->
+    <g id="stormCloudC">
+      <!-- Haze -->
+      <ellipse cx="35" cy="24" rx="42" ry="20" fill="url(#puffWisp)" opacity="0.35" />
+      <!-- Dark base -->
+      <ellipse cx="30" cy="34" rx="24" ry="8"  fill="url(#puffDark)" opacity="0.65" />
+      <ellipse cx="50" cy="32" rx="20" ry="7"  fill="url(#puffDark)" opacity="0.55" />
+      <!-- Body -->
+      <ellipse cx="25" cy="26" rx="18" ry="11" fill="url(#puffMid)" opacity="0.8" />
+      <ellipse cx="45" cy="24" rx="20" ry="12" fill="url(#puffMid)" opacity="0.85" />
+      <ellipse cx="60" cy="26" rx="14" ry="10" fill="url(#puffMid)" opacity="0.7" />
+      <!-- Bright tops -->
+      <ellipse cx="32" cy="18" rx="14" ry="9"  fill="url(#puffBright)" opacity="0.85" />
+      <ellipse cx="48" cy="16" rx="16" ry="10" fill="url(#puffBright)" opacity="0.9" />
+      <!-- Highlights -->
+      <ellipse cx="42" cy="12" rx="10" ry="6"  fill="url(#puffWhite)" opacity="0.75" />
+      <!-- Wisps -->
+      <ellipse cx="6"  cy="28" rx="10" ry="6"  fill="url(#puffWisp)" opacity="0.45" />
+      <ellipse cx="70" cy="26" rx="8"  ry="5"  fill="url(#puffWisp)" opacity="0.35" />
+    </g>
 
     <!-- Fog/Mist Gradient -->
     <linearGradient id="mistGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -125,44 +271,6 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.8"/>
     </filter>
 
-    <!-- ======= REALISTIC CLOUD TYPE A: Large Cumulonimbus ======= -->
-    <g id="stormCloud">
-      <!-- Soft ambient glow behind the cloud -->
-      <ellipse cx="65" cy="38" rx="70" ry="28" fill="url(#cloudRadial2)" filter="url(#cloudSoftLight)" opacity="0.4" />
-      <!-- Main cloud body — organic bezier shape -->
-      <path d="M8,48 C8,42 14,28 28,26 C32,14 46,6 60,8 C68,2 82,0 92,8 C104,4 118,10 122,22 C132,22 138,32 134,42 C138,48 136,56 128,58 L12,58 C4,56 2,52 8,48 Z" fill="url(#cloudRadial1)" filter="url(#cloudEdge)" />
-      <!-- Top highlight layer (simulates light from above) -->
-      <path d="M28,28 C34,16 48,10 60,12 C68,6 80,4 90,10 C100,8 112,14 116,24 C108,18 96,14 86,16 C76,10 62,12 54,18 C44,14 34,18 28,28 Z" fill="url(#cloudHighlight)" filter="url(#cloudSoft)" opacity="0.7" />
-      <!-- Mid-layer wisps for volume -->
-      <path d="M16,44 C18,36 28,30 40,32 C44,24 56,20 66,22 C74,18 86,16 96,20 C106,18 116,24 120,34 C124,40 122,48 116,52 L20,52 C12,50 10,46 16,44 Z" fill="url(#cloudRadial1)" opacity="0.6" filter="url(#cloudEdge)" />
-      <!-- Dark underbelly (rain-heavy base) -->
-      <path d="M18,50 C20,46 32,42 50,44 C62,40 80,40 100,44 C112,42 126,46 128,52 L126,58 L14,58 L12,52 Z" fill="url(#cloudUnderbelly)" filter="url(#cloudSoft)" opacity="0.8" />
-      <!-- Wispy edges left -->
-      <ellipse cx="12" cy="48" rx="14" ry="8" fill="url(#cloudRadial2)" filter="url(#cloudSoft)" opacity="0.5" />
-      <!-- Wispy edges right -->
-      <ellipse cx="130" cy="44" rx="12" ry="9" fill="url(#cloudRadial2)" filter="url(#cloudSoft)" opacity="0.45" />
-      <!-- Inner detail puffs -->
-      <ellipse cx="45" cy="24" rx="18" ry="12" fill="url(#cloudHighlight)" filter="url(#cloudSoft)" opacity="0.35" />
-      <ellipse cx="85" cy="18" rx="16" ry="11" fill="url(#cloudHighlight)" filter="url(#cloudSoft)" opacity="0.3" />
-    </g>
-
-    <!-- ======= REALISTIC CLOUD TYPE B: Medium Cloud ======= -->
-    <g id="stormCloudB">
-      <ellipse cx="50" cy="34" rx="55" ry="22" fill="url(#cloudRadial2)" filter="url(#cloudSoftLight)" opacity="0.35" />
-      <path d="M10,42 C10,36 20,26 34,24 C38,16 50,10 62,14 C72,8 84,12 90,22 C98,20 106,28 102,38 C106,44 102,50 96,50 L14,50 C6,50 4,46 10,42 Z" fill="url(#cloudRadial1)" filter="url(#cloudEdge)" />
-      <path d="M34,26 C40,18 52,14 62,16 C70,12 82,14 88,24 C80,18 70,16 62,20 C52,16 42,20 34,26 Z" fill="url(#cloudHighlight)" filter="url(#cloudSoft)" opacity="0.6" />
-      <path d="M16,44 C18,40 30,36 48,38 C60,34 78,36 92,40 C100,42 100,48 94,50 L16,50 C10,48 10,46 16,44 Z" fill="url(#cloudUnderbelly)" filter="url(#cloudSoft)" opacity="0.7" />
-      <ellipse cx="38" cy="20" rx="12" ry="8" fill="url(#cloudHighlight)" filter="url(#cloudSoft)" opacity="0.3" />
-    </g>
-
-    <!-- ======= REALISTIC CLOUD TYPE C: Small Wispy Cloud ======= -->
-    <g id="stormCloudC">
-      <ellipse cx="35" cy="28" rx="38" ry="16" fill="url(#cloudRadial2)" filter="url(#cloudSoftLight)" opacity="0.3" />
-      <path d="M6,34 C8,28 16,22 28,22 C32,16 42,12 52,16 C58,14 66,18 66,26 C70,30 68,36 62,38 L10,38 C4,36 2,34 6,34 Z" fill="url(#cloudRadial1)" filter="url(#cloudEdge)" />
-      <path d="M28,24 C34,18 44,14 52,18 C56,16 62,18 64,26 C58,20 48,18 40,22 C34,20 28,22 28,24 Z" fill="url(#cloudHighlight)" filter="url(#cloudSoft)" opacity="0.5" />
-      <path d="M12,34 C14,30 26,28 40,30 C50,28 60,32 62,36 L10,36 Z" fill="url(#cloudUnderbelly)" filter="url(#cloudSoft)" opacity="0.6" />
-    </g>
-
     <style>
       .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: -0.5px; }
       .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 0.5s ease-out 5s forwards; opacity: 0; letter-spacing: 0.5px; }
@@ -192,9 +300,15 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       @keyframes showFinal { 0%, 99.9% { opacity: 0; } 100% { opacity: 1; } }
 
       /* PROVEN: Infinite moving animations using ONLY translateX */
-      .wave1 { animation: moveLeft 12s linear infinite; }
-      .wave2 { animation: moveLeft 8s linear infinite; }
-      .wave3 { animation: moveLeft 15s linear infinite; }
+      /* Realistic water wave layers at different speeds (parallax depth) */
+      .waterBase  { animation: moveLeft 25s linear infinite; }
+      .waterMid1  { animation: moveLeft 18s linear infinite; }
+      .waterMid2  { animation: moveLeft 14s linear infinite; }
+      .waterSurf1 { animation: moveLeft 10s linear infinite; }
+      .waterSurf2 { animation: moveLeft 8s linear infinite; }
+      .waterFoam1 { animation: moveLeft 7s linear infinite; }
+      .waterFoam2 { animation: moveLeft 9s linear infinite; }
+      .waterShim  { animation: moveLeft 20s linear infinite; }
       .clouds { animation: moveLeft 30s linear infinite; }
       .clouds2 { animation: moveLeft 45s linear infinite; }
 
@@ -417,10 +531,47 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
 
 
 
-    <!-- Waves -->
-    <path class="wave3" d="M 0 160 Q 100 130 200 160 T 400 160 T 600 160 T 800 160 T 1000 160 T 1200 160 T 1400 160 T 1600 160 L 1600 250 L 0 250 Z" fill="url(#waveGrad3)" opacity="0.4" />
-    <path class="wave2" d="M 0 180 Q 100 210 200 180 T 400 180 T 600 180 T 800 180 T 1000 180 T 1200 180 T 1400 180 T 1600 180 L 1600 250 L 0 250 Z" fill="url(#waveGrad2)" opacity="0.6" />
-    <path class="wave1" d="M 0 200 Q 100 170 200 200 T 400 200 T 600 200 T 800 200 T 1000 200 T 1200 200 T 1400 200 T 1600 200 L 1600 250 L 0 250 Z" fill="url(#waveGrad1)" opacity="0.8" />
+    <!-- =============================================
+         REALISTIC OCEAN WATER
+         7 layers creating depth: base → mid → surface → foam → shimmer
+         Each layer has organic curves, different speeds, and overlapping
+         translucency to simulate light refracting through water.
+         ============================================= -->
+
+    <!-- LAYER 1: Deep ocean base (slowest, darkest — the "floor") -->
+    <path class="waterBase" d="M0,185 C40,178 80,192 120,185 C160,178 200,195 240,188 C280,181 320,193 360,186 C400,179 440,194 480,187 C520,180 560,192 600,185 C640,178 680,194 720,187 C760,180 800,192 840,185 C880,178 920,194 960,187 C1000,180 1040,192 1080,185 C1120,178 1160,194 1200,187 C1240,180 1280,193 1320,186 C1360,179 1400,194 1440,187 C1480,180 1520,192 1560,185 L1600,185 L1600,260 L0,260 Z" fill="url(#waterDeep)" />
+
+    <!-- LAYER 2: Mid-depth water 1 (subtle undulation) -->
+    <path class="waterMid1" d="M0,195 C50,188 90,202 140,195 C190,188 230,205 280,198 C330,191 370,204 420,197 C470,190 510,206 560,199 C610,192 650,205 700,198 C750,191 790,206 840,199 C890,192 930,205 980,198 C1030,191 1070,206 1120,199 C1170,192 1210,205 1260,198 C1310,191 1350,206 1400,199 C1450,192 1490,205 1540,198 L1600,198 L1600,260 L0,260 Z" fill="url(#waterMid)" opacity="0.85" />
+
+    <!-- LAYER 3: Mid-depth water 2 (counter-rhythm for natural feel) -->
+    <path class="waterMid2" d="M0,200 C35,206 75,194 110,200 C145,206 185,193 220,199 C255,205 295,193 330,199 C365,205 405,192 440,198 C475,204 515,193 550,199 C585,205 625,192 660,198 C695,204 735,193 770,199 C805,205 845,192 880,198 C915,204 955,193 990,199 C1025,205 1065,192 1100,198 C1135,204 1175,193 1210,199 C1245,205 1285,192 1320,198 C1355,204 1395,193 1430,199 C1465,205 1505,192 1540,198 L1600,198 L1600,260 L0,260 Z" fill="url(#waterMid)" opacity="0.6" />
+
+    <!-- LAYER 4: Surface water 1 (brighter, catches reflected sky) -->
+    <path class="waterSurf1" d="M0,208 C30,202 60,214 100,208 C140,202 170,216 210,210 C250,204 280,215 320,209 C360,203 390,216 430,210 C470,204 500,215 540,209 C580,203 610,216 650,210 C690,204 720,215 760,209 C800,203 830,216 870,210 C910,204 940,215 980,209 C1020,203 1050,216 1090,210 C1130,204 1160,215 1200,209 C1240,203 1270,216 1310,210 C1350,204 1380,215 1420,209 C1460,203 1490,216 1530,210 L1600,210 L1600,260 L0,260 Z" fill="url(#waterSurface)" opacity="0.9" />
+
+    <!-- LAYER 5: Surface water 2 (fastest visible ripples) -->
+    <path class="waterSurf2" d="M0,215 C25,210 50,220 80,215 C110,210 135,222 165,217 C195,212 220,222 250,217 C280,212 305,223 335,218 C365,213 390,222 420,217 C450,212 475,223 505,218 C535,213 560,222 590,217 C620,212 645,223 675,218 C705,213 730,222 760,217 C790,212 815,223 845,218 C875,213 900,222 930,217 C960,212 985,223 1015,218 C1045,213 1070,222 1100,217 C1130,212 1155,223 1185,218 C1215,213 1240,222 1270,217 C1300,212 1325,223 1355,218 C1385,213 1410,222 1440,217 C1470,212 1495,223 1525,218 L1600,218 L1600,260 L0,260 Z" fill="url(#waterSurface)" opacity="0.5" />
+
+    <!-- LAYER 6: Foam / whitecap crests (thin bright lines on wave peaks) -->
+    <path class="waterFoam1" d="M0,206 C20,203 40,208 65,205 C90,202 110,210 140,207 C170,204 190,211 220,208 C250,205 270,212 300,209 C330,206 350,212 380,209 C410,206 430,213 460,210 C490,207 510,213 540,210 C570,207 590,213 620,210 C650,207 670,213 700,210 C730,207 750,214 780,211 C810,208 830,214 860,211 C890,208 910,214 940,211 C970,208 990,214 1020,211 C1050,208 1070,214 1100,211 C1130,208 1150,214 1180,211 C1210,208 1230,214 1260,211 C1290,208 1310,215 1340,212 C1370,209 1390,214 1420,211 C1450,208 1470,214 1500,211 C1530,208 1550,214 1580,211 L1600,211 L1600,216 L0,216 Z" fill="url(#waterFoam)" opacity="0.7" />
+
+    <path class="waterFoam2" d="M0,212 C15,209 35,215 55,212 C75,209 95,216 120,213 C145,210 165,217 190,214 C215,211 235,217 260,214 C285,211 305,218 330,215 C355,212 375,218 400,215 C425,212 445,219 470,216 C495,213 515,219 540,216 C565,213 585,219 610,216 C635,213 655,220 680,217 C705,214 725,220 750,217 C775,214 795,220 820,217 C845,214 865,220 890,217 C915,214 935,221 960,218 C985,215 1005,221 1030,218 C1055,215 1075,221 1100,218 C1125,215 1145,221 1170,218 C1195,215 1215,222 1240,219 C1265,216 1285,222 1310,219 C1335,216 1355,222 1380,219 C1405,216 1425,222 1450,219 C1475,216 1495,222 1520,219 C1545,216 1565,222 1590,219 L1600,219 L1600,222 L0,222 Z" fill="url(#waterFoam)" opacity="0.45" />
+
+    <!-- LAYER 7: Surface shimmer (scattered light reflections) -->
+    <rect class="waterShim" x="0" y="200" width="1600" height="25" fill="url(#waterShimmer)" opacity="0.4" />
+
+    <!-- Foam particle dots (scattered across wave surface) -->
+    <ellipse cx="120" cy="210" rx="4" ry="2" fill="url(#foamDot)" opacity="0.6" />
+    <ellipse cx="280" cy="212" rx="3" ry="1.5" fill="url(#foamDot)" opacity="0.5" />
+    <ellipse cx="390" cy="208" rx="5" ry="2" fill="url(#foamDot)" opacity="0.55" />
+    <ellipse cx="510" cy="214" rx="3" ry="1.5" fill="url(#foamDot)" opacity="0.45" />
+    <ellipse cx="620" cy="209" rx="4" ry="2" fill="url(#foamDot)" opacity="0.5" />
+    <ellipse cx="740" cy="213" rx="3" ry="1.5" fill="url(#foamDot)" opacity="0.4" />
+    <ellipse cx="180" cy="215" rx="2" ry="1" fill="url(#foamDot)" opacity="0.35" />
+    <ellipse cx="450" cy="211" rx="3" ry="1.5" fill="url(#foamDot)" opacity="0.5" />
+    <ellipse cx="580" cy="216" rx="2" ry="1" fill="url(#foamDot)" opacity="0.3" />
+    <ellipse cx="700" cy="210" rx="4" ry="2" fill="url(#foamDot)" opacity="0.45" />
   </g>
   
   <!-- === NEON GLOWING BORDER (replaces boring grey) === -->
