@@ -75,48 +75,48 @@
 
     <!-- Bright puff (upper cloud highlights) -->
     <radialGradient id="puffBright">
-      <stop offset="0%"  stop-color="#d8e3f2" stop-opacity="1" />
-      <stop offset="35%" stop-color="#b8c7dc" stop-opacity="0.9"  />
-      <stop offset="70%" stop-color="#8e9db4" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#6a7a90" stop-opacity="0.1"   />
+      <stop offset="0%"  stop-color="#e2e8f0" stop-opacity="1" />
+      <stop offset="70%" stop-color="#cbd5e1" stop-opacity="0.95"  />
+      <stop offset="90%" stop-color="#94a3b8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#64748b" stop-opacity="0"   />
     </radialGradient>
 
     <!-- Mid-tone puff (main body) -->
     <radialGradient id="puffMid">
-      <stop offset="0%"  stop-color="#9eaec3" stop-opacity="1"  />
-      <stop offset="30%" stop-color="#7e8f96" stop-opacity="0.85"  />
-      <stop offset="65%" stop-color="#657183" stop-opacity="0.5" />
-      <stop offset="100%" stop-color="#4d5a6c" stop-opacity="0.1"   />
+      <stop offset="0%"  stop-color="#94a3b8" stop-opacity="1"  />
+      <stop offset="75%" stop-color="#64748b" stop-opacity="0.95"  />
+      <stop offset="95%" stop-color="#475569" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#334155" stop-opacity="0"   />
     </radialGradient>
 
     <!-- Dark puff (underbelly / shadow) -->
     <radialGradient id="puffDark">
-      <stop offset="0%"  stop-color="#4a5566" stop-opacity="1" />
-      <stop offset="30%" stop-color="#3e4a5a" stop-opacity="0.8" />
-      <stop offset="65%" stop-color="#2f3947" stop-opacity="0.4"  />
-      <stop offset="100%" stop-color="#212837" stop-opacity="0.1"   />
+      <stop offset="0%"  stop-color="#475569" stop-opacity="1" />
+      <stop offset="75%" stop-color="#334155" stop-opacity="0.95" />
+      <stop offset="95%" stop-color="#1e293b" stop-opacity="0.6"  />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"   />
     </radialGradient>
 
     <!-- Very dark core (deepest shadow) -->
     <radialGradient id="puffDeep">
-      <stop offset="0%"  stop-color="#2a303c" stop-opacity="1"  />
-      <stop offset="40%" stop-color="#212837" stop-opacity="0.7"  />
-      <stop offset="100%" stop-color="#1f273a" stop-opacity="0.1"   />
+      <stop offset="0%"  stop-color="#1e293b" stop-opacity="1"  />
+      <stop offset="80%" stop-color="#0f172a" stop-opacity="0.9"  />
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"   />
     </radialGradient>
 
     <!-- White highlight (top-lit puff) -->
     <radialGradient id="puffWhite">
-      <stop offset="0%"  stop-color="#f2f8ff" stop-opacity="0.9" />
-      <stop offset="30%" stop-color="#dbe5f1" stop-opacity="0.6" />
-      <stop offset="60%" stop-color="#a4b3c8" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#74849b" stop-opacity="0"   />
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#f8fafc" stop-opacity="0.8" />
+      <stop offset="90%" stop-color="#e2e8f0" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#cbd5e1" stop-opacity="0"   />
     </radialGradient>
 
     <!-- Subtle wisp (very faint atmosphere) -->
     <radialGradient id="puffWisp">
-      <stop offset="0%"  stop-color="#a4b3c8" stop-opacity="0.6"  />
-      <stop offset="50%" stop-color="#74849b" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#576579" stop-opacity="0"   />
+      <stop offset="0%"  stop-color="#cbd5e1" stop-opacity="0.5"  />
+      <stop offset="70%" stop-color="#94a3b8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#64748b" stop-opacity="0"   />
     </radialGradient>
 
     <!-- =============================================
