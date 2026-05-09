@@ -77,48 +77,48 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
 
     <!-- Bright puff (upper cloud highlights) -->
     <radialGradient id="puffBright">
-      <stop offset="0%"  stop-color="#c8d3e2" stop-opacity="0.85" />
-      <stop offset="35%" stop-color="#a8b7cc" stop-opacity="0.6"  />
-      <stop offset="70%" stop-color="#7e8da4" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#5a6a80" stop-opacity="0"   />
+      <stop offset="0%"  stop-color="#d8e3f2" stop-opacity="1" />
+      <stop offset="35%" stop-color="#b8c7dc" stop-opacity="0.9"  />
+      <stop offset="70%" stop-color="#8e9db4" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#6a7a90" stop-opacity="0.1"   />
     </radialGradient>
 
     <!-- Mid-tone puff (main body) -->
     <radialGradient id="puffMid">
-      <stop offset="0%"  stop-color="#8e9db3" stop-opacity="0.8"  />
-      <stop offset="30%" stop-color="#6e7f96" stop-opacity="0.6"  />
-      <stop offset="65%" stop-color="#556173" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#3d4a5c" stop-opacity="0"   />
+      <stop offset="0%"  stop-color="#9eaec3" stop-opacity="1"  />
+      <stop offset="30%" stop-color="#7e8f96" stop-opacity="0.85"  />
+      <stop offset="65%" stop-color="#657183" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#4d5a6c" stop-opacity="0.1"   />
     </radialGradient>
 
     <!-- Dark puff (underbelly / shadow) -->
     <radialGradient id="puffDark">
-      <stop offset="0%"  stop-color="#3a4556" stop-opacity="0.75" />
-      <stop offset="30%" stop-color="#2e3a4a" stop-opacity="0.55" />
-      <stop offset="65%" stop-color="#1f2937" stop-opacity="0.2"  />
-      <stop offset="100%" stop-color="#111827" stop-opacity="0"   />
+      <stop offset="0%"  stop-color="#4a5566" stop-opacity="1" />
+      <stop offset="30%" stop-color="#3e4a5a" stop-opacity="0.8" />
+      <stop offset="65%" stop-color="#2f3947" stop-opacity="0.4"  />
+      <stop offset="100%" stop-color="#212837" stop-opacity="0.1"   />
     </radialGradient>
 
     <!-- Very dark core (deepest shadow) -->
     <radialGradient id="puffDeep">
-      <stop offset="0%"  stop-color="#1a202c" stop-opacity="0.7"  />
-      <stop offset="40%" stop-color="#111827" stop-opacity="0.4"  />
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"   />
+      <stop offset="0%"  stop-color="#2a303c" stop-opacity="1"  />
+      <stop offset="40%" stop-color="#212837" stop-opacity="0.7"  />
+      <stop offset="100%" stop-color="#1f273a" stop-opacity="0.1"   />
     </radialGradient>
 
     <!-- White highlight (top-lit puff) -->
     <radialGradient id="puffWhite">
-      <stop offset="0%"  stop-color="#e2e8f0" stop-opacity="0.55" />
-      <stop offset="30%" stop-color="#cbd5e1" stop-opacity="0.35" />
-      <stop offset="60%" stop-color="#94a3b8" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#64748b" stop-opacity="0"   />
+      <stop offset="0%"  stop-color="#f2f8ff" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#dbe5f1" stop-opacity="0.6" />
+      <stop offset="60%" stop-color="#a4b3c8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#74849b" stop-opacity="0"   />
     </radialGradient>
 
     <!-- Subtle wisp (very faint atmosphere) -->
     <radialGradient id="puffWisp">
-      <stop offset="0%"  stop-color="#94a3b8" stop-opacity="0.3"  />
-      <stop offset="50%" stop-color="#64748b" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#475569" stop-opacity="0"   />
+      <stop offset="0%"  stop-color="#a4b3c8" stop-opacity="0.6"  />
+      <stop offset="50%" stop-color="#74849b" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#576579" stop-opacity="0"   />
     </radialGradient>
 
     <!-- =============================================
@@ -271,6 +271,20 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.8"/>
     </filter>
 
+    <!-- =============================================
+         MARINE LIFE SVG DEFINITIONS
+         ============================================= -->
+
+    <!-- Shark Dorsal Fin (Scaled up for visibility) -->
+    <g id="sharkFin">
+      <!-- Main fin -->
+      <path d="M0,24 C4,8 12,-8 16,-20 C20,-8 28,8 32,24 Z" fill="#374151" />
+      <!-- Light edge (catches light) -->
+      <path d="M14,-16 C18,-8 24,4 28,20 C24,8 20,-4 16,-16 Z" fill="#6b7280" opacity="0.5" />
+      <!-- Dark shadow side -->
+      <path d="M2,20 C6,8 12,-4 16,-20 C12,-4 8,8 6,20 Z" fill="#1f2937" opacity="0.4" />
+    </g>
+
     <style>
       .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: -0.5px; }
       .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 0.5s ease-out 5s forwards; opacity: 0; letter-spacing: 0.5px; }
@@ -394,6 +408,36 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
         50% { opacity: 0.9; }
       }
 
+      /* =============================================
+         SHARK FIN ANIMATIONS
+         Fin surfaces, glides forward, then submerges.
+         ============================================= */
+
+      .sharkFin1 {
+        animation: finSurface1 10s ease-in-out infinite;
+      }
+      @keyframes finSurface1 {
+        0%   { transform: translate(0px, 40px); opacity: 0; }
+        8%   { transform: translate(15px, -5px); opacity: 1; }
+        25%  { transform: translate(75px, -20px); opacity: 1; }
+        42%  { transform: translate(135px, -5px); opacity: 1; }
+        50%  { transform: translate(150px, 40px); opacity: 0; }
+        100% { transform: translate(150px, 40px); opacity: 0; }
+      }
+
+      .sharkFin2 {
+        animation: finSurface2 12s ease-in-out infinite;
+        animation-delay: 5s;
+      }
+      @keyframes finSurface2 {
+        0%   { transform: translate(0px, 40px); opacity: 0; }
+        6%   { transform: translate(12px, -8px); opacity: 1; }
+        20%  { transform: translate(60px, -25px); opacity: 1; }
+        35%  { transform: translate(110px, -8px); opacity: 1; }
+        42%  { transform: translate(130px, 40px); opacity: 0; }
+        100% { transform: translate(130px, 40px); opacity: 0; }
+      }
+
       /* === GLITCH / HACKER TEXT EFFECT (RGB channel split) === */
       .glitchR {
         animation: glitchRight 3s steps(1, end) infinite;
@@ -485,7 +529,7 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
 
     <!-- === REALISTIC STORM CLOUD LAYERS === -->
     <!-- Back layer: distant, softer, slower (clouds2 class) -->
-    <g class="clouds2" opacity="0.40">
+    <g class="clouds2" opacity="0.75">
       <use href="#stormCloudC" transform="translate(100, 18) scale(1.4)" />
       <use href="#stormCloudB" transform="translate(350, 8) scale(1.0)" />
       <use href="#stormCloudC" transform="translate(580, 25) scale(1.6)" />
@@ -497,7 +541,7 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
     </g>
 
     <!-- Front layer: larger, closer, more detailed (clouds class) -->
-    <g class="clouds" opacity="0.82">
+    <g class="clouds" opacity="1.0">
       <use href="#stormCloud" transform="translate(30, -10) scale(1.0)" />
       <use href="#stormCloudB" transform="translate(220, 5) scale(1.1)" />
       <use href="#stormCloud" transform="translate(380, -5) scale(1.3)" />
@@ -572,6 +616,22 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
     <ellipse cx="450" cy="211" rx="3" ry="1.5" fill="url(#foamDot)" opacity="0.5" />
     <ellipse cx="580" cy="216" rx="2" ry="1" fill="url(#foamDot)" opacity="0.3" />
     <ellipse cx="700" cy="210" rx="4" ry="2" fill="url(#foamDot)" opacity="0.45" />
+
+    <!-- =============================================
+         MARINE LIFE: SHARK FINS
+         Placed between water layers for depth.
+         ============================================= -->
+
+    <!-- Shark Fin 1: Surfaces left of center -->
+    <g class="sharkFin1" style="transform-origin: 150px 208px;">
+      <use href="#sharkFin" x="150" y="196" />
+    </g>
+
+    <!-- Shark Fin 2: Surfaces right area -->
+    <g class="sharkFin2" style="transform-origin: 550px 210px;">
+      <use href="#sharkFin" x="550" y="198" />
+    </g>
+
   </g>
   
   <!-- === NEON GLOWING BORDER (replaces boring grey) === -->
