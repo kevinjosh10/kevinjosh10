@@ -275,14 +275,14 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
          MARINE LIFE SVG DEFINITIONS
          ============================================= -->
 
-    <!-- Shark Dorsal Fin (Scaled up for visibility) -->
+    <!-- Shark Dorsal Fin (Realistic swept-back curve) -->
     <g id="sharkFin">
       <!-- Main fin -->
-      <path d="M0,24 C4,8 12,-8 16,-20 C20,-8 28,8 32,24 Z" fill="#374151" />
-      <!-- Light edge (catches light) -->
-      <path d="M14,-16 C18,-8 24,4 28,20 C24,8 20,-4 16,-16 Z" fill="#6b7280" opacity="0.5" />
-      <!-- Dark shadow side -->
-      <path d="M2,20 C6,8 12,-4 16,-20 C12,-4 8,8 6,20 Z" fill="#1f2937" opacity="0.4" />
+      <path d="M0,20 C10,10 15,-15 25,-20 C27,-21 30,-19 28,-15 C25,-5 20,10 40,20 Z" fill="#2d3748" />
+      <!-- Light edge (trailing edge) -->
+      <path d="M25,-20 C27,-21 30,-19 28,-15 C25,-5 20,10 40,20 C30,10 27,-10 25,-20 Z" fill="#4a5568" opacity="0.6" />
+      <!-- Dark shadow side (leading edge/base) -->
+      <path d="M0,20 C10,10 15,-15 25,-20 C23,-15 15,5 10,20 Z" fill="#1a202c" opacity="0.5" />
     </g>
 
     <style>
@@ -409,33 +409,40 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       }
 
       /* =============================================
-         SHARK FIN ANIMATIONS
-         Fin surfaces, glides forward, then submerges.
+         SHARK FIN ANIMATIONS (Realistic Patrol)
+         Fin surfaces, glides, submerges, turns around,
+         and swims back the other way.
          ============================================= */
 
       .sharkFin1 {
-        animation: finSurface1 10s ease-in-out infinite;
+        animation: finPatrol1 18s linear infinite;
       }
-      @keyframes finSurface1 {
-        0%   { transform: translate(0px, 40px); opacity: 0; }
-        8%   { transform: translate(15px, -5px); opacity: 1; }
-        25%  { transform: translate(75px, -20px); opacity: 1; }
-        42%  { transform: translate(135px, -5px); opacity: 1; }
-        50%  { transform: translate(150px, 40px); opacity: 0; }
-        100% { transform: translate(150px, 40px); opacity: 0; }
+      @keyframes finPatrol1 {
+        0%   { transform: translateX(0px) translateY(40px) scaleX(1); opacity: 0; }
+        5%   { transform: translateX(30px) translateY(-5px) scaleX(1); opacity: 1; }
+        20%  { transform: translateX(250px) translateY(-5px) scaleX(1); opacity: 1; }
+        25%  { transform: translateX(280px) translateY(40px) scaleX(1); opacity: 0; }
+        50%  { transform: translateX(280px) translateY(40px) scaleX(-1); opacity: 0; }
+        55%  { transform: translateX(250px) translateY(-5px) scaleX(-1); opacity: 1; }
+        70%  { transform: translateX(30px) translateY(-5px) scaleX(-1); opacity: 1; }
+        75%  { transform: translateX(0px) translateY(40px) scaleX(-1); opacity: 0; }
+        100% { transform: translateX(0px) translateY(40px) scaleX(1); opacity: 0; }
       }
 
       .sharkFin2 {
-        animation: finSurface2 12s ease-in-out infinite;
-        animation-delay: 5s;
+        animation: finPatrol2 22s linear infinite;
+        animation-delay: -7s;
       }
-      @keyframes finSurface2 {
-        0%   { transform: translate(0px, 40px); opacity: 0; }
-        6%   { transform: translate(12px, -8px); opacity: 1; }
-        20%  { transform: translate(60px, -25px); opacity: 1; }
-        35%  { transform: translate(110px, -8px); opacity: 1; }
-        42%  { transform: translate(130px, 40px); opacity: 0; }
-        100% { transform: translate(130px, 40px); opacity: 0; }
+      @keyframes finPatrol2 {
+        0%   { transform: translateX(0px) translateY(40px) scaleX(-1); opacity: 0; }
+        5%   { transform: translateX(-30px) translateY(-8px) scaleX(-1); opacity: 1; }
+        20%  { transform: translateX(-300px) translateY(-8px) scaleX(-1); opacity: 1; }
+        25%  { transform: translateX(-330px) translateY(40px) scaleX(-1); opacity: 0; }
+        50%  { transform: translateX(-330px) translateY(40px) scaleX(1); opacity: 0; }
+        55%  { transform: translateX(-300px) translateY(-8px) scaleX(1); opacity: 1; }
+        70%  { transform: translateX(-30px) translateY(-8px) scaleX(1); opacity: 1; }
+        75%  { transform: translateX(0px) translateY(40px) scaleX(1); opacity: 0; }
+        100% { transform: translateX(0px) translateY(40px) scaleX(-1); opacity: 0; }
       }
 
       /* === GLITCH / HACKER TEXT EFFECT (RGB channel split) === */
@@ -622,14 +629,14 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
          Placed between water layers for depth.
          ============================================= -->
 
-    <!-- Shark Fin 1: Surfaces left of center -->
-    <g class="sharkFin1" style="transform-origin: 150px 208px;">
+    <!-- Shark Fin 1: Patrols left side -->
+    <g class="sharkFin1" style="transform-origin: 170px 196px;">
       <use href="#sharkFin" x="150" y="196" />
     </g>
 
-    <!-- Shark Fin 2: Surfaces right area -->
-    <g class="sharkFin2" style="transform-origin: 550px 210px;">
-      <use href="#sharkFin" x="550" y="198" />
+    <!-- Shark Fin 2: Patrols right side -->
+    <g class="sharkFin2" style="transform-origin: 670px 202px;">
+      <use href="#sharkFin" x="650" y="202" />
     </g>
 
   </g>
