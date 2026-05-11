@@ -15,7 +15,7 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">// This line doesn't actually do anything,</text>
-<text x="50%" y="85" class="text">but the code stops working when I delete it.</text>
+  <text x="50%" y="60" class="text">Java is like Alzheimer's, it starts off slow,</text>
+<text x="50%" y="85" class="text">but eventually, your memory is gone.</text>
 
 </svg>
