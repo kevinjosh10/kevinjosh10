@@ -1,4 +1,4 @@
-<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -15,8 +15,7 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">Being a self-taught developer is almost the</text>
-<text x="50%" y="85" class="text">same as being a cut neck chicken because you</text>
-<text x="50%" y="110" class="text">have no sense of direction in the beginning.</text>
+  <text x="50%" y="60" class="text">If Bill Gates had a dime for every time</text>
+<text x="50%" y="85" class="text">Windows crashed ... Oh wait, he does.</text>
 
 </svg>
