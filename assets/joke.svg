@@ -1,4 +1,4 @@
-<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -15,8 +15,7 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">There are only 10 kinds of people in this</text>
-<text x="50%" y="85" class="text">world: those who know binary and those who</text>
-<text x="50%" y="110" class="text">don't.</text>
+  <text x="50%" y="60" class="text">I've got a really good UDP joke to tell you</text>
+<text x="50%" y="85" class="text">but I don’t know if you'll get it.</text>
 
 </svg>
