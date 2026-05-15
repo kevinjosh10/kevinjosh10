@@ -1,4 +1,4 @@
-<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -15,8 +15,9 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">How do you tell HTML from HTML5? - Try it out</text>
-<text x="50%" y="85" class="text">in Internet Explorer - Did it work? - No? -</text>
-<text x="50%" y="110" class="text">It's HTML5.</text>
+  <text x="50%" y="60" class="text">Judge: "I sentence you to the maximum</text>
+<text x="50%" y="85" class="text">punishment..." Me (thinking): "Please be</text>
+<text x="50%" y="110" class="text">death, please be death..." Judge: "Learn</text>
+<text x="50%" y="135" class="text">Java!" Me: "Damn."</text>
 
 </svg>
