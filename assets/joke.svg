@@ -1,4 +1,4 @@
-<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="255" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -15,7 +15,12 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">I'd tell you a joke about NAT but I would</text>
-<text x="50%" y="85" class="text">have to translate.</text>
+  <text x="50%" y="60" class="text">Four engineers get into a car. The car won't</text>
+<text x="50%" y="85" class="text">start. The Mechanical engineer says "It's a</text>
+<text x="50%" y="110" class="text">broken starter". The Electrical engineer says</text>
+<text x="50%" y="135" class="text">"Dead battery". The Chemical engineer says</text>
+<text x="50%" y="160" class="text">"Impurities in the gasoline". The IT engineer</text>
+<text x="50%" y="185" class="text">says "Hey guys, I have an idea: How about we</text>
+<text x="50%" y="210" class="text">all get out of the car and get back in".</text>
 
 </svg>
