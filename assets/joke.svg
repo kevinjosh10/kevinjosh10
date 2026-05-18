@@ -1,4 +1,4 @@
-<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -15,9 +15,8 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">Two reasons I don't give money to homeless</text>
-<text x="50%" y="85" class="text">people. 1) They are going to spend it all on</text>
-<text x="50%" y="110" class="text">drugs and alcohol 2) I am going to spend it</text>
-<text x="50%" y="135" class="text">all on drugs and alcohol.</text>
+  <text x="50%" y="60" class="text">Eight bytes walk into a bar. The bartender</text>
+<text x="50%" y="85" class="text">asks, "Can I get you anything?" "Yeah," reply</text>
+<text x="50%" y="110" class="text">the bytes. "Make us a double."</text>
 
 </svg>
