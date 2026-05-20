@@ -1,4 +1,4 @@
-<svg width="500" height="205" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="105" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -15,10 +15,6 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">Today I learned that changing random stuff</text>
-<text x="50%" y="85" class="text">until your program works is "hacky" and a</text>
-<text x="50%" y="110" class="text">"bad coding practice" but if you do it fast</text>
-<text x="50%" y="135" class="text">enough it's "Machine Learning" and pays 4x</text>
-<text x="50%" y="160" class="text">your current salary.</text>
+  <text x="50%" y="60" class="text">"We messed up the keming again guys."</text>
 
 </svg>
