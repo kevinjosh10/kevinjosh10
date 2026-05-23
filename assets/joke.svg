@@ -15,10 +15,10 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">My wife and I have reached the difficult</text>
-<text x="50%" y="85" class="text">decision that we do not want children. If</text>
-<text x="50%" y="110" class="text">anybody does, please just send me your</text>
-<text x="50%" y="135" class="text">contact details and we can drop them off</text>
-<text x="50%" y="160" class="text">tomorrow.</text>
+  <text x="50%" y="60" class="text">The six stages of debugging: 1. That can't</text>
+<text x="50%" y="85" class="text">happen. 2. That doesn't happen on my machine.</text>
+<text x="50%" y="110" class="text">3. That shouldn't happen. 4. Why does that</text>
+<text x="50%" y="135" class="text">happen? 5. Oh, I see. 6. How did that ever</text>
+<text x="50%" y="160" class="text">work?</text>
 
 </svg>
