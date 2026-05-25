@@ -1,4 +1,4 @@
-<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="205" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -15,7 +15,10 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">My parents raised me as an only child, which</text>
-<text x="50%" y="85" class="text">really annoyed my younger brother.</text>
+  <text x="50%" y="60" class="text">A guy walks into a bar and asks for 1.4 root</text>
+<text x="50%" y="85" class="text">beers. The bartender says "I'll have to</text>
+<text x="50%" y="110" class="text">charge you extra, that's a root beer float".</text>
+<text x="50%" y="135" class="text">The guy says "In that case, better make it a</text>
+<text x="50%" y="160" class="text">double."</text>
 
 </svg>
