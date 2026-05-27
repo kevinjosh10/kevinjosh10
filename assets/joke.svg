@@ -1,4 +1,4 @@
-<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -15,9 +15,7 @@
   
   <text x="50%" y="30" class="title">💻 Dev Joke of the Day</text>
   
-  <text x="50%" y="60" class="text">Java and C were telling jokes. It was C's</text>
-<text x="50%" y="85" class="text">turn, so he writes something on the wall,</text>
-<text x="50%" y="110" class="text">points to it and says "Do you get the</text>
-<text x="50%" y="135" class="text">reference?" But Java didn't.</text>
+  <text x="50%" y="60" class="text">My parents raised me as an only child, which</text>
+<text x="50%" y="85" class="text">really annoyed my younger brother.</text>
 
 </svg>
