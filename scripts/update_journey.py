@@ -112,7 +112,7 @@ def generate_svg(days_passed, total_days):
 def update_activity_graph():
     """Downloads the activity graph and injects SMIL animations for GitHub rendering."""
     print("Generating animated activity graph...")
-    url = 'https://github-readme-activity-graph.vercel.app/graph?username=kevinjosh10&theme=redical&hide_border=true&area=true&custom_title=Contribution%20Activity'
+    url = 'https://github-readme-activity-graph.vercel.app/graph?username=kevinjosh10&theme=tokyonight&hide_border=true&area=true&custom_title=Contribution%20Activity'
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req) as response:
@@ -121,22 +121,23 @@ def update_activity_graph():
         # Add <defs> for the highly visible multicolour moving gradient
         defs = """<defs>
           <linearGradient id="movingGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-opacity="0.95">
-              <animate attributeName="stop-color" values="#ff0055;#ffee00;#00ff55;#00ffff;#0055ff;#aa00ff;#ff0055" dur="3s" repeatCount="indefinite" />
+            <stop offset="0%" stop-opacity="0.85">
+              <animate attributeName="stop-color" values="#00f2fe;#39ff14;#00f2fe" dur="3s" repeatCount="indefinite" />
             </stop>
-            <stop offset="25%" stop-opacity="0.95">
-              <animate attributeName="stop-color" values="#ffee00;#00ff55;#00ffff;#0055ff;#aa00ff;#ff0055;#ffee00" dur="3s" repeatCount="indefinite" />
+            <stop offset="50%" stop-opacity="0.85">
+              <animate attributeName="stop-color" values="#39ff14;#00f2fe;#39ff14" dur="3s" repeatCount="indefinite" />
             </stop>
-            <stop offset="50%" stop-opacity="0.95">
-              <animate attributeName="stop-color" values="#00ff55;#00ffff;#0055ff;#aa00ff;#ff0055;#ffee00;#00ff55" dur="3s" repeatCount="indefinite" />
-            </stop>
-            <stop offset="75%" stop-opacity="0.95">
-              <animate attributeName="stop-color" values="#00ffff;#0055ff;#aa00ff;#ff0055;#ffee00;#00ff55;#00ffff" dur="3s" repeatCount="indefinite" />
-            </stop>
-            <stop offset="100%" stop-opacity="0.95">
-              <animate attributeName="stop-color" values="#0055ff;#aa00ff;#ff0055;#ffee00;#00ff55;#00ffff;#0055ff" dur="3s" repeatCount="indefinite" />
+            <stop offset="100%" stop-opacity="0.85">
+              <animate attributeName="stop-color" values="#00f2fe;#39ff14;#00f2fe" dur="3s" repeatCount="indefinite" />
             </stop>
           </linearGradient>
+          <filter id="neonGlow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
         </defs>"""
         
         # Inject defs right after <svg ...>
@@ -145,10 +146,10 @@ def update_activity_graph():
         # Remove the solid background card
         svg_data = re.sub(r'<rect[^>]*id="cardBg"[^>]*>', '', svg_data)
         
-        # Line animation - continuous drawing trace and pulse
+        # Line animation - continuous drawing trace and pulse with neon glow
         svg_data = re.sub(
             r'(<path[^>]*class="ct-line"[^>]*)></path>',
-            r'\1><animate attributeName="stroke-dashoffset" from="5000" to="0" dur="5s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" /></path>',
+            r'\1 style="stroke: #00f2fe !important; filter: url(#neonGlow) !important;"><animate attributeName="stroke-dashoffset" from="5000" to="0" dur="5s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" /></path>',
             svg_data
         )
         
@@ -159,10 +160,10 @@ def update_activity_graph():
             svg_data
         )
 
-        # Point animation - continuous bouncing and fading
+        # Point animation - continuous bouncing and fading with neon glow
         svg_data = re.sub(
             r'(<line[^>]*class="ct-point"[^>]*)></line>',
-            r'\1><animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="2s" repeatCount="indefinite" /></line>',
+            r'\1 style="stroke: #39ff14 !important; filter: url(#neonGlow) !important;"><animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="2s" repeatCount="indefinite" /></line>',
             svg_data
         )
 

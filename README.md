@@ -67,7 +67,7 @@
 <div align="center">
   <br>
   <a href="https://github.com/kevinjosh10">
-    <img src="https://streak-stats.demolab.com/?user=kevinjosh10&theme=radical&hide_border=true&bg_color=00000000" width="60%" />
+    <img src="https://streak-stats.demolab.com/?user=kevinjosh10&theme=transparent&hide_border=true&ring=00f2fe&fire=39ff14&currStreakNum=39ff14&currStreakLabel=00f2fe&sideNums=e2e8f0&sideLabels=94a3b8&dates=94a3b8" width="60%" />
   </a>
 </div>
 
