@@ -44,9 +44,7 @@
 ### 🛠️ `kevin@aws:~$ ls /usr/local/skills`
 
 <div align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=aws,linux,python,cpp,c,java,docker,kubernetes,git,githubactions,bash,firebase,js&theme=dark" />
-  </a>
+    <img src="assets/skills.svg" alt="Terminal Skills Matrix" width="100%" />
 </div>
 
 ---

@@ -31,6 +31,7 @@ jobs:
           python scripts/generate_quote.py
           python scripts/generate_mission.py
           python scripts/generate_views.py
+          python scripts/generate_skills.py
       - name: Commit & Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

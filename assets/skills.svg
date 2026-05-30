@@ -1,0 +1,77 @@
+<svg width="800" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #0f172a; rx: 10px; }
+      .topbar { fill: #1e293b; }
+      .btn-red { fill: #ef4444; }
+      .btn-yellow { fill: #eab308; }
+      .btn-green { fill: #22c55e; }
+      
+      .line {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 15px;
+        fill: #94a3b8;
+        opacity: 0;
+        animation: type 0.1s forwards;
+      }
+      .prompt { fill: #00f2fe; font-weight: bold; }
+      .ok { fill: #39ff14; font-weight: bold; }
+      
+      @keyframes type {
+        to { opacity: 1; }
+      }
+      
+      .blink {
+        animation: type 0.1s forwards, blinkCursor 1s step-end infinite 8.5s !important;
+      }
+      @keyframes blinkCursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      
+    .l0 { animation-delay: 0.5s; }
+    .l1 { animation-delay: 1.5s; }
+    .l2 { animation-delay: 2.1s; }
+    .l3 { animation-delay: 2.7s; }
+    .l4 { animation-delay: 3.3s; }
+    .l5 { animation-delay: 3.9s; }
+    .l6 { animation-delay: 4.5s; }
+    .l7 { animation-delay: 5.1s; }
+    .l8 { animation-delay: 5.7s; }
+    .l9 { animation-delay: 6.3s; }
+    .l10 { animation-delay: 6.9s; }
+    .l11 { animation-delay: 7.9s; }
+
+    </style>
+  </defs>
+
+  <!-- Terminal Window -->
+  <rect width="100%" height="100%" class="bg" />
+  
+  <!-- Top Bar -->
+  <path d="M 0 10 Q 0 0 10 0 L 790 0 Q 800 0 800 10 L 800 25 L 0 25 Z" class="topbar" />
+  
+  <!-- Window Buttons -->
+  <circle cx="20" cy="12.5" r="5" class="btn-red" />
+  <circle cx="40" cy="12.5" r="5" class="btn-yellow" />
+  <circle cx="60" cy="12.5" r="5" class="btn-green" />
+  
+  <!-- Terminal Title -->
+  <text x="400" y="17" font-family="-apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">kevin@aws: ~/skills</text>
+
+  <!-- Content -->
+  <g transform="translate(0, 10)">
+    <text x="20" y="45" class="line l0 prompt">kevin@aws:~$ ./init_cloud_infrastructure.sh</text>
+    <text x="20" y="70" class="line l1"><tspan class="ok">[ OK ]</tspan> Booting KevinOS v1.0.0...</text>
+    <text x="20" y="95" class="line l2"><tspan class="ok">[ OK ]</tspan> Initializing AWS Architecture...</text>
+    <text x="20" y="120" class="line l3"><tspan class="ok">[ OK ]</tspan> Loading Python 3.10 Runtime...</text>
+    <text x="20" y="145" class="line l4"><tspan class="ok">[ OK ]</tspan> Compiling C/C++ Core Binaries...</text>
+    <text x="20" y="170" class="line l5"><tspan class="ok">[ OK ]</tspan> Mounting Docker Containers & Kubernetes Pods...</text>
+    <text x="20" y="195" class="line l6"><tspan class="ok">[ OK ]</tspan> Starting Java Virtual Machine...</text>
+    <text x="20" y="220" class="line l7"><tspan class="ok">[ OK ]</tspan> Establishing Git & GitHub Actions CI/CD pipelines...</text>
+    <text x="20" y="245" class="line l8"><tspan class="ok">[ OK ]</tspan> Configuring Bash Environment & Linux Kernel...</text>
+    <text x="20" y="270" class="line l9"><tspan class="ok">[ OK ]</tspan> Connecting Firebase & JS Front-end Services...</text>
+    <text x="20" y="295" class="line l10"><tspan class="ok">[ OK ]</tspan> All systems operational. Ready to build.</text>
+    <text x="20" y="320" class="line l11 blink">kevin@aws:~$ _</text>
+  </g>
+</svg>
