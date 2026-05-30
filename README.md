@@ -41,12 +41,9 @@
 
 ### 📂 Featured Architecture & Engineering Projects
 
-| Project | Description | Key Tech |
-|---------|-------------|----------|
-| **[Production-Grade S3 Backup Tool](https://github.com/kevinjosh10/s3-backup-tool)** | A resilient, industry-standard CLI utility for metadata-based incremental synchronization, AWS encryption, and lifecycle automation. | `Python`, `AWS S3`, `Boto3` |
-| **[CloudMorph Serverless](https://github.com/kevinjosh10/CloudMorph)** | A serverless file intelligence platform deployed on AWS. Handles secure cross-origin uploads and pre-signed URL generation via Lambda. | `AWS Lambda`, `API Gateway` |
-| **[Cryptexa & JCE Hub](https://github.com/kevinjosh10/Cryptexa)** | Modular, full-stack community platforms built with modern web architecture, featuring decoupled frontend/backend services. | `Web Arch`, `Serverless` |
-| **[EMG Sensor Firmware](https://github.com/kevinjosh10/emg-sensor)** | End-to-end IoT architecture bridging embedded firmware with modular backend telemetry routing and a monitoring dashboard. | `IoT`, `Hardware Arch` |
+<div align="center">
+  <img src="assets/projects.svg?v=1" alt="Featured Projects" width="100%" />
+</div>
 
 ---
 
