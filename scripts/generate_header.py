@@ -388,6 +388,22 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
         100% { transform: translateY(0px); }
       }
 
+      /* === RAIN SPLASHES ON WATER === */
+      .splashCircle {
+        animation: ripple 0.6s linear infinite;
+      }
+      .del0 { animation-delay: 0.0s; }
+      .del1 { animation-delay: 0.1s; }
+      .del2 { animation-delay: 0.2s; }
+      .del3 { animation-delay: 0.3s; }
+      .del4 { animation-delay: 0.4s; }
+      .del5 { animation-delay: 0.5s; }
+
+      @keyframes ripple {
+        0% { transform: scale(0.2); opacity: 0.8; }
+        100% { transform: scale(2.5); opacity: 0; }
+      }
+
       /* === SKY FLASH (ambient glow during lightning) === */
       .skyFlash { animation: ambientFlash 4s ease-in-out infinite; }
       .skyFlash1 { animation-delay: 0s; }
@@ -651,6 +667,28 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
     <ellipse cx="450" cy="211" rx="3" ry="1.5" fill="url(#foamDot)" opacity="0.5" />
     <ellipse cx="580" cy="216" rx="2" ry="1" fill="url(#foamDot)" opacity="0.3" />
     <ellipse cx="700" cy="210" rx="4" ry="2" fill="url(#foamDot)" opacity="0.45" />
+
+    <!-- === RAIN SPLASHES ON WATER SURFACE === -->
+    <g class="splashes" opacity="0.6">
+      <g transform="translate(40, 205)"><ellipse class="splashCircle del0" cx="0" cy="0" rx="3" ry="1" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(150, 212)"><ellipse class="splashCircle del3" cx="0" cy="0" rx="4" ry="1.5" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(280, 208)"><ellipse class="splashCircle del1" cx="0" cy="0" rx="3" ry="1" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(390, 215)"><ellipse class="splashCircle del4" cx="0" cy="0" rx="2" ry="0.5" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(510, 206)"><ellipse class="splashCircle del2" cx="0" cy="0" rx="3" ry="1" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(640, 218)"><ellipse class="splashCircle del5" cx="0" cy="0" rx="3" ry="1" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(750, 210)"><ellipse class="splashCircle del0" cx="0" cy="0" rx="4" ry="1.5" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(85, 216)"><ellipse class="splashCircle del3" cx="0" cy="0" rx="3" ry="1" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(220, 207)"><ellipse class="splashCircle del1" cx="0" cy="0" rx="3" ry="1" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(330, 214)"><ellipse class="splashCircle del4" cx="0" cy="0" rx="4" ry="1.5" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(460, 205)"><ellipse class="splashCircle del2" cx="0" cy="0" rx="3" ry="1" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(580, 211)"><ellipse class="splashCircle del5" cx="0" cy="0" rx="2" ry="0.5" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(710, 217)"><ellipse class="splashCircle del0" cx="0" cy="0" rx="4" ry="1.5" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(190, 209)"><ellipse class="splashCircle del2" cx="0" cy="0" rx="3" ry="1" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(410, 213)"><ellipse class="splashCircle del4" cx="0" cy="0" rx="3" ry="1" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(540, 208)"><ellipse class="splashCircle del1" cx="0" cy="0" rx="2" ry="0.5" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(680, 206)"><ellipse class="splashCircle del5" cx="0" cy="0" rx="4" ry="1.5" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+      <g transform="translate(780, 215)"><ellipse class="splashCircle del3" cx="0" cy="0" rx="3" ry="1" fill="none" stroke="#e0f2fe" stroke-width="0.8"/></g>
+    </g>
 
     <!-- =============================================
          MARINE LIFE: SHARK FINS

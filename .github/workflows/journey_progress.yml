@@ -28,7 +28,7 @@ jobs:
           python scripts/generate_about_me.py
           python scripts/update_journey.py
           python scripts/generate_header.py
-          python scripts/generate_joke.py
+          python scripts/generate_quote.py
       - name: Commit & Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/header.svg?v=25" alt="Profile Header" width="100%" />
+  <img src="assets/header.svg?v=26" alt="Profile Header" width="100%" />
 </div>
 
 <div align="center">
@@ -81,7 +81,7 @@
 
 <div align="center">
   <br>
-  <img src="assets/joke.svg" alt="Dev Joke of the Day" />
+  <img src="assets/quote.svg" alt="Motivational Quote of the Day" />
 </div>
 
 <div align="center">
