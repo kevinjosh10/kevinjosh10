@@ -7,11 +7,11 @@ def generate_skills_svg():
         "[ OK ] Initializing AWS Architecture...",
         "[ OK ] Loading Python 3.10 Runtime...",
         "[ OK ] Compiling C/C++ Core Binaries...",
-        "[ OK ] Mounting Docker Containers & Kubernetes Pods...",
+        "[ OK ] Mounting Docker Containers &amp; Kubernetes Pods...",
         "[ OK ] Starting Java Virtual Machine...",
-        "[ OK ] Establishing Git & GitHub Actions CI/CD pipelines...",
-        "[ OK ] Configuring Bash Environment & Linux Kernel...",
-        "[ OK ] Connecting Firebase & JS Front-end Services...",
+        "[ OK ] Establishing Git &amp; GitHub Actions CI/CD pipelines...",
+        "[ OK ] Configuring Bash Environment &amp; Linux Kernel...",
+        "[ OK ] Connecting Firebase &amp; JS Front-end Services...",
         "[ OK ] All systems operational. Ready to build.",
         "kevin@aws:~$ _"
     ]

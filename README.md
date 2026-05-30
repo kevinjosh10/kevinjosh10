@@ -44,7 +44,7 @@
 ### 🛠️ `kevin@aws:~$ ls /usr/local/skills`
 
 <div align="center">
-    <img src="assets/skills.svg" alt="Terminal Skills Matrix" width="100%" />
+    <img src="assets/skills.svg?v=2" alt="Terminal Skills Matrix" width="100%" />
 </div>
 
 ---

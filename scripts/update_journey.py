@@ -118,7 +118,7 @@ def update_activity_graph():
         with urllib.request.urlopen(req) as response:
             svg_data = response.read().decode('utf-8')
 
-        # Add <defs> for the highly visible multicolour moving gradient
+        # Add <defs> and <style> for the highly visible neon rendering
         defs = """<defs>
           <linearGradient id="movingGradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-opacity="0.85">
@@ -138,6 +138,11 @@ def update_activity_graph():
               <feMergeNode in="SourceGraphic"/>
             </feMerge>
           </filter>
+          <style>
+            .ct-line { stroke: #00f2fe !important; filter: url(#neonGlow) !important; }
+            .ct-point { stroke: #39ff14 !important; filter: url(#neonGlow) !important; }
+            .ct-area { fill: url(#movingGradient) !important; opacity: 1 !important; }
+          </style>
         </defs>"""
         
         # Inject defs right after <svg ...>
@@ -146,24 +151,17 @@ def update_activity_graph():
         # Remove the solid background card
         svg_data = re.sub(r'<rect[^>]*id="cardBg"[^>]*>', '', svg_data)
         
-        # Line animation - continuous drawing trace and pulse with neon glow
+        # Line animation - continuous drawing trace and pulse
         svg_data = re.sub(
             r'(<path[^>]*class="ct-line"[^>]*)></path>',
-            r'\1 style="stroke: #00f2fe !important; filter: url(#neonGlow) !important;"><animate attributeName="stroke-dashoffset" from="5000" to="0" dur="5s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" /></path>',
-            svg_data
-        )
-        
-        # Area animation - moving gradient fill!
-        svg_data = re.sub(
-            r'(<path[^>]*class="ct-area"[^>]*)></path>',
-            r'\1 style="fill: url(#movingGradient) !important;" opacity="1"></path>',
+            r'\1><animate attributeName="stroke-dashoffset" from="5000" to="0" dur="5s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" /></path>',
             svg_data
         )
 
-        # Point animation - continuous bouncing and fading with neon glow
+        # Point animation - continuous bouncing
         svg_data = re.sub(
             r'(<line[^>]*class="ct-point"[^>]*)></line>',
-            r'\1 style="stroke: #39ff14 !important; filter: url(#neonGlow) !important;"><animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="2s" repeatCount="indefinite" /></line>',
+            r'\1><animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="2s" repeatCount="indefinite" /></line>',
             svg_data
         )
 

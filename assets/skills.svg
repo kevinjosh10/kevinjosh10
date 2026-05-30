@@ -66,11 +66,11 @@
     <text x="20" y="95" class="line l2"><tspan class="ok">[ OK ]</tspan> Initializing AWS Architecture...</text>
     <text x="20" y="120" class="line l3"><tspan class="ok">[ OK ]</tspan> Loading Python 3.10 Runtime...</text>
     <text x="20" y="145" class="line l4"><tspan class="ok">[ OK ]</tspan> Compiling C/C++ Core Binaries...</text>
-    <text x="20" y="170" class="line l5"><tspan class="ok">[ OK ]</tspan> Mounting Docker Containers & Kubernetes Pods...</text>
+    <text x="20" y="170" class="line l5"><tspan class="ok">[ OK ]</tspan> Mounting Docker Containers &amp; Kubernetes Pods...</text>
     <text x="20" y="195" class="line l6"><tspan class="ok">[ OK ]</tspan> Starting Java Virtual Machine...</text>
-    <text x="20" y="220" class="line l7"><tspan class="ok">[ OK ]</tspan> Establishing Git & GitHub Actions CI/CD pipelines...</text>
-    <text x="20" y="245" class="line l8"><tspan class="ok">[ OK ]</tspan> Configuring Bash Environment & Linux Kernel...</text>
-    <text x="20" y="270" class="line l9"><tspan class="ok">[ OK ]</tspan> Connecting Firebase & JS Front-end Services...</text>
+    <text x="20" y="220" class="line l7"><tspan class="ok">[ OK ]</tspan> Establishing Git &amp; GitHub Actions CI/CD pipelines...</text>
+    <text x="20" y="245" class="line l8"><tspan class="ok">[ OK ]</tspan> Configuring Bash Environment &amp; Linux Kernel...</text>
+    <text x="20" y="270" class="line l9"><tspan class="ok">[ OK ]</tspan> Connecting Firebase &amp; JS Front-end Services...</text>
     <text x="20" y="295" class="line l10"><tspan class="ok">[ OK ]</tspan> All systems operational. Ready to build.</text>
     <text x="20" y="320" class="line l11 blink">kevin@aws:~$ _</text>
   </g>
