@@ -77,6 +77,9 @@
             <rect x="193" y="175" width="56" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
             <text x="221.0" y="191" class="tag" fill="#00f2fe">Boto3</text>
             
+            <rect x="259" y="175" width="40" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
+            <text x="279.0" y="191" class="tag" fill="#00f2fe">CLI</text>
+            
         </g>
         
         <!-- Card: CloudMorph -->
@@ -97,11 +100,17 @@
 <text x="435" y="144" class="desc">and pre-signed URLs via Lambda.</text>
 
             
-            <rect x="435" y="175" width="96" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
-            <text x="483.0" y="191" class="tag" fill="#39ff14">AWS Lambda</text>
+            <rect x="435" y="175" width="64" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
+            <text x="467.0" y="191" class="tag" fill="#39ff14">Lambda</text>
             
-            <rect x="541" y="175" width="104" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
-            <text x="593.0" y="191" class="tag" fill="#39ff14">API Gateway</text>
+            <rect x="509" y="175" width="80" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
+            <text x="549.0" y="191" class="tag" fill="#39ff14">API Gtwy</text>
+            
+            <rect x="599" y="175" width="32" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
+            <text x="615.0" y="191" class="tag" fill="#39ff14">S3</text>
+            
+            <rect x="641" y="175" width="64" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
+            <text x="673.0" y="191" class="tag" fill="#39ff14">Python</text>
             
         </g>
         
@@ -118,16 +127,19 @@
             
             <text x="80" y="273" class="title" fill="#ff007f">Cryptexa</text>
             
-            <text x="45" y="310" class="desc">Modular full-stack community platform</text>
-<text x="45" y="332" class="desc">built with modern web architecture</text>
-<text x="45" y="354" class="desc">and decoupled serverless backends.</text>
+            <text x="45" y="310" class="desc">Full-stack student community hub for</text>
+<text x="45" y="332" class="desc">resource sharing &amp; real-time forums.</text>
+<text x="45" y="354" class="desc">Built with a decoupled serverless backend.</text>
 
             
-            <rect x="45" y="385" width="80" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
-            <text x="85.0" y="401" class="tag" fill="#ff007f">Web Arch</text>
+            <rect x="45" y="385" width="56" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
+            <text x="73.0" y="401" class="tag" fill="#ff007f">React</text>
             
-            <rect x="135" y="385" width="96" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
-            <text x="183.0" y="401" class="tag" fill="#ff007f">Serverless</text>
+            <rect x="111" y="385" width="72" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
+            <text x="147.0" y="401" class="tag" fill="#ff007f">Node.js</text>
+            
+            <rect x="193" y="385" width="96" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
+            <text x="241.0" y="401" class="tag" fill="#ff007f">Serverless</text>
             
         </g>
         

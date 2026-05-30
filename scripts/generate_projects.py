@@ -10,7 +10,7 @@ def generate_projects_svg():
                 "based incremental synchronization,",
                 "encryption, and lifecycle automation."
             ],
-            "tags": ["Python", "AWS S3", "Boto3"],
+            "tags": ["Python", "AWS S3", "Boto3", "CLI"],
             "color": "#00f2fe", # Cyan
             "x": 20, "y": 20
         },
@@ -22,7 +22,7 @@ def generate_projects_svg():
                 "handling secure cross-origin uploads",
                 "and pre-signed URLs via Lambda."
             ],
-            "tags": ["AWS Lambda", "API Gateway"],
+            "tags": ["Lambda", "API Gtwy", "S3", "Python"],
             "color": "#39ff14", # Green
             "x": 410, "y": 20
         },
@@ -30,11 +30,11 @@ def generate_projects_svg():
             "title": "Cryptexa",
             "link": "https://github.com/kevinjosh10/Cryptexa",
             "desc": [
-                "Modular full-stack community platform",
-                "built with modern web architecture",
-                "and decoupled serverless backends."
+                "Full-stack student community hub for",
+                "resource sharing &amp; real-time forums.",
+                "Built with a decoupled serverless backend."
             ],
-            "tags": ["Web Arch", "Serverless"],
+            "tags": ["React", "Node.js", "Serverless"],
             "color": "#ff007f", # Pink
             "x": 20, "y": 230
         },
