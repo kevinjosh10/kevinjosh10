@@ -17,7 +17,7 @@
               <animate attributeName="stop-color" values="#00f2fe;#39ff14;#00f2fe" dur="3s" repeatCount="indefinite" />
             </stop>
           </linearGradient>
-          <filter id="neonGlow">
+          <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
             <feMerge>
               <feMergeNode in="coloredBlur"/>
