@@ -124,8 +124,8 @@ def update_activity_graph():
             <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.6" />
             <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.0" />
           </linearGradient>
-          <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+          <filter id="neonGlow" filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
             <feMerge>
               <feMergeNode in="coloredBlur"/>
               <feMergeNode in="SourceGraphic"/>
@@ -133,7 +133,7 @@ def update_activity_graph():
           </filter>
           <style>
             .ct-line { stroke: #00f2fe !important; stroke-width: 3px !important; filter: url(#neonGlow) !important; }
-            .ct-point { stroke: #39ff14 !important; stroke-width: 6px !important; filter: url(#neonGlow) !important; }
+            .ct-point { stroke: #39ff14 !important; stroke-width: 8px !important; stroke-linecap: round !important; filter: url(#neonGlow) !important; }
             .ct-area { fill: url(#fadeGradient) !important; fill-opacity: 1 !important; }
             .ct-grid { stroke: #1e293b !important; stroke-dasharray: 4 !important; }
           </style>

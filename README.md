@@ -59,7 +59,7 @@
 <div align="center">
   <br>
   <a href="https://github.com/kevinjosh10">
-    <img src="assets/activity.svg" width="98%" alt="Contribution Activity Graph" />
+    <img src="assets/activity.svg?v=1" width="98%" alt="Contribution Activity Graph" />
   </a>
 </div>
 
