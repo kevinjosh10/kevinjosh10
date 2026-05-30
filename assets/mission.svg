@@ -1,21 +1,24 @@
 <svg width="650" height="80" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Animated Cyberpunk Gradient -->
-    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ff007f">
-        <animate attributeName="stop-color" values="#ff007f;#7928ca;#ff007f" dur="4s" repeatCount="indefinite" />
+    <!-- Animated Vibrant Multi-Color Gradient -->
+    <linearGradient id="vibrantGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe">
+        <animate attributeName="stop-color" values="#00f2fe;#39ff14;#ff007f;#ffea00;#00f2fe" dur="6s" repeatCount="indefinite" />
       </stop>
-      <stop offset="50%" stop-color="#7928ca">
-        <animate attributeName="stop-color" values="#7928ca;#4338ca;#7928ca" dur="4s" repeatCount="indefinite" />
+      <stop offset="33%" stop-color="#39ff14">
+        <animate attributeName="stop-color" values="#39ff14;#ff007f;#ffea00;#00f2fe;#39ff14" dur="6s" repeatCount="indefinite" />
       </stop>
-      <stop offset="100%" stop-color="#4338ca">
-        <animate attributeName="stop-color" values="#4338ca;#ff007f;#4338ca" dur="4s" repeatCount="indefinite" />
+      <stop offset="66%" stop-color="#ff007f">
+        <animate attributeName="stop-color" values="#ff007f;#ffea00;#00f2fe;#39ff14;#ff007f" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#ffea00">
+        <animate attributeName="stop-color" values="#ffea00;#00f2fe;#39ff14;#ff007f;#ffea00" dur="6s" repeatCount="indefinite" />
       </stop>
     </linearGradient>
 
-    <!-- Glowing text filter -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+    <!-- Glowing text filter (expanded bounds) -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -25,15 +28,15 @@
     <style>
       .title {
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        font-size: 34px;
+        font-size: 38px;
         font-weight: 900;
         text-anchor: middle;
-        fill: url(#neonGradient);
+        fill: url(#vibrantGradient);
         filter: url(#glow);
-        letter-spacing: 2px;
+        letter-spacing: 3px;
       }
     </style>
   </defs>
 
-  <text x="50%" y="55" class="title">🚀 THE 1000-DAY MISSION</text>
+  <text x="50%" y="55" class="title">THE 1000-DAY MISSION</text>
 </svg>
