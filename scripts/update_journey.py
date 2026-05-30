@@ -112,7 +112,7 @@ def generate_svg(days_passed, total_days):
 def update_activity_graph():
     """Downloads the activity graph and injects SMIL animations for GitHub rendering."""
     print("Generating animated activity graph...")
-    url = 'https://github-readme-activity-graph.vercel.app/graph?username=kevinjosh10&theme=tokyonight&hide_border=true&area=true&custom_title=Contribution%20Activity'
+    url = 'https://github-readme-activity-graph.vercel.app/graph?username=kevinjosh10&bg_color=00000000&color=94a3b8&line=00f2fe&point=39ff14&area_color=00f2fe&area=true&hide_border=true&custom_title=Contribution%20Activity'
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req) as response:
@@ -120,16 +120,9 @@ def update_activity_graph():
 
         # Add <defs> and <style> for the highly visible neon rendering
         defs = """<defs>
-          <linearGradient id="movingGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-opacity="0.85">
-              <animate attributeName="stop-color" values="#00f2fe;#39ff14;#00f2fe" dur="3s" repeatCount="indefinite" />
-            </stop>
-            <stop offset="50%" stop-opacity="0.85">
-              <animate attributeName="stop-color" values="#39ff14;#00f2fe;#39ff14" dur="3s" repeatCount="indefinite" />
-            </stop>
-            <stop offset="100%" stop-opacity="0.85">
-              <animate attributeName="stop-color" values="#00f2fe;#39ff14;#00f2fe" dur="3s" repeatCount="indefinite" />
-            </stop>
+          <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.0" />
           </linearGradient>
           <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
@@ -139,9 +132,10 @@ def update_activity_graph():
             </feMerge>
           </filter>
           <style>
-            .ct-line { stroke: #00f2fe !important; filter: url(#neonGlow) !important; }
-            .ct-point { stroke: #39ff14 !important; filter: url(#neonGlow) !important; }
-            .ct-area { fill: url(#movingGradient) !important; opacity: 1 !important; }
+            .ct-line { stroke: #00f2fe !important; stroke-width: 3px !important; filter: url(#neonGlow) !important; }
+            .ct-point { stroke: #39ff14 !important; stroke-width: 6px !important; filter: url(#neonGlow) !important; }
+            .ct-area { fill: url(#fadeGradient) !important; fill-opacity: 1 !important; }
+            .ct-grid { stroke: #1e293b !important; stroke-dasharray: 4 !important; }
           </style>
         </defs>"""
         
