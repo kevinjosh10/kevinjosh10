@@ -44,7 +44,7 @@ def generate_projects_svg():
             "desc": [
                 "End-to-end IoT architecture bridging",
                 "embedded firmware with modular",
-                "telemetry routing & dashboards."
+                "telemetry routing &amp; dashboards."
             ],
             "tags": ["IoT", "Hardware Arch"],
             "color": "#ffea00", # Yellow

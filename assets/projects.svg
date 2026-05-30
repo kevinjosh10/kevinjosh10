@@ -153,7 +153,7 @@
                 
                 <text x="435" y="310" class="desc">End-to-end IoT architecture bridging</text>
 <text x="435" y="332" class="desc">embedded firmware with modular</text>
-<text x="435" y="354" class="desc">telemetry routing & dashboards.</text>
+<text x="435" y="354" class="desc">telemetry routing &amp; dashboards.</text>
 
                 
             <rect x="435" y="385" width="40" height="24" rx="12" fill="#ffea00" fill-opacity="0.15" stroke="#ffea00" stroke-width="1" />
