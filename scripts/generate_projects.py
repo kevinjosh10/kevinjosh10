@@ -72,23 +72,21 @@ def generate_projects_svg():
 
         cards_html += f'''
         <!-- Card: {p["title"]} -->
-        <a href="{p["link"]}" target="_blank">
-            <g class="card" style="animation-delay: {idx * 0.15}s">
-                <rect x="{p["x"]}" y="{p["y"]}" width="370" height="200" rx="12" class="card-bg" />
-                <!-- Neon top border highlight -->
-                <path d="M {p["x"]} {p["y"]+12} Q {p["x"]} {p["y"]} {p["x"]+12} {p["y"]} L {p["x"]+358} {p["y"]} Q {p["x"]+370} {p["y"]} {p["x"]+370} {p["y"]+12}" stroke="{p["color"]}" stroke-width="3" fill="none" class="card-highlight" />
-                
-                <!-- Icon/Folder -->
-                <svg x="{p["x"] + 25}" y="{p["y"] + 25}" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="{p["color"]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                </svg>
-                
-                <text x="{p["x"] + 60}" y="{p["y"] + 43}" class="title" fill="{p["color"]}">{p["title"]}</text>
-                
-                {desc_html}
-                {tags_html}
-            </g>
-        </a>
+        <g class="card" style="animation-delay: {idx * 0.15}s">
+            <rect x="{p["x"]}" y="{p["y"]}" width="370" height="200" rx="12" class="card-bg" />
+            <!-- Neon top border highlight -->
+            <path d="M {p["x"]} {p["y"]+12} Q {p["x"]} {p["y"]} {p["x"]+12} {p["y"]} L {p["x"]+358} {p["y"]} Q {p["x"]+370} {p["y"]} {p["x"]+370} {p["y"]+12}" stroke="{p["color"]}" stroke-width="3" fill="none" class="card-highlight" />
+            
+            <!-- Icon/Folder -->
+            <svg x="{p["x"] + 25}" y="{p["y"] + 25}" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="{p["color"]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+            
+            <text x="{p["x"] + 60}" y="{p["y"] + 43}" class="title" fill="{p["color"]}">{p["title"]}</text>
+            
+            {desc_html}
+            {tags_html}
+        </g>
         '''
 
     svg_content = f"""<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
