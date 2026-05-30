@@ -417,6 +417,25 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
         10% { opacity: 0; }
       }
 
+      /* === HOVER EASTER EGG === */
+      .easterEgg {
+        opacity: 0;
+        fill: #f8fafc;
+        font-size: 22px;
+        font-family: monospace;
+        font-weight: bold;
+        text-anchor: middle;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+        filter: drop-shadow(0px 0px 8px #93c5fd);
+      }
+      svg:hover .easterEgg {
+        opacity: 1;
+      }
+      svg:hover .lightning {
+        animation-duration: 0.6s !important;
+      }
+
       /* === DRIFTING FOG/MIST === */
       .mist1 { animation: moveLeft 40s linear infinite; }
       .mist2 { animation: moveLeft 55s linear infinite; }
@@ -741,6 +760,9 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
   </g>
   <text x="50%" y="125" class="sub1">I push directly to main.</text>
   <text x="50%" y="155" class="sub2">(Just kidding, I use CI/CD pipelines like a responsible adult 🛠️)</text>
+
+  <!-- === HOVER EASTER EGG (Hidden funny text revealed on hover) === -->
+  <text x="50%" y="195" class="easterEgg">"There is no cloud, just someone else's computer."</text>
 
 </svg>
 """

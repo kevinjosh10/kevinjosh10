@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/header.svg?v=26" alt="Profile Header" width="100%" />
+  <img src="assets/header.svg?v=27" alt="Profile Header" width="100%" />
 </div>
 
 <div align="center">
@@ -32,7 +32,7 @@
 
 <div align="center">
   <br>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=900&size=32&duration=1&pause=9999999&color=FE428E&center=true&vCenter=true&repeat=false&width=650&lines=🚀+THE+1000-DAY+MISSION" alt="1000 Day Mission Title" />
+  <img src="assets/mission.svg" alt="1000 Day Mission Title" />
   <br>
   <p><i>A public 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design.<br>Daily commitment to building production-grade systems—bridging the gap between theory and real-world engineering.</i></p>
   <img src="assets/progress.svg?v=1" alt="Animated Wave Progress Bar" />
@@ -86,7 +86,7 @@
 
 <div align="center">
   <br>
-  <img src="https://komarev.com/ghpvc/?username=kevinjosh10&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
+  <img src="assets/views.svg" alt="Profile Views" />
 </div>
 
 ---

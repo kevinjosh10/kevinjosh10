@@ -1,0 +1,50 @@
+import os
+
+def generate_mission_svg():
+    svg_content = """<svg width="650" height="80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Animated Cyberpunk Gradient -->
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f">
+        <animate attributeName="stop-color" values="#ff007f;#7928ca;#ff007f" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#7928ca">
+        <animate attributeName="stop-color" values="#7928ca;#4338ca;#7928ca" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#4338ca">
+        <animate attributeName="stop-color" values="#4338ca;#ff007f;#4338ca" dur="4s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Glowing text filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .title {
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 34px;
+        font-weight: 900;
+        text-anchor: middle;
+        fill: url(#neonGradient);
+        filter: url(#glow);
+        letter-spacing: 2px;
+      }
+    </style>
+  </defs>
+
+  <text x="50%" y="55" class="title">🚀 THE 1000-DAY MISSION</text>
+</svg>
+"""
+    os.makedirs("assets", exist_ok=True)
+    with open("assets/mission.svg", "w", encoding="utf-8") as f:
+        f.write(svg_content)
+    print("Generated Animated Mission SVG.")
+
+if __name__ == "__main__":
+    generate_mission_svg()
