@@ -7,19 +7,9 @@
 </div>
 
 <div align="center">
-  <br>
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Quote of the Day" />
-  <br>
-</div>
-
----
-
-<div align="center">
   <h2>👨‍💻 About Me</h2>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=700&size=24&duration=3000&pause=800&color=39FF14&center=true&vCenter=true&width=700&lines=🎓+1st-Year+CS+Student+at+Jerusalem+College+of+Engineering;☁️+Cloud-Native+Architect+in+Training;✝️+Faith+Driven+•+God+First;🔥+1000-Day+Commitment+•+No+Excuses;🧠+Born+to+Master+Cloud;💪+Discipline+Over+Motivation" alt="About Me Typing" />
+  <img src="assets/about_me.svg?v=1" alt="About Me Summary" width="100%" />
   <br>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=18&duration=4000&pause=1000&color=F0F0FF&center=true&vCenter=true&width=700&lines=I+don't+just+learn+cloud—I+build+production-grade+systems+with+it.;AWS+architecture,+serverless+pipelines,+and+backend+engineering.;Building+in+public+•+Learning+out+loud+•+Every+single+day." alt="Subtitle Typing" />
-  <br><br>
   <a href="https://www.linkedin.com/in/kevin-josh10">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
