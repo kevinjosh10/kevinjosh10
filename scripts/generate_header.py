@@ -770,15 +770,15 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
     <!-- Base Text -->
     <text x="46%" y="80" class="title">Hello, World! I'm Kevin</text>
         <g class="neonServer" transform="translate(18, 0)">
-      <rect x="648" y="32" width="34" height="46" rx="4" fill="none" stroke="#00f2fe" stroke-width="2" filter="url(#neonGlow)" />
+      <rect x="648" y="32" width="34" height="46" rx="4" fill="none" stroke="#00f2fe" stroke-width="2" />
       
-      <rect x="652" y="36" width="26" height="10" rx="2" fill="none" stroke="#00f2fe" stroke-width="1.5" filter="url(#neonGlow)" />
-      <line x1="656" y1="41" x2="662" y2="41" stroke="#00f2fe" stroke-width="1.5" filter="url(#neonGlow)" />
-      <circle cx="672" cy="41" r="1.5" fill="#39ff14" class="neonBlink1" filter="url(#neonGlow)" />
+      <rect x="652" y="36" width="26" height="10" rx="2" fill="none" stroke="#00f2fe" stroke-width="1.5" />
+      <line x1="656" y1="41" x2="662" y2="41" stroke="#00f2fe" stroke-width="1.5" />
+      <circle cx="672" cy="41" r="1.5" fill="#39ff14" class="neonBlink1" />
       
       <!-- Cloud Symbol in Middle -->
       <g transform="translate(658, 49) scale(0.6)">
-        <path d="M19.7,11.4c0-4.3-3.5-7.8-7.8-7.8c-2.3,0-4.4,1-5.8,2.7C5.3,5.5,4,5.1,2.5,5.1C-0.3,5.1-2.5,7.3-2.5,10.2 c0,2.8,2.3,5.1,5.1,5.1h14.7c1.4,0,2.5-1.1,2.5-2.5C19.8,12.5,19.7,11.4,19.7,11.4z" fill="none" stroke="#fbbf24" stroke-width="2.5" filter="url(#neonGlow)" />
+        <path d="M19.7,11.4c0-4.3-3.5-7.8-7.8-7.8c-2.3,0-4.4,1-5.8,2.7C5.3,5.5,4,5.1,2.5,5.1C-0.3,5.1-2.5,7.3-2.5,10.2 c0,2.8,2.3,5.1,5.1,5.1h14.7c1.4,0,2.5-1.1,2.5-2.5C19.8,12.5,19.7,11.4,19.7,11.4z" fill="none" stroke="#fbbf24" stroke-width="2.5" />
       </g>
       
       <rect x="652" y="64" width="26" height="10" rx="2" fill="none" stroke="#00f2fe" stroke-width="1.5" filter="url(#neonGlow)" />
