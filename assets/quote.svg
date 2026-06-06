@@ -1,4 +1,4 @@
-<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,8 +16,9 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"The trouble with the rat race is that even</text>
-<text x="50%" y="85" class="text">if you win, you're still a rat." — Lily</text>
-<text x="50%" y="110" class="text">Tomlin</text>
+  <text x="50%" y="60" class="text">"No matter who you are, we're creatures of</text>
+<text x="50%" y="85" class="text">habit. The better your habits are, the better</text>
+<text x="50%" y="110" class="text">they will be in pressure situations." — Wayne</text>
+<text x="50%" y="135" class="text">Gretzky</text>
 
 </svg>
