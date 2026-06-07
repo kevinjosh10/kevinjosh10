@@ -143,29 +143,32 @@
             
         </g>
         
-        <!-- Card: EMG Sensor Firmware -->
+        <!-- Card: AWS Static Website -->
         <g class="card" style="animation-delay: 0.44999999999999996s">
             <rect x="410" y="230" width="370" height="200" rx="12" class="card-bg" />
             <!-- Neon top border highlight -->
-            <path d="M 410 242 Q 410 230 422 230 L 768 230 Q 780 230 780 242" stroke="#ffea00" stroke-width="3" fill="none" class="card-highlight" />
+            <path d="M 410 242 Q 410 230 422 230 L 768 230 Q 780 230 780 242" stroke="#ff9900" stroke-width="3" fill="none" class="card-highlight" />
             
             <!-- Icon/Folder -->
-            <svg x="435" y="255" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffea00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg x="435" y="255" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
             </svg>
             
-            <text x="470" y="273" class="title" fill="#ffea00">EMG Sensor Firmware</text>
+            <text x="470" y="273" class="title" fill="#ff9900">AWS Static Website</text>
             
-            <text x="435" y="310" class="desc">End-to-end IoT architecture bridging</text>
-<text x="435" y="332" class="desc">embedded firmware with modular</text>
-<text x="435" y="354" class="desc">telemetry routing &amp; dashboards.</text>
+            <text x="435" y="310" class="desc">Serverless web hosting architecture</text>
+<text x="435" y="332" class="desc">using Amazon S3, CloudFront CDN, and</text>
+<text x="435" y="354" class="desc">Route 53 for low-latency delivery.</text>
 
             
-            <rect x="435" y="385" width="40" height="24" rx="12" fill="#ffea00" fill-opacity="0.15" stroke="#ffea00" stroke-width="1" />
-            <text x="455.0" y="401" class="tag" fill="#ffea00">IoT</text>
+            <rect x="435" y="385" width="64" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
+            <text x="467.0" y="401" class="tag" fill="#ff9900">AWS S3</text>
             
-            <rect x="485" y="385" width="120" height="24" rx="12" fill="#ffea00" fill-opacity="0.15" stroke="#ffea00" stroke-width="1" />
-            <text x="545.0" y="401" class="tag" fill="#ffea00">Hardware Arch</text>
+            <rect x="509" y="385" width="96" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
+            <text x="557.0" y="401" class="tag" fill="#ff9900">CloudFront</text>
+            
+            <rect x="615" y="385" width="80" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
+            <text x="655.0" y="401" class="tag" fill="#ff9900">Route 53</text>
             
         </g>
         

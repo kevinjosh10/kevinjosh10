@@ -39,15 +39,15 @@ def generate_projects_svg():
             "x": 20, "y": 230
         },
         {
-            "title": "EMG Sensor Firmware",
-            "link": "https://github.com/kevinjosh10/emg-sensor",
+            "title": "AWS Static Website",
+            "link": "https://github.com/kevinjosh10/aws-static-website",
             "desc": [
-                "End-to-end IoT architecture bridging",
-                "embedded firmware with modular",
-                "telemetry routing &amp; dashboards."
+                "Serverless web hosting architecture",
+                "using Amazon S3, CloudFront CDN, and",
+                "Route 53 for low-latency delivery."
             ],
-            "tags": ["IoT", "Hardware Arch"],
-            "color": "#ffea00", # Yellow
+            "tags": ["AWS S3", "CloudFront", "Route 53"],
+            "color": "#ff9900", # AWS Orange
             "x": 410, "y": 230
         }
     ]
