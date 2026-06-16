@@ -331,21 +331,44 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       }
 
       /* === DECRYPT ANIMATION (5s FAST TWITCHING) === */
-      .decryptText { fill: #00f2fe; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: 0px; opacity: 0; }
-      .dec1 { animation: cycle 0.7s infinite; animation-delay: 0.0s; }
-      .dec2 { animation: cycle 0.7s infinite; animation-delay: 0.1s; }
-      .dec3 { animation: cycle 0.7s infinite; animation-delay: 0.2s; }
-      .dec4 { animation: cycle 0.7s infinite; animation-delay: 0.3s; }
-      .dec5 { animation: cycle 0.7s infinite; animation-delay: 0.4s; }
-      .dec6 { animation: cycle 0.7s infinite; animation-delay: 0.5s; }
-      .dec7 { animation: cycle 0.7s infinite; animation-delay: 0.6s; }
+            .decryptText { fill: url(#skyBlueGradient); filter: drop-shadow(0 0 5px rgba(0,242,254,0.8)); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: 0px; opacity: 0; }
+      .dec1 { animation: cycle 3.0s infinite; animation-delay: 0.00s; }
+      .dec2 { animation: cycle 3.0s infinite; animation-delay: 0.10s; }
+      .dec3 { animation: cycle 3.0s infinite; animation-delay: 0.20s; }
+      .dec4 { animation: cycle 3.0s infinite; animation-delay: 0.30s; }
+      .dec5 { animation: cycle 3.0s infinite; animation-delay: 0.40s; }
+      .dec6 { animation: cycle 3.0s infinite; animation-delay: 0.50s; }
+      .dec7 { animation: cycle 3.0s infinite; animation-delay: 0.60s; }
+      .dec8 { animation: cycle 3.0s infinite; animation-delay: 0.70s; }
+      .dec9 { animation: cycle 3.0s infinite; animation-delay: 0.80s; }
+      .dec10 { animation: cycle 3.0s infinite; animation-delay: 0.90s; }
+      .dec11 { animation: cycle 3.0s infinite; animation-delay: 1.00s; }
+      .dec12 { animation: cycle 3.0s infinite; animation-delay: 1.10s; }
+      .dec13 { animation: cycle 3.0s infinite; animation-delay: 1.20s; }
+      .dec14 { animation: cycle 3.0s infinite; animation-delay: 1.30s; }
+      .dec15 { animation: cycle 3.0s infinite; animation-delay: 1.40s; }
+      .dec16 { animation: cycle 3.0s infinite; animation-delay: 1.50s; }
+      .dec17 { animation: cycle 3.0s infinite; animation-delay: 1.60s; }
+      .dec18 { animation: cycle 3.0s infinite; animation-delay: 1.70s; }
+      .dec19 { animation: cycle 3.0s infinite; animation-delay: 1.80s; }
+      .dec20 { animation: cycle 3.0s infinite; animation-delay: 1.90s; }
+      .dec21 { animation: cycle 3.0s infinite; animation-delay: 2.00s; }
+      .dec22 { animation: cycle 3.0s infinite; animation-delay: 2.10s; }
+      .dec23 { animation: cycle 3.0s infinite; animation-delay: 2.20s; }
+      .dec24 { animation: cycle 3.0s infinite; animation-delay: 2.30s; }
+      .dec25 { animation: cycle 3.0s infinite; animation-delay: 2.40s; }
+      .dec26 { animation: cycle 3.0s infinite; animation-delay: 2.50s; }
+      .dec27 { animation: cycle 3.0s infinite; animation-delay: 2.60s; }
+      .dec28 { animation: cycle 3.0s infinite; animation-delay: 2.70s; }
+      .dec29 { animation: cycle 3.0s infinite; animation-delay: 2.80s; }
+      .dec30 { animation: cycle 3.0s infinite; animation-delay: 2.90s; }
 
-      @keyframes cycle { 0%, 14.2% { opacity: 1; } 14.3%, 100% { opacity: 0; } }
+      @keyframes cycle { 0%, 3.3% { opacity: 1; } 3.4%, 100% { opacity: 0; } }
 
-      .decryptWrapper { animation: hideWrapper 5s forwards; }
+      .decryptWrapper { animation: hideWrapper 3s forwards; }
       @keyframes hideWrapper { 0%, 99.9% { opacity: 1; } 100% { opacity: 0; } }
 
-      .finalReveal { animation: showFinal 5s forwards; opacity: 0; }
+      .finalReveal { animation: showFinal 3s forwards; opacity: 0; }
       @keyframes showFinal { 0%, 99.9% { opacity: 0; } 100% { opacity: 1; } }
 
       /* PROVEN: Infinite moving animations using ONLY translateX */
@@ -768,15 +791,38 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
   <!-- === NEON GLOWING BORDER (replaces boring grey) === -->
   <rect width="99%" height="98%" x="4" y="2" fill="none" stroke="url(#neonBorder)" stroke-width="1.5" rx="15px" filter="url(#neonGlow)" class="neonBorderRect" />
   
-  <!-- === HACKER DECRYPT SEQUENCE (5s FAST TWITCHING) === -->
+  <!-- === HACKER DECRYPT SEQUENCE (3s RANDOM SHUFFLE) === -->
   <g class="decryptWrapper">
-    <text x="50%" y="80" class="decryptText dec1">0x8F4B2A9C7D1E5F3A8B1C</text>
-    <text x="50%" y="80" class="decryptText dec2">X#9a!z_ Q$m*p! %'bY8x@p</text>
-    <text x="50%" y="80" class="decryptText dec3">H@x$9, %Q*p! 0xK#v1nZ2!</text>
-    <text x="50%" y="80" class="decryptText dec4">H3!&amp;o, W%rLd_ 1"m k3v1n</text>
-    <text x="50%" y="80" class="decryptText dec5">He[lo, W0r]d! I'x K?vin</text>
-    <text x="50%" y="80" class="decryptText dec6">Hell0, Wor1d! I'm Kev!n</text>
-    <text x="50%" y="80" class="decryptText dec7">Hello, World! I'm Kevin</text>
+    <text x="50%" y="80" class="decryptText dec1">?x?t=ju)&*_!;@HY&Zp9-|r</text>
+    <text x="50%" y="80" class="decryptText dec2">}1U[}AjHdku<tv>i];:!sch</text>
+    <text x="50%" y="80" class="decryptText dec3">Mmgfr3OXzr1+KGX-C^NHtTE</text>
+    <text x="50%" y="80" class="decryptText dec4">i5(&VY=x_S?#>YMu^I1qH2C</text>
+    <text x="50%" y="80" class="decryptText dec5">>i3@2X>?8tKctZUB:YzBm*;</text>
+    <text x="50%" y="80" class="decryptText dec6">SufMPXdpS#fD+#{DX;ox]z,</text>
+    <text x="50%" y="80" class="decryptText dec7">_}%bzY%[+X5(_0|NcUIK-9Z</text>
+    <text x="50%" y="80" class="decryptText dec8">18Z_mk.g?wDKETMy]OuADow</text>
+    <text x="50%" y="80" class="decryptText dec9">y-*$t3oCtJE-JpC?U8uJ}W6</text>
+    <text x="50%" y="80" class="decryptText dec10">&v_dA*NY}(2:qoe;Nka1&Tr</text>
+    <text x="50%" y="80" class="decryptText dec11">:CNM}Zq-fd1BZ;hF+j&OQ<<</text>
+    <text x="50%" y="80" class="decryptText dec12">zG[02]<vOwr#D-X+=Rf0$Zj</text>
+    <text x="50%" y="80" class="decryptText dec13">3=9&vzv<N#t:p9a4WB|Wfm}</text>
+    <text x="50%" y="80" class="decryptText dec14">}qN]x1Q{-s8o)27}/V4KZ(#</text>
+    <text x="50%" y="80" class="decryptText dec15">a-*8xkWJUjLgPp1J-faF,|*</text>
+    <text x="50%" y="80" class="decryptText dec16">aG;ouEKi{U|cBa._q^O(]]w</text>
+    <text x="50%" y="80" class="decryptText dec17">v.:N3|-m#5f)JYh$ixYH4Te</text>
+    <text x="50%" y="80" class="decryptText dec18">!Fn9H:lcr!D/ne=0Utf&lr%</text>
+    <text x="50%" y="80" class="decryptText dec19">IhrIaW!|DQA*o^lQI9[OTMb</text>
+    <text x="50%" y="80" class="decryptText dec20">?xmxgSw>OxRFJLvab60rDZR</text>
+    <text x="50%" y="80" class="decryptText dec21">]#1*8PQd@Ov=^w&Qa[Qh$7s</text>
+    <text x="50%" y="80" class="decryptText dec22">cH#*TlD_T/RwK;^<u&MOBY+</text>
+    <text x="50%" y="80" class="decryptText dec23">(GR?bhmEaJD>.Z-<1E.E#Ld</text>
+    <text x="50%" y="80" class="decryptText dec24">XxHV0xhiyorZ7&Od|&w*F?T</text>
+    <text x="50%" y="80" class="decryptText dec25">lo(AB42Ej=3KGq]|Se*){4I</text>
+    <text x="50%" y="80" class="decryptText dec26">4Ogd<=HlnAj:Qp!_l,uwDx)</text>
+    <text x="50%" y="80" class="decryptText dec27">0k5W[rbeSBEUnY#@17r{!vy</text>
+    <text x="50%" y="80" class="decryptText dec28">,tzN@Wz+n:{dlHFR(|/H1<L</text>
+    <text x="50%" y="80" class="decryptText dec29">y*3lL4zu6AIHiyp1@p,,Ke?</text>
+    <text x="50%" y="80" class="decryptText dec30">T5LeJ4Z^/qfAbuXPDL&@sCD</text>
   </g>
 
   <g class="finalReveal">
