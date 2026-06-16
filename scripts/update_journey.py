@@ -124,16 +124,9 @@ def update_activity_graph():
             <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.6" />
             <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.0" />
           </linearGradient>
-          <filter id="neonGlow" filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-            <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
           <style>
-            .ct-line { stroke: #00f2fe !important; stroke-width: 3px !important; filter: url(#neonGlow) !important; }
-            .ct-point { stroke: #39ff14 !important; stroke-width: 8px !important; stroke-linecap: round !important; filter: url(#neonGlow) !important; }
+            .ct-line { stroke: #00f2fe !important; stroke-width: 3px !important; filter: drop-shadow(0 0 5px #00f2fe) !important; }
+            .ct-point { stroke: #39ff14 !important; stroke-width: 8px !important; stroke-linecap: round !important; filter: drop-shadow(0 0 5px #39ff14) !important; }
             .ct-area { fill: url(#fadeGradient) !important; fill-opacity: 1 !important; }
             .ct-grid { stroke: #1e293b !important; stroke-dasharray: 4 !important; }
           </style>
@@ -165,6 +158,19 @@ def update_activity_graph():
     except Exception as e:
         print(f"Failed to generate animated activity graph: {e}")
 
+def update_streak_stats():
+    """Downloads the GitHub streak stats to cache it locally."""
+    print("Caching GitHub streak stats...")
+    url = 'https://streak-stats.demolab.com/?user=kevinjosh10&theme=transparent&hide_border=true&ring=00f2fe&fire=39ff14&currStreakNum=39ff14&currStreakLabel=00f2fe&sideNums=e2e8f0&sideLabels=94a3b8&dates=94a3b8'
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req) as response:
+            with open('assets/streak.svg', 'wb') as f:
+                f.write(response.read())
+        print("Successfully cached assets/streak.svg")
+    except Exception as e:
+        print(f"Failed to cache streak stats: {e}")
+
 def main():
     # Use UTC time and convert to IST (UTC +5:30)
     utc_now = datetime.datetime.utcnow()
@@ -186,6 +192,9 @@ def main():
     
     # Generate Animated Activity Graph
     update_activity_graph()
+    
+    # Cache Streak Stats
+    update_streak_stats()
 
 if __name__ == "__main__":
     main()

@@ -47,19 +47,19 @@
 
 ---
 
-### 📊 Engineering Metrics
+### 📈 Engineering Metrics
 
 <div align="center">
   <br>
   <a href="https://github.com/kevinjosh10">
-    <img src="https://streak-stats.demolab.com/?user=kevinjosh10&theme=transparent&hide_border=true&ring=00f2fe&fire=39ff14&currStreakNum=39ff14&currStreakLabel=00f2fe&sideNums=e2e8f0&sideLabels=94a3b8&dates=94a3b8" width="60%" />
+    <img src="assets/streak.svg?v=1" width="60%" alt="GitHub Streak Stats" />
   </a>
 </div>
 
 <div align="center">
   <br>
   <a href="https://github.com/kevinjosh10">
-    <img src="assets/activity.svg?v=1" width="98%" alt="Contribution Activity Graph" />
+    <img src="assets/activity.svg?v=3" width="98%" alt="Contribution Activity Graph" />
   </a>
 </div>
 
