@@ -52,7 +52,7 @@
 <div align="center">
   <br>
   <a href="https://github.com/kevinjosh10">
-    <img src="assets/streak.svg?v=1" width="60%" alt="GitHub Streak Stats" />
+    <img src="assets/streak.svg?v=2" width="60%" alt="GitHub Streak Stats" />
   </a>
 </div>
 

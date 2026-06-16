@@ -160,8 +160,9 @@ def update_activity_graph():
 
 def update_streak_stats():
     """Downloads the GitHub streak stats to cache it locally."""
+    import time
     print("Caching GitHub streak stats...")
-    url = 'https://streak-stats.demolab.com/?user=kevinjosh10&theme=transparent&hide_border=true&ring=00f2fe&fire=39ff14&currStreakNum=39ff14&currStreakLabel=00f2fe&sideNums=e2e8f0&sideLabels=94a3b8&dates=94a3b8'
+    url = f'https://streak-stats.demolab.com/?user=kevinjosh10&theme=transparent&hide_border=true&ring=00f2fe&fire=39ff14&currStreakNum=39ff14&currStreakLabel=00f2fe&sideNums=e2e8f0&sideLabels=94a3b8&dates=94a3b8&_cache_buster={int(time.time())}'
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req) as response:
