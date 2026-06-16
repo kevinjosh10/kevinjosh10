@@ -305,8 +305,12 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       <path d="M-10,20 Q-5,16 5,20" fill="none" stroke="#f8fafc" stroke-width="1.5" opacity="0.5" />
     </g>
 
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#004e92" />
+    </linearGradient>
     <style>
-      .title { fill: #00f2fe; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: -0.5px; }
+      .title { fill: url(#blueGradient); filter: drop-shadow(0 0 8px rgba(0,242,254,0.8)); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: -0.5px; }
       .sub1 { fill: #ffd700; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 24px; font-weight: 700; text-anchor: middle; animation: fadeIn 0.5s ease-out 5s forwards; opacity: 0; letter-spacing: 0.5px; }
       .sub2 { fill: #f7fafc; filter: url(#shadow); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 16px; font-style: italic; font-weight: 500; text-anchor: middle; animation: fadeIn 0.5s ease-out 5.4s forwards; opacity: 0; }
       
