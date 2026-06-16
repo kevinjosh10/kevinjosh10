@@ -537,19 +537,21 @@
       /* === GLITCH / HACKER TEXT EFFECT (RGB channel split) === */
       .glitchR {
         animation: glitchRight 3s steps(1, end) infinite;
-        fill: #ff0040;
+        fill: url(#skyBlueGradient);
         font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace;
         font-size: 44px;
         font-weight: 900;
         text-anchor: middle;
+        filter: drop-shadow(0 0 5px rgba(0,242,254,0.8));
       }
       .glitchL {
         animation: glitchLeft 3s steps(1, end) infinite;
-        fill: #00f2fe;
+        fill: url(#skyBlueGradient);
         font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace;
         font-size: 44px;
         font-weight: 900;
         text-anchor: middle;
+        filter: drop-shadow(0 0 5px rgba(14,165,233,0.8));
       }
 
       @keyframes glitchRight {
