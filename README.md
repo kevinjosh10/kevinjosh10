@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/header.svg?v=35" alt="Profile Header" width="100%" />
+  <img src="assets/header.svg?v=36" alt="Profile Header" width="100%" />
 </div>
 
 <div align="center">
