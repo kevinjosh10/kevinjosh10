@@ -104,6 +104,14 @@ def generate_header():
       .title-accent {{
         fill: #ffb703;
       }}
+      .subtext {{
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        fill: #94a3b8;
+      }}
+      .subtext-accent {{
+        fill: #ffb703;
+      }}
       .cursor {{
         fill: #00f2fe;
         animation: blink 1s step-end infinite;
@@ -118,11 +126,29 @@ def generate_header():
         opacity: 0.3;
         rx: 12px;
       }}
+      .float-cloud {{
+        animation: floatCloud 10s ease-in-out infinite alternate;
+      }}
+      .float-cloud2 {{
+        animation: floatCloud 15s ease-in-out infinite alternate-reverse;
+      }}
+      @keyframes floatCloud {{
+        0% {{ transform: translateY(0px) translateX(0px); }}
+        100% {{ transform: translateY(-10px) translateX(20px); }}
+      }}
     </style>
   </defs>
 
   <!-- Background -->
   <rect width="100%" height="100%" rx="12" class="bg-rect" />
+  
+  <!-- Geometric Clouds -->
+  <g class="float-cloud" opacity="0.15" stroke="#00f2fe" stroke-width="2" fill="none" transform="translate(300, 20)">
+    <path d="M 120,60 A 20,20 0 0,1 150,45 A 30,30 0 0,1 200,55 A 20,20 0 0,1 210,85 L 120,85 A 15,15 0 0,1 120,60 Z" />
+  </g>
+  <g class="float-cloud2" opacity="0.1" stroke="#ffb703" stroke-width="2" fill="none" transform="translate(60, -10) scale(0.7)">
+    <path d="M 120,60 A 20,20 0 0,1 150,45 A 30,30 0 0,1 200,55 A 20,20 0 0,1 210,85 L 120,85 A 15,15 0 0,1 120,60 Z" />
+  </g>
   
   <!-- Subtle Grid -->
   {mesh_lines}
@@ -137,7 +163,8 @@ def generate_header():
   </g>
 
   <!-- Typography -->
-  <text x="50" y="110" class="title-text">Hello, World! I'm <tspan class="title-accent">Kevin</tspan><tspan class="cursor">_</tspan></text>
+  <text x="50" y="100" class="title-text">Hello, World! I'm <tspan class="title-accent">Kevin</tspan><tspan class="cursor">_</tspan></text>
+  <text x="50" y="135" class="subtext">&gt; I push directly to main... just kidding, I use <tspan class="subtext-accent">CI/CD pipelines</tspan> like a responsible adult.</text>
 
   <!-- Border -->
   <rect x="2" y="2" width="796" height="196" class="glow-border" />

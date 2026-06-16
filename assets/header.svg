@@ -44,6 +44,14 @@
       .title-accent {
         fill: #ffb703;
       }
+      .subtext {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        fill: #94a3b8;
+      }
+      .subtext-accent {
+        fill: #ffb703;
+      }
       .cursor {
         fill: #00f2fe;
         animation: blink 1s step-end infinite;
@@ -58,11 +66,29 @@
         opacity: 0.3;
         rx: 12px;
       }
+      .float-cloud {
+        animation: floatCloud 10s ease-in-out infinite alternate;
+      }
+      .float-cloud2 {
+        animation: floatCloud 15s ease-in-out infinite alternate-reverse;
+      }
+      @keyframes floatCloud {
+        0% { transform: translateY(0px) translateX(0px); }
+        100% { transform: translateY(-10px) translateX(20px); }
+      }
     </style>
   </defs>
 
   <!-- Background -->
   <rect width="100%" height="100%" rx="12" class="bg-rect" />
+  
+  <!-- Geometric Clouds -->
+  <g class="float-cloud" opacity="0.15" stroke="#00f2fe" stroke-width="2" fill="none" transform="translate(300, 20)">
+    <path d="M 120,60 A 20,20 0 0,1 150,45 A 30,30 0 0,1 200,55 A 20,20 0 0,1 210,85 L 120,85 A 15,15 0 0,1 120,60 Z" />
+  </g>
+  <g class="float-cloud2" opacity="0.1" stroke="#ffb703" stroke-width="2" fill="none" transform="translate(60, -10) scale(0.7)">
+    <path d="M 120,60 A 20,20 0 0,1 150,45 A 30,30 0 0,1 200,55 A 20,20 0 0,1 210,85 L 120,85 A 15,15 0 0,1 120,60 Z" />
+  </g>
   
   <!-- Subtle Grid -->
   <line x1="0" y1="20" x2="800" y2="20" class="grid-line" style="animation-delay: 0.0s" />
@@ -108,16 +134,16 @@
 
   
   <!-- Data Packets -->
-  <circle cx="-10" cy="35" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="4.83271983990642s" begin="1.1405125947831158s" repeatCount="indefinite" /></circle>
-<circle cx="-10" cy="80" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="3.908934551241848s" begin="2.1604151919876244s" repeatCount="indefinite" /></circle>
-<circle cx="-10" cy="170" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="4.075888592288661s" begin="3.070495021330661s" repeatCount="indefinite" /></circle>
-<circle cx="-10" cy="215" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="5.399350496567457s" begin="2.0068063160988197s" repeatCount="indefinite" /></circle>
-<circle cx="-10" cy="215" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="4.346236015268159s" begin="3.5786859966964952s" repeatCount="indefinite" /></circle>
-<circle cx="-10" cy="200" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="4.470029487715152s" begin="0.2813688458627337s" repeatCount="indefinite" /></circle>
-<circle cx="-10" cy="170" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="5.414268581862238s" begin="3.3295314402156424s" repeatCount="indefinite" /></circle>
-<circle cx="-10" cy="140" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="4.20710738828407s" begin="1.2495945273166336s" repeatCount="indefinite" /></circle>
-<circle cx="-10" cy="50" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="5.435347567011279s" begin="1.7766049598976381s" repeatCount="indefinite" /></circle>
-<circle cx="-10" cy="215" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="5.047106556169979s" begin="3.2877713070377452s" repeatCount="indefinite" /></circle>
+  <circle cx="-10" cy="50" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="4.414714760708852s" begin="2.267437450644578s" repeatCount="indefinite" /></circle>
+<circle cx="-10" cy="50" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="4.09183903032593s" begin="3.0423674070779705s" repeatCount="indefinite" /></circle>
+<circle cx="-10" cy="110" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="4.884356389815296s" begin="1.7587681186173478s" repeatCount="indefinite" /></circle>
+<circle cx="-10" cy="200" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="3.2904108883848493s" begin="3.005970547472343s" repeatCount="indefinite" /></circle>
+<circle cx="-10" cy="125" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="4.204345521492724s" begin="3.3337429054228642s" repeatCount="indefinite" /></circle>
+<circle cx="-10" cy="155" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="3.841631844802875s" begin="2.778141801561869s" repeatCount="indefinite" /></circle>
+<circle cx="-10" cy="215" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="3.165302389159024s" begin="2.1617754843784716s" repeatCount="indefinite" /></circle>
+<circle cx="-10" cy="155" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="3.535441285893864s" begin="2.865515531170241s" repeatCount="indefinite" /></circle>
+<circle cx="-10" cy="35" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="3.4498257885651338s" begin="2.9415539878541677s" repeatCount="indefinite" /></circle>
+<circle cx="-10" cy="125" r="1.5" class="packet"><animate attributeName="cx" from="-10" to="810" dur="5.3553922401590786s" begin="3.8898231198566164s" repeatCount="indefinite" /></circle>
 
 
   <!-- Isometric Cloud Core -->
@@ -162,7 +188,8 @@
   </g>
 
   <!-- Typography -->
-  <text x="50" y="110" class="title-text">Hello, World! I'm <tspan class="title-accent">Kevin</tspan><tspan class="cursor">_</tspan></text>
+  <text x="50" y="100" class="title-text">Hello, World! I'm <tspan class="title-accent">Kevin</tspan><tspan class="cursor">_</tspan></text>
+  <text x="50" y="135" class="subtext">&gt; I push directly to main... just kidding, I use <tspan class="subtext-accent">CI/CD pipelines</tspan> like a responsible adult.</text>
 
   <!-- Border -->
   <rect x="2" y="2" width="796" height="196" class="glow-border" />
