@@ -331,7 +331,7 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
       }
 
       /* === DECRYPT ANIMATION (5s FAST TWITCHING) === */
-            .decryptText { fill: url(#skyBlueGradient); filter: drop-shadow(0 0 5px rgba(0,242,254,0.8)); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: 0px; opacity: 0; }
+                  .decryptText { fill: url(#skyBlueGradient); filter: drop-shadow(0 0 5px rgba(0,242,254,0.8)); font-family: 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; font-size: 44px; font-weight: 900; text-anchor: middle; letter-spacing: 0px; opacity: 0; }
       .dec1 { animation: cycle 3.0s infinite; animation-delay: 0.00s; }
       .dec2 { animation: cycle 3.0s infinite; animation-delay: 0.10s; }
       .dec3 { animation: cycle 3.0s infinite; animation-delay: 0.20s; }
@@ -793,36 +793,36 @@ svg_content = """<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg
   
   <!-- === HACKER DECRYPT SEQUENCE (3s RANDOM SHUFFLE) === -->
   <g class="decryptWrapper">
-    <text x="50%" y="80" class="decryptText dec1">Me[pEnghH#PPT)49?z#w0X[</text>
-    <text x="50%" y="80" class="decryptText dec2">Pj^y[*SncsmDzAMU/?bfIcr</text>
-    <text x="50%" y="80" class="decryptText dec3">=DNRRt%(7tn_iXn|EBHQ!2l</text>
-    <text x="50%" y="80" class="decryptText dec4">o+z^$UtYIdW%d1}EjUg.[0;</text>
-    <text x="50%" y="80" class="decryptText dec5">N2N$}!ta@Yc7!MO1gP-*yjQ</text>
-    <text x="50%" y="80" class="decryptText dec6">aPrq31C*kl[z(kM2On4r0=h</text>
-    <text x="50%" y="80" class="decryptText dec7">GQZH@+Z@RB2U-W[!N}UK[bW</text>
-    <text x="50%" y="80" class="decryptText dec8">,z1bK2?.YJ^{y.8=/J3j/:w</text>
-    <text x="50%" y="80" class="decryptText dec9">zd@lON2wiw?e#l06$|a*^BQ</text>
-    <text x="50%" y="80" class="decryptText dec10">hT}fnOG.xF#rL;{KQaefVcs</text>
-    <text x="50%" y="80" class="decryptText dec11">:@lZ?Bh3xov-yj7ZU?Js?Tz</text>
-    <text x="50%" y="80" class="decryptText dec12">j4kG)A$))s_s=y^heop1_)4</text>
-    <text x="50%" y="80" class="decryptText dec13">!+1^!qZ4_zetVBQCkd^th3U</text>
-    <text x="50%" y="80" class="decryptText dec14">CAoIW$nUpH7^9[#Njg7OYQ6</text>
-    <text x="50%" y="80" class="decryptText dec15">8KCi=M+6f{xvPfwri-Ci0cp</text>
-    <text x="50%" y="80" class="decryptText dec16">)!bTGI|9SN*m-?EbhY2oh9v</text>
-    <text x="50%" y="80" class="decryptText dec17">3PUMTrhMUDs%M!0fn8D2+MW</text>
-    <text x="50%" y="80" class="decryptText dec18">qA+48dXPf*U3|95Ng+$wwep</text>
-    <text x="50%" y="80" class="decryptText dec19">(Tsq2ec%^3xH3GU|v*!7=n4</text>
-    <text x="50%" y="80" class="decryptText dec20">B#XG{ifO1R{tskT!^|p}NQZ</text>
-    <text x="50%" y="80" class="decryptText dec21">?{R.g=H^G8h-ZMy1x;#?x?a</text>
-    <text x="50%" y="80" class="decryptText dec22">2{6cF*%%FOntx6/?MYAkzj}</text>
-    <text x="50%" y="80" class="decryptText dec23">J0BoreEocR*=UF|b0?I=zqt</text>
-    <text x="50%" y="80" class="decryptText dec24">7EEq0m/4--m2G#bWR[j-6GQ</text>
-    <text x="50%" y="80" class="decryptText dec25">I(o22Y]}iL5WglcLVRJ_Vo-</text>
-    <text x="50%" y="80" class="decryptText dec26">o=)usfns_]wqX4^@lk{Y_)+</text>
-    <text x="50%" y="80" class="decryptText dec27">AJ0wdLt}*x-,eF5GQC]QoqK</text>
-    <text x="50%" y="80" class="decryptText dec28">.:yqJB9V3nD#,H/(BBA:3)(</text>
-    <text x="50%" y="80" class="decryptText dec29">V#p6+)McKip5RPHllIARIJ#</text>
-    <text x="50%" y="80" class="decryptText dec30">)2mgndM,^4DQ)^?@y6chTz(</text>
+    <text x="46%" y="80" class="decryptText dec1">MyH|!.4%[g(F[bOuA#*6C}9</text>
+    <text x="46%" y="80" class="decryptText dec2">e6u]e*SV-A)@I$iXbk@r{Gr</text>
+    <text x="46%" y="80" class="decryptText dec3">M_E(=Dp6%!u1ZazhAk/ME${</text>
+    <text x="46%" y="80" class="decryptText dec4">omQ8u@f8)[9!Gykxc^l6qVI</text>
+    <text x="46%" y="80" class="decryptText dec5">;N55nuSVfU{uT[,v|@%B+@v</text>
+    <text x="46%" y="80" class="decryptText dec6">e]!L[bqz6|h1YK$//CM|}Rb</text>
+    <text x="46%" y="80" class="decryptText dec7">KrHt5opjQ^3CF5^}3D$@A4#</text>
+    <text x="46%" y="80" class="decryptText dec8">HPsLeow{%(@NFuSBJGt1LB^</text>
+    <text x="46%" y="80" class="decryptText dec9">HecH!VSH^%L_:OuxEGLvpw6</text>
+    <text x="46%" y="80" class="decryptText dec10">HelldE^Xo=oO)JC(PuyP7cI</text>
+    <text x="46%" y="80" class="decryptText dec11">Hell](s:xqBf*R-KDe-qlVs</text>
+    <text x="46%" y="80" class="decryptText dec12">Hello)Sl0-?a,HSy@qyvoYO</text>
+    <text x="46%" y="80" class="decryptText dec13">Hello,n_$+DNk_Gw$B73ef*</text>
+    <text x="46%" y="80" class="decryptText dec14">Hello, WodvcWJr{j5(rhPq</text>
+    <text x="46%" y="80" class="decryptText dec15">Hello, W0l3f8c1KCm1),u#</text>
+    <text x="46%" y="80" class="decryptText dec16">Hello, Wo^SXBw?PTw40;_A</text>
+    <text x="46%" y="80" class="decryptText dec17">Hello, Wor?qjZw{xj:xFy9</text>
+    <text x="46%" y="80" class="decryptText dec18">Hello, Worl@E]v816k02B+</text>
+    <text x="46%" y="80" class="decryptText dec19">Hello, Worldv6pVQWZS;Xf</text>
+    <text x="46%" y="80" class="decryptText dec20">Hello, World!GUG0rCGTyK</text>
+    <text x="46%" y="80" class="decryptText dec21">Hello, World! Jr;;}0p:h</text>
+    <text x="46%" y="80" class="decryptText dec22">Hello, World! IN^a%..(S</text>
+    <text x="46%" y="80" class="decryptText dec23">Hello, World! I'c=(Hn-p</text>
+    <text x="46%" y="80" class="decryptText dec24">Hello, World! I'mXM*jSu</text>
+    <text x="46%" y="80" class="decryptText dec25">Hello, World! I'm 7_Szh</text>
+    <text x="46%" y="80" class="decryptText dec26">Hello, World! I'm K(V:@</text>
+    <text x="46%" y="80" class="decryptText dec27">Hello, World! I'm Ke21k</text>
+    <text x="46%" y="80" class="decryptText dec28">Hello, World! I'm KevPZ</text>
+    <text x="46%" y="80" class="decryptText dec29">Hello, World! I'm Kevim</text>
+    <text x="46%" y="80" class="decryptText dec30">Hello, World! I'm Kevin</text>
   </g>
 
   <g class="finalReveal">
