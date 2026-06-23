@@ -58,7 +58,7 @@ def generate_projects_svg():
                 "to manage machine learning projects",
                 "and event-driven training pipelines."
             ],
-            "tags": ["AWS", "React", "Serverless", "Python"],
+            "tags": ["SQS", "Lambda", "S3", "Firebase"],
             "color": "#0ea5e9", # Sky Blue
             "x": 20, "y": 440
         },
