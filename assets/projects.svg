@@ -163,55 +163,55 @@
             
         </g>
         
-        <!-- Card: AWS Static Website -->
+        <!-- Card: GitWrapped -->
         <g class="card" style="animation-delay: 0.6s">
             <rect x="20" y="440" width="370" height="200" rx="12" class="card-bg" />
             <!-- Neon top border highlight -->
-            <path d="M 20 452 Q 20 440 32 440 L 378 440 Q 390 440 390 452" stroke="#ff9900" stroke-width="3" fill="none" class="card-highlight" />
+            <path d="M 20 452 Q 20 440 32 440 L 378 440 Q 390 440 390 452" stroke="#8b5cf6" stroke-width="3" fill="none" class="card-highlight" />
             
             <!-- Icon/Folder -->
-            <svg x="45" y="465" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg x="45" y="465" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
             </svg>
             
-            <text x="80" y="483" class="title" fill="#ff9900">AWS Static Website</text>
+            <text x="80" y="483" class="title" fill="#8b5cf6">GitWrapped</text>
             
-            <text x="45" y="520" class="desc">Serverless web hosting architecture</text>\n<text x="45" y="542" class="desc">using Amazon S3, CloudFront CDN, and</text>\n<text x="45" y="564" class="desc">Route 53 for low-latency delivery.</text>\n
+            <text x="45" y="520" class="desc">Highly animated cinematic 'Spotify</text>\n<text x="45" y="542" class="desc">Wrapped' style experience generated</text>\n<text x="45" y="564" class="desc">entirely from raw GitHub statistics.</text>\n
             
-            <rect x="45" y="595" width="64" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
-            <text x="77.0" y="611" class="tag" fill="#ff9900">AWS S3</text>
+            <rect x="45" y="595" width="56" height="24" rx="12" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1" />
+            <text x="73.0" y="611" class="tag" fill="#8b5cf6">React</text>
             
-            <rect x="119" y="595" width="96" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
-            <text x="167.0" y="611" class="tag" fill="#ff9900">CloudFront</text>
+            <rect x="111" y="595" width="120" height="24" rx="12" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1" />
+            <text x="171.0" y="611" class="tag" fill="#8b5cf6">Framer Motion</text>
             
-            <rect x="225" y="595" width="80" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
-            <text x="265.0" y="611" class="tag" fill="#ff9900">Route 53</text>
+            <rect x="241" y="595" width="40" height="24" rx="12" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1" />
+            <text x="261.0" y="611" class="tag" fill="#8b5cf6">API</text>
             
         </g>
         
-        <!-- Card: GitWrapped -->
+        <!-- Card: AWS Static Website -->
         <g class="card" style="animation-delay: 0.75s">
             <rect x="410" y="440" width="370" height="200" rx="12" class="card-bg" />
             <!-- Neon top border highlight -->
-            <path d="M 410 452 Q 410 440 422 440 L 768 440 Q 780 440 780 452" stroke="#8b5cf6" stroke-width="3" fill="none" class="card-highlight" />
+            <path d="M 410 452 Q 410 440 422 440 L 768 440 Q 780 440 780 452" stroke="#ff9900" stroke-width="3" fill="none" class="card-highlight" />
             
             <!-- Icon/Folder -->
-            <svg x="435" y="465" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg x="435" y="465" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
             </svg>
             
-            <text x="470" y="483" class="title" fill="#8b5cf6">GitWrapped</text>
+            <text x="470" y="483" class="title" fill="#ff9900">AWS Static Website</text>
             
-            <text x="435" y="520" class="desc">Highly animated cinematic 'Spotify</text>\n<text x="435" y="542" class="desc">Wrapped' style experience generated</text>\n<text x="435" y="564" class="desc">entirely from raw GitHub statistics.</text>\n
+            <text x="435" y="520" class="desc">Serverless web hosting architecture</text>\n<text x="435" y="542" class="desc">using Amazon S3, CloudFront CDN, and</text>\n<text x="435" y="564" class="desc">Route 53 for low-latency delivery.</text>\n
             
-            <rect x="435" y="595" width="56" height="24" rx="12" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1" />
-            <text x="463.0" y="611" class="tag" fill="#8b5cf6">React</text>
+            <rect x="435" y="595" width="64" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
+            <text x="467.0" y="611" class="tag" fill="#ff9900">AWS S3</text>
             
-            <rect x="501" y="595" width="120" height="24" rx="12" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1" />
-            <text x="561.0" y="611" class="tag" fill="#8b5cf6">Framer Motion</text>
+            <rect x="509" y="595" width="96" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
+            <text x="557.0" y="611" class="tag" fill="#ff9900">CloudFront</text>
             
-            <rect x="631" y="595" width="40" height="24" rx="12" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1" />
-            <text x="651.0" y="611" class="tag" fill="#8b5cf6">API</text>
+            <rect x="615" y="595" width="80" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
+            <text x="655.0" y="611" class="tag" fill="#ff9900">Route 53</text>
             
         </g>
         

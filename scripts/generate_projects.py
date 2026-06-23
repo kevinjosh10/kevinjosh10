@@ -47,17 +47,6 @@ def generate_projects_svg():
             "color": "#ff007f" # Pink
         },
         {
-            "title": "AWS Static Website",
-            "link": "https://github.com/kevinjosh10/aws-static-website",
-            "desc": [
-                "Serverless web hosting architecture",
-                "using Amazon S3, CloudFront CDN, and",
-                "Route 53 for low-latency delivery."
-            ],
-            "tags": ["AWS S3", "CloudFront", "Route 53"],
-            "color": "#ff9900" # AWS Orange
-        },
-        {
             "title": "GitWrapped",
             "link": "https://github.com/kevinjosh10/GitWrapped",
             "desc": [
@@ -67,6 +56,17 @@ def generate_projects_svg():
             ],
             "tags": ["React", "Framer Motion", "API"],
             "color": "#8b5cf6" # Purple
+        },
+        {
+            "title": "AWS Static Website",
+            "link": "https://github.com/kevinjosh10/aws-static-website",
+            "desc": [
+                "Serverless web hosting architecture",
+                "using Amazon S3, CloudFront CDN, and",
+                "Route 53 for low-latency delivery."
+            ],
+            "tags": ["AWS S3", "CloudFront", "Route 53"],
+            "color": "#ff9900" # AWS Orange
         }
     ]
 
