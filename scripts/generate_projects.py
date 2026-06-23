@@ -59,7 +59,7 @@ def generate_projects_svg():
                 "and event-driven training pipelines."
             ],
             "tags": ["SQS", "Lambda", "S3", "Firebase"],
-            "color": "#00c853", # Bright Dark Green
+            "color": "#ffd700", # Bright Yellow
             "x": 20, "y": 440
         },
         {
