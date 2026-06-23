@@ -49,6 +49,30 @@ def generate_projects_svg():
             "tags": ["AWS S3", "CloudFront", "Route 53"],
             "color": "#ff9900", # AWS Orange
             "x": 410, "y": 230
+        },
+        {
+            "title": "CloudTrain Studio",
+            "link": "https://github.com/kevinjosh10/CloudTrain",
+            "desc": [
+                "End-to-end serverless MLOps platform",
+                "to manage machine learning projects",
+                "and event-driven training pipelines."
+            ],
+            "tags": ["AWS", "React", "Serverless", "Python"],
+            "color": "#0ea5e9", # Sky Blue
+            "x": 20, "y": 440
+        },
+        {
+            "title": "GitWrapped",
+            "link": "https://github.com/kevinjosh10/GitWrapped",
+            "desc": [
+                "Highly animated cinematic 'Spotify",
+                "Wrapped' style experience generated",
+                "entirely from raw GitHub statistics."
+            ],
+            "tags": ["React", "Framer Motion", "API"],
+            "color": "#8b5cf6", # Purple
+            "x": 410, "y": 440
         }
     ]
 
@@ -89,7 +113,7 @@ def generate_projects_svg():
         </g>
         '''
 
-    svg_content = f"""<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+    svg_content = f"""<svg width="800" height="660" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .card {{

@@ -42,7 +42,7 @@
 ### 📂 Featured Architecture & Engineering Projects
 
 <div align="center">
-  <img src="assets/projects.svg?v=4" alt="Featured Projects" width="100%" />
+  <img src="assets/projects.svg?t=1782235398" alt="Featured Projects" width="100%" />
 </div>
 
 ---
