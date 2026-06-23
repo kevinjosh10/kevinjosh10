@@ -3,6 +3,17 @@ import os
 def generate_projects_svg():
     projects = [
         {
+            "title": "CloudTrain Studio",
+            "link": "https://github.com/kevinjosh10/CloudTrain",
+            "desc": [
+                "End-to-end serverless MLOps platform",
+                "to manage machine learning projects",
+                "and event-driven training pipelines."
+            ],
+            "tags": ["SQS", "Lambda", "S3", "Firebase"],
+            "color": "#ffd700" # Bright Yellow
+        },
+        {
             "title": "S3 Backup Tool",
             "link": "https://github.com/kevinjosh10/s3-backup-tool",
             "desc": [
@@ -11,8 +22,7 @@ def generate_projects_svg():
                 "encryption, and lifecycle automation."
             ],
             "tags": ["Python", "AWS S3", "Boto3", "CLI"],
-            "color": "#00f2fe", # Cyan
-            "x": 20, "y": 20
+            "color": "#00f2fe" # Cyan
         },
         {
             "title": "CloudMorph",
@@ -23,8 +33,7 @@ def generate_projects_svg():
                 "and pre-signed URLs via Lambda."
             ],
             "tags": ["Lambda", "API Gtwy", "S3", "Python"],
-            "color": "#39ff14", # Green
-            "x": 410, "y": 20
+            "color": "#39ff14" # Green
         },
         {
             "title": "Cryptexa",
@@ -35,8 +44,7 @@ def generate_projects_svg():
                 "Built with a decoupled serverless backend."
             ],
             "tags": ["React", "Node.js", "Serverless"],
-            "color": "#ff007f", # Pink
-            "x": 20, "y": 230
+            "color": "#ff007f" # Pink
         },
         {
             "title": "AWS Static Website",
@@ -47,20 +55,7 @@ def generate_projects_svg():
                 "Route 53 for low-latency delivery."
             ],
             "tags": ["AWS S3", "CloudFront", "Route 53"],
-            "color": "#ff9900", # AWS Orange
-            "x": 410, "y": 230
-        },
-        {
-            "title": "CloudTrain Studio",
-            "link": "https://github.com/kevinjosh10/CloudTrain",
-            "desc": [
-                "End-to-end serverless MLOps platform",
-                "to manage machine learning projects",
-                "and event-driven training pipelines."
-            ],
-            "tags": ["SQS", "Lambda", "S3", "Firebase"],
-            "color": "#ffd700", # Bright Yellow
-            "x": 20, "y": 440
+            "color": "#ff9900" # AWS Orange
         },
         {
             "title": "GitWrapped",
@@ -71,17 +66,23 @@ def generate_projects_svg():
                 "entirely from raw GitHub statistics."
             ],
             "tags": ["React", "Framer Motion", "API"],
-            "color": "#8b5cf6", # Purple
-            "x": 410, "y": 440
+            "color": "#8b5cf6" # Purple
         }
     ]
+
+    # Dynamically assign x and y based on index
+    for idx, p in enumerate(projects):
+        row = idx // 2
+        col = idx % 2
+        p["x"] = 20 + col * 390
+        p["y"] = 20 + row * 210
 
     cards_html = ""
     for idx, p in enumerate(projects):
         # Generate description text elements
         desc_html = ""
         for i, line in enumerate(p["desc"]):
-            desc_html += f'<text x="{p["x"] + 25}" y="{p["y"] + 80 + (i*22)}" class="desc">{line}</text>\n'
+            desc_html += f'<text x="{p["x"] + 25}" y="{p["y"] + 80 + (i*22)}" class="desc">{line}</text>\\n'
             
         # Generate tags
         tags_html = ""

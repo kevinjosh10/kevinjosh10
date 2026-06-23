@@ -50,157 +50,142 @@
   <rect width="100%" height="100%" fill="transparent" />
 
   
-        <!-- Card: S3 Backup Tool -->
+        <!-- Card: CloudTrain Studio -->
         <g class="card" style="animation-delay: 0.0s">
             <rect x="20" y="20" width="370" height="200" rx="12" class="card-bg" />
             <!-- Neon top border highlight -->
-            <path d="M 20 32 Q 20 20 32 20 L 378 20 Q 390 20 390 32" stroke="#00f2fe" stroke-width="3" fill="none" class="card-highlight" />
+            <path d="M 20 32 Q 20 20 32 20 L 378 20 Q 390 20 390 32" stroke="#ffd700" stroke-width="3" fill="none" class="card-highlight" />
             
             <!-- Icon/Folder -->
-            <svg x="45" y="45" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg x="45" y="45" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffd700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
             </svg>
             
-            <text x="80" y="63" class="title" fill="#00f2fe">S3 Backup Tool</text>
+            <text x="80" y="63" class="title" fill="#ffd700">CloudTrain Studio</text>
             
-            <text x="45" y="100" class="desc">Resilient CLI utility for metadata-</text>
-<text x="45" y="122" class="desc">based incremental synchronization,</text>
-<text x="45" y="144" class="desc">encryption, and lifecycle automation.</text>
-
+            <text x="45" y="100" class="desc">End-to-end serverless MLOps platform</text>\n<text x="45" y="122" class="desc">to manage machine learning projects</text>\n<text x="45" y="144" class="desc">and event-driven training pipelines.</text>\n
             
-            <rect x="45" y="175" width="64" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
-            <text x="77.0" y="191" class="tag" fill="#00f2fe">Python</text>
+            <rect x="45" y="175" width="40" height="24" rx="12" fill="#ffd700" fill-opacity="0.15" stroke="#ffd700" stroke-width="1" />
+            <text x="65.0" y="191" class="tag" fill="#ffd700">SQS</text>
             
-            <rect x="119" y="175" width="64" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
-            <text x="151.0" y="191" class="tag" fill="#00f2fe">AWS S3</text>
+            <rect x="95" y="175" width="64" height="24" rx="12" fill="#ffd700" fill-opacity="0.15" stroke="#ffd700" stroke-width="1" />
+            <text x="127.0" y="191" class="tag" fill="#ffd700">Lambda</text>
             
-            <rect x="193" y="175" width="56" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
-            <text x="221.0" y="191" class="tag" fill="#00f2fe">Boto3</text>
+            <rect x="169" y="175" width="32" height="24" rx="12" fill="#ffd700" fill-opacity="0.15" stroke="#ffd700" stroke-width="1" />
+            <text x="185.0" y="191" class="tag" fill="#ffd700">S3</text>
             
-            <rect x="259" y="175" width="40" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
-            <text x="279.0" y="191" class="tag" fill="#00f2fe">CLI</text>
+            <rect x="211" y="175" width="80" height="24" rx="12" fill="#ffd700" fill-opacity="0.15" stroke="#ffd700" stroke-width="1" />
+            <text x="251.0" y="191" class="tag" fill="#ffd700">Firebase</text>
+            
+        </g>
+        
+        <!-- Card: S3 Backup Tool -->
+        <g class="card" style="animation-delay: 0.15s">
+            <rect x="410" y="20" width="370" height="200" rx="12" class="card-bg" />
+            <!-- Neon top border highlight -->
+            <path d="M 410 32 Q 410 20 422 20 L 768 20 Q 780 20 780 32" stroke="#00f2fe" stroke-width="3" fill="none" class="card-highlight" />
+            
+            <!-- Icon/Folder -->
+            <svg x="435" y="45" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+            
+            <text x="470" y="63" class="title" fill="#00f2fe">S3 Backup Tool</text>
+            
+            <text x="435" y="100" class="desc">Resilient CLI utility for metadata-</text>\n<text x="435" y="122" class="desc">based incremental synchronization,</text>\n<text x="435" y="144" class="desc">encryption, and lifecycle automation.</text>\n
+            
+            <rect x="435" y="175" width="64" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
+            <text x="467.0" y="191" class="tag" fill="#00f2fe">Python</text>
+            
+            <rect x="509" y="175" width="64" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
+            <text x="541.0" y="191" class="tag" fill="#00f2fe">AWS S3</text>
+            
+            <rect x="583" y="175" width="56" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
+            <text x="611.0" y="191" class="tag" fill="#00f2fe">Boto3</text>
+            
+            <rect x="649" y="175" width="40" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
+            <text x="669.0" y="191" class="tag" fill="#00f2fe">CLI</text>
             
         </g>
         
         <!-- Card: CloudMorph -->
-        <g class="card" style="animation-delay: 0.15s">
-            <rect x="410" y="20" width="370" height="200" rx="12" class="card-bg" />
+        <g class="card" style="animation-delay: 0.3s">
+            <rect x="20" y="230" width="370" height="200" rx="12" class="card-bg" />
             <!-- Neon top border highlight -->
-            <path d="M 410 32 Q 410 20 422 20 L 768 20 Q 780 20 780 32" stroke="#39ff14" stroke-width="3" fill="none" class="card-highlight" />
+            <path d="M 20 242 Q 20 230 32 230 L 378 230 Q 390 230 390 242" stroke="#39ff14" stroke-width="3" fill="none" class="card-highlight" />
             
             <!-- Icon/Folder -->
-            <svg x="435" y="45" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#39ff14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg x="45" y="255" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#39ff14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
             </svg>
             
-            <text x="470" y="63" class="title" fill="#39ff14">CloudMorph</text>
+            <text x="80" y="273" class="title" fill="#39ff14">CloudMorph</text>
             
-            <text x="435" y="100" class="desc">Serverless file intelligence platform</text>
-<text x="435" y="122" class="desc">handling secure cross-origin uploads</text>
-<text x="435" y="144" class="desc">and pre-signed URLs via Lambda.</text>
-
+            <text x="45" y="310" class="desc">Serverless file intelligence platform</text>\n<text x="45" y="332" class="desc">handling secure cross-origin uploads</text>\n<text x="45" y="354" class="desc">and pre-signed URLs via Lambda.</text>\n
             
-            <rect x="435" y="175" width="64" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
-            <text x="467.0" y="191" class="tag" fill="#39ff14">Lambda</text>
+            <rect x="45" y="385" width="64" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
+            <text x="77.0" y="401" class="tag" fill="#39ff14">Lambda</text>
             
-            <rect x="509" y="175" width="80" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
-            <text x="549.0" y="191" class="tag" fill="#39ff14">API Gtwy</text>
+            <rect x="119" y="385" width="80" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
+            <text x="159.0" y="401" class="tag" fill="#39ff14">API Gtwy</text>
             
-            <rect x="599" y="175" width="32" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
-            <text x="615.0" y="191" class="tag" fill="#39ff14">S3</text>
+            <rect x="209" y="385" width="32" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
+            <text x="225.0" y="401" class="tag" fill="#39ff14">S3</text>
             
-            <rect x="641" y="175" width="64" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
-            <text x="673.0" y="191" class="tag" fill="#39ff14">Python</text>
+            <rect x="251" y="385" width="64" height="24" rx="12" fill="#39ff14" fill-opacity="0.15" stroke="#39ff14" stroke-width="1" />
+            <text x="283.0" y="401" class="tag" fill="#39ff14">Python</text>
             
         </g>
         
         <!-- Card: Cryptexa -->
-        <g class="card" style="animation-delay: 0.3s">
-            <rect x="20" y="230" width="370" height="200" rx="12" class="card-bg" />
+        <g class="card" style="animation-delay: 0.44999999999999996s">
+            <rect x="410" y="230" width="370" height="200" rx="12" class="card-bg" />
             <!-- Neon top border highlight -->
-            <path d="M 20 242 Q 20 230 32 230 L 378 230 Q 390 230 390 242" stroke="#ff007f" stroke-width="3" fill="none" class="card-highlight" />
+            <path d="M 410 242 Q 410 230 422 230 L 768 230 Q 780 230 780 242" stroke="#ff007f" stroke-width="3" fill="none" class="card-highlight" />
             
             <!-- Icon/Folder -->
-            <svg x="45" y="255" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg x="435" y="255" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
             </svg>
             
-            <text x="80" y="273" class="title" fill="#ff007f">Cryptexa</text>
+            <text x="470" y="273" class="title" fill="#ff007f">Cryptexa</text>
             
-            <text x="45" y="310" class="desc">Full-stack student community hub for</text>
-<text x="45" y="332" class="desc">resource sharing &amp; real-time forums.</text>
-<text x="45" y="354" class="desc">Built with a decoupled serverless backend.</text>
-
+            <text x="435" y="310" class="desc">Full-stack student community hub for</text>\n<text x="435" y="332" class="desc">resource sharing &amp; real-time forums.</text>\n<text x="435" y="354" class="desc">Built with a decoupled serverless backend.</text>\n
             
-            <rect x="45" y="385" width="56" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
-            <text x="73.0" y="401" class="tag" fill="#ff007f">React</text>
+            <rect x="435" y="385" width="56" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
+            <text x="463.0" y="401" class="tag" fill="#ff007f">React</text>
             
-            <rect x="111" y="385" width="72" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
-            <text x="147.0" y="401" class="tag" fill="#ff007f">Node.js</text>
+            <rect x="501" y="385" width="72" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
+            <text x="537.0" y="401" class="tag" fill="#ff007f">Node.js</text>
             
-            <rect x="193" y="385" width="96" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
-            <text x="241.0" y="401" class="tag" fill="#ff007f">Serverless</text>
+            <rect x="583" y="385" width="96" height="24" rx="12" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
+            <text x="631.0" y="401" class="tag" fill="#ff007f">Serverless</text>
             
         </g>
         
         <!-- Card: AWS Static Website -->
-        <g class="card" style="animation-delay: 0.44999999999999996s">
-            <rect x="410" y="230" width="370" height="200" rx="12" class="card-bg" />
-            <!-- Neon top border highlight -->
-            <path d="M 410 242 Q 410 230 422 230 L 768 230 Q 780 230 780 242" stroke="#ff9900" stroke-width="3" fill="none" class="card-highlight" />
-            
-            <!-- Icon/Folder -->
-            <svg x="435" y="255" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-            </svg>
-            
-            <text x="470" y="273" class="title" fill="#ff9900">AWS Static Website</text>
-            
-            <text x="435" y="310" class="desc">Serverless web hosting architecture</text>
-<text x="435" y="332" class="desc">using Amazon S3, CloudFront CDN, and</text>
-<text x="435" y="354" class="desc">Route 53 for low-latency delivery.</text>
-
-            
-            <rect x="435" y="385" width="64" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
-            <text x="467.0" y="401" class="tag" fill="#ff9900">AWS S3</text>
-            
-            <rect x="509" y="385" width="96" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
-            <text x="557.0" y="401" class="tag" fill="#ff9900">CloudFront</text>
-            
-            <rect x="615" y="385" width="80" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
-            <text x="655.0" y="401" class="tag" fill="#ff9900">Route 53</text>
-            
-        </g>
-        
-        <!-- Card: CloudTrain Studio -->
         <g class="card" style="animation-delay: 0.6s">
             <rect x="20" y="440" width="370" height="200" rx="12" class="card-bg" />
             <!-- Neon top border highlight -->
-            <path d="M 20 452 Q 20 440 32 440 L 378 440 Q 390 440 390 452" stroke="#ffd700" stroke-width="3" fill="none" class="card-highlight" />
+            <path d="M 20 452 Q 20 440 32 440 L 378 440 Q 390 440 390 452" stroke="#ff9900" stroke-width="3" fill="none" class="card-highlight" />
             
             <!-- Icon/Folder -->
-            <svg x="45" y="465" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffd700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg x="45" y="465" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
             </svg>
             
-            <text x="80" y="483" class="title" fill="#ffd700">CloudTrain Studio</text>
+            <text x="80" y="483" class="title" fill="#ff9900">AWS Static Website</text>
             
-            <text x="45" y="520" class="desc">End-to-end serverless MLOps platform</text>
-<text x="45" y="542" class="desc">to manage machine learning projects</text>
-<text x="45" y="564" class="desc">and event-driven training pipelines.</text>
-
+            <text x="45" y="520" class="desc">Serverless web hosting architecture</text>\n<text x="45" y="542" class="desc">using Amazon S3, CloudFront CDN, and</text>\n<text x="45" y="564" class="desc">Route 53 for low-latency delivery.</text>\n
             
-            <rect x="45" y="595" width="40" height="24" rx="12" fill="#ffd700" fill-opacity="0.15" stroke="#ffd700" stroke-width="1" />
-            <text x="65.0" y="611" class="tag" fill="#ffd700">SQS</text>
+            <rect x="45" y="595" width="64" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
+            <text x="77.0" y="611" class="tag" fill="#ff9900">AWS S3</text>
             
-            <rect x="95" y="595" width="64" height="24" rx="12" fill="#ffd700" fill-opacity="0.15" stroke="#ffd700" stroke-width="1" />
-            <text x="127.0" y="611" class="tag" fill="#ffd700">Lambda</text>
+            <rect x="119" y="595" width="96" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
+            <text x="167.0" y="611" class="tag" fill="#ff9900">CloudFront</text>
             
-            <rect x="169" y="595" width="32" height="24" rx="12" fill="#ffd700" fill-opacity="0.15" stroke="#ffd700" stroke-width="1" />
-            <text x="185.0" y="611" class="tag" fill="#ffd700">S3</text>
-            
-            <rect x="211" y="595" width="80" height="24" rx="12" fill="#ffd700" fill-opacity="0.15" stroke="#ffd700" stroke-width="1" />
-            <text x="251.0" y="611" class="tag" fill="#ffd700">Firebase</text>
+            <rect x="225" y="595" width="80" height="24" rx="12" fill="#ff9900" fill-opacity="0.15" stroke="#ff9900" stroke-width="1" />
+            <text x="265.0" y="611" class="tag" fill="#ff9900">Route 53</text>
             
         </g>
         
@@ -217,10 +202,7 @@
             
             <text x="470" y="483" class="title" fill="#8b5cf6">GitWrapped</text>
             
-            <text x="435" y="520" class="desc">Highly animated cinematic 'Spotify</text>
-<text x="435" y="542" class="desc">Wrapped' style experience generated</text>
-<text x="435" y="564" class="desc">entirely from raw GitHub statistics.</text>
-
+            <text x="435" y="520" class="desc">Highly animated cinematic 'Spotify</text>\n<text x="435" y="542" class="desc">Wrapped' style experience generated</text>\n<text x="435" y="564" class="desc">entirely from raw GitHub statistics.</text>\n
             
             <rect x="435" y="595" width="56" height="24" rx="12" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1" />
             <text x="463.0" y="611" class="tag" fill="#8b5cf6">React</text>
