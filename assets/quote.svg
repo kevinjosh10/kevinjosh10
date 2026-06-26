@@ -1,4 +1,4 @@
-<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,7 +16,9 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"The question isn't who is going to let me;</text>
-<text x="50%" y="85" class="text">it's who is going to stop me." — Ayn Rand</text>
+  <text x="50%" y="60" class="text">"Show kindness but never expect it. Show</text>
+<text x="50%" y="85" class="text">authenticity but never expect it. Only the</text>
+<text x="50%" y="110" class="text">wise are indifferent to things they can't</text>
+<text x="50%" y="135" class="text">control." — Maxime Lagace</text>
 
 </svg>
