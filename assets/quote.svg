@@ -1,4 +1,4 @@
-<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,8 +16,7 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"It's easy to be a critic, but being a doer</text>
-<text x="50%" y="85" class="text">requires effort, risk, and change." — Wayne</text>
-<text x="50%" y="110" class="text">Dyer</text>
+  <text x="50%" y="60" class="text">"Happiness is not a goal...it's a by-product</text>
+<text x="50%" y="85" class="text">of a life well lived." — Eleanor Roosevelt</text>
 
 </svg>
