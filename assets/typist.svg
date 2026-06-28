@@ -1,0 +1,147 @@
+<svg width="600" height="40" viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Flowing Gradient -->
+    <linearGradient id="flowingGradient" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="25%" stop-color="#4facfe" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="75%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#00f2fe" />
+      <animate attributeName="x1" values="0%;-100%" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="200%;100%" dur="3s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <style>
+      .text {
+        font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+        font-size: 22px;
+        font-weight: 700;
+        fill: url(#flowingGradient);
+        text-anchor: middle;
+      }
+      .cursor {
+        fill: #00f2fe;
+        font-size: 22px;
+        font-family: 'Consolas', 'Menlo', monospace;
+        font-weight: 700;
+      }
+      
+      @keyframes blinkCursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <g>
+
+    <!-- Group for Line 0, only visible during its time -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0.0000;0.2375;0.2385;1.0000" dur="16s" repeatCount="indefinite" />
+      
+      <clipPath id="clip_full_0">
+        <rect x="123.10000000000002" y="0" width="0" height="40">
+          <animate attributeName="width" 
+                   values="0;363.79999999999995;363.79999999999995;0;0;0" 
+                   keyTimes="0.0000;0.0750;0.2000;0.2375;0.2385;1.0000" 
+                   dur="16s" 
+                   repeatCount="indefinite" />
+        </rect>
+      </clipPath>
+      
+      <text x="300" y="28" class="text" clip-path="url(#clip_full_0)">Cloud Infrastructure Engineer</text>
+      
+      <!-- Cursor -->
+      <text x="123.10000000000002" y="28" class="cursor" style="animation: blinkCursor 0.8s step-end infinite;">|
+        <!-- Move cursor X -->
+        <animate attributeName="x" 
+                 values="0;363.79999999999995;363.79999999999995;0;0;0" 
+                 keyTimes="0.0000;0.0750;0.2000;0.2375;0.2385;1.0000" 
+                 dur="16s" 
+                 repeatCount="indefinite" additive="sum" />
+      </text>
+    </g>
+
+    <!-- Group for Line 1, only visible during its time -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.0000;0.2490;0.2500;0.4875;0.4885;1.0000" dur="16s" repeatCount="indefinite" />
+      
+      <clipPath id="clip_full_1">
+        <rect x="123.10000000000002" y="0" width="0" height="40">
+          <animate attributeName="width" 
+                   values="0;0;0;363.79999999999995;363.79999999999995;0;0;0" 
+                   keyTimes="0.0000;0.2490;0.2500;0.3250;0.4500;0.4875;0.4885;1.0000" 
+                   dur="16s" 
+                   repeatCount="indefinite" />
+        </rect>
+      </clipPath>
+      
+      <text x="300" y="28" class="text" clip-path="url(#clip_full_1)">AWS Architecture | Serverless</text>
+      
+      <!-- Cursor -->
+      <text x="123.10000000000002" y="28" class="cursor" style="animation: blinkCursor 0.8s step-end infinite;">|
+        <!-- Move cursor X -->
+        <animate attributeName="x" 
+                 values="0;0;0;363.79999999999995;363.79999999999995;0;0;0" 
+                 keyTimes="0.0000;0.2490;0.2500;0.3250;0.4500;0.4875;0.4885;1.0000" 
+                 dur="16s" 
+                 repeatCount="indefinite" additive="sum" />
+      </text>
+    </g>
+
+    <!-- Group for Line 2, only visible during its time -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.0000;0.4990;0.5000;0.7375;0.7385;1.0000" dur="16s" repeatCount="indefinite" />
+      
+      <clipPath id="clip_full_2">
+        <rect x="98.70000000000002" y="0" width="0" height="40">
+          <animate attributeName="width" 
+                   values="0;0;0;412.59999999999997;412.59999999999997;0;0;0" 
+                   keyTimes="0.0000;0.4990;0.5000;0.5750;0.7000;0.7375;0.7385;1.0000" 
+                   dur="16s" 
+                   repeatCount="indefinite" />
+        </rect>
+      </clipPath>
+      
+      <text x="300" y="28" class="text" clip-path="url(#clip_full_2)">Building Production-Grade Systems</text>
+      
+      <!-- Cursor -->
+      <text x="98.70000000000002" y="28" class="cursor" style="animation: blinkCursor 0.8s step-end infinite;">|
+        <!-- Move cursor X -->
+        <animate attributeName="x" 
+                 values="0;0;0;412.59999999999997;412.59999999999997;0;0;0" 
+                 keyTimes="0.0000;0.4990;0.5000;0.5750;0.7000;0.7375;0.7385;1.0000" 
+                 dur="16s" 
+                 repeatCount="indefinite" additive="sum" />
+      </text>
+    </g>
+
+    <!-- Group for Line 3, only visible during its time -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.0000;0.7490;0.7500;0.9875;0.9885;1.0000" dur="16s" repeatCount="indefinite" />
+      
+      <clipPath id="clip_full_3">
+        <rect x="129.20000000000002" y="0" width="0" height="40">
+          <animate attributeName="width" 
+                   values="0;0;0;351.59999999999997;351.59999999999997;0;0;0" 
+                   keyTimes="0.0000;0.7490;0.7500;0.8250;0.9500;0.9875;0.9885;1.0000" 
+                   dur="16s" 
+                   repeatCount="indefinite" />
+        </rect>
+      </clipPath>
+      
+      <text x="300" y="28" class="text" clip-path="url(#clip_full_3)">Learning in Public Every Day</text>
+      
+      <!-- Cursor -->
+      <text x="129.20000000000002" y="28" class="cursor" style="animation: blinkCursor 0.8s step-end infinite;">|
+        <!-- Move cursor X -->
+        <animate attributeName="x" 
+                 values="0;0;0;351.59999999999997;351.59999999999997;0;0;0" 
+                 keyTimes="0.0000;0.7490;0.7500;0.8250;0.9500;0.9875;0.9885;1.0000" 
+                 dur="16s" 
+                 repeatCount="indefinite" additive="sum" />
+      </text>
+    </g>
+
+  </g>
+</svg>
