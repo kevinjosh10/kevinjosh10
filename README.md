@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Consolas&weight=700&size=22&duration=4000&pause=1000&color=BF5AF2&center=true&vCenter=true&width=600&lines=Cloud+Infrastructure+Engineer;AWS+Architecture+%7C+Serverless;Building+Production-Grade+Systems;Learning+in+Public+Every+Day" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Consolas&weight=700&size=22&duration=4000&pause=1000&color=00F2FE&center=true&vCenter=true&width=600&lines=Cloud+Infrastructure+Engineer;AWS+Architecture+%7C+Serverless;Building+Production-Grade+Systems;Learning+in+Public+Every+Day" alt="Typing SVG" />
 </div>
 
 <div align="center">
