@@ -1,4 +1,4 @@
-<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,7 +16,9 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"The heart wants what it wants - or else it</text>
-<text x="50%" y="85" class="text">does not care." — Emily Dickinson</text>
+  <text x="50%" y="60" class="text">"The moment you stop to think about whether</text>
+<text x="50%" y="85" class="text">you love someone, you've already stopped</text>
+<text x="50%" y="110" class="text">loving that person forever." — Carlos Ruiz</text>
+<text x="50%" y="135" class="text">Zafon</text>
 
 </svg>
