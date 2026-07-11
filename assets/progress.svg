@@ -18,14 +18,14 @@
     <!-- Soft glow filter -->
     <filter id="gf"><feGaussianBlur stdDeviation="2.5"/></filter>
     <!-- Clip to filled area -->
-    <clipPath id="cp"><rect x="10" y="16" width="76.6" height="30" rx="15"/></clipPath>
+    <clipPath id="cp"><rect x="10" y="16" width="77.1" height="30" rx="15"/></clipPath>
   </defs>
 
   <!-- ========== BACKGROUND TRACK ========== -->
   <rect x="10" y="16" width="580" height="30" rx="15" fill="#1e293b" fill-opacity="0.3"/>
 
   <!-- ========== GLOW LAYER (behind bar) ========== -->
-  <rect x="10" y="16" width="76.6" height="30" rx="15" fill="url(#g1)" filter="url(#gf)" opacity="0.5">
+  <rect x="10" y="16" width="77.1" height="30" rx="15" fill="url(#g1)" filter="url(#gf)" opacity="0.5">
     <animate attributeName="opacity" values="0.35;0.6;0.35" dur="3s" repeatCount="indefinite"/>
   </rect>
 
@@ -57,11 +57,11 @@
       <animate attributeName="cy" values="40;14" dur="2.5s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;0.7;0" dur="2.5s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="38" cy="42" r="1.5" fill="#fff" opacity="0">
+    <circle cx="39" cy="42" r="1.5" fill="#fff" opacity="0">
       <animate attributeName="cy" values="42;16" dur="3s" begin="0.8s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;0.6;0" dur="3s" begin="0.8s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="57" cy="38" r="2.2" fill="#fff" opacity="0">
+    <circle cx="58" cy="38" r="2.2" fill="#fff" opacity="0">
       <animate attributeName="cy" values="38;12" dur="3.5s" begin="1.6s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;0.65;0" dur="3.5s" begin="1.6s" repeatCount="indefinite"/>
     </circle>
@@ -72,11 +72,11 @@
   </g>
 
   <!-- ========== PULSING EDGE GLOW ========== -->
-  <rect x="10" y="16" width="76.6" height="30" rx="15" fill="none" stroke="#818cf8" stroke-width="1.5">
+  <rect x="10" y="16" width="77.1" height="30" rx="15" fill="none" stroke="#818cf8" stroke-width="1.5">
     <animate attributeName="stroke-opacity" values="0.2;0.7;0.2" dur="2s" repeatCount="indefinite"/>
     <animate attributeName="stroke-width" values="1;2.5;1" dur="2s" repeatCount="indefinite"/>
   </rect>
 
   <!-- ========== LABEL ========== -->
-  <text x="300" y="65" fill="#94a3b8" font-family="Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Day 132 / 1000  ·  86.8% remaining  🚀</text>
+  <text x="300" y="65" fill="#94a3b8" font-family="Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Day 133 / 1000  ·  86.7% remaining  🚀</text>
 </svg>
