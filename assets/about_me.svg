@@ -66,7 +66,7 @@
 
   <g transform="translate(400, 0)">
     <text x="0" y="60" class="main-title">ARCHITECTING SCALABLE CLOUD SYSTEMS.</text>
-    <text x="0" y="110" class="sub-title"><tspan class="highlight">&gt;</tspan> 1st-Year CS <tspan class="highlight">|</tspan> AWS Architect <tspan class="highlight">|</tspan> Cloud Infrastructure Engineer</text>
+    <text x="0" y="110" class="sub-title"><tspan class="highlight">&gt;</tspan> 2nd-Year CS <tspan class="highlight">|</tspan> AWS Architect <tspan class="highlight">|</tspan> Cloud Infrastructure Engineer</text>
     <text x="0" y="150" class="tagline">I don't just learn cloud — I build production-grade systems with it.</text>
     <text x="0" y="175" class="tagline">Building in public. Learning out loud. Faith Driven.</text>
   </g>

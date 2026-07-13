@@ -8,7 +8,7 @@
 
 <div align="center">
   <h2>👨‍💻 About Me</h2>
-  <img src="assets/about_me.svg?v=1" alt="About Me Summary" width="100%" />
+  <img src="assets/about_me.svg?v=cb_1783964697_411" alt="About Me Summary" width="100%" />
   <br>
   <a href="https://www.linkedin.com/in/kevin-josh10">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />

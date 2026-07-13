@@ -29,7 +29,7 @@ def generate_resume():
     pdf.ln(2)
     
     pdf.set_font("Helvetica", '', 10)
-    summary = "Cloud Infrastructure Engineer and 1st-year CS student executing a public 1000-Day Mission to master AWS Architecture and automated deployments. Focused on building scalable, serverless, and production-grade systems using infrastructure-as-code principles. High-agency builder with a bias for action and shipping real-world distributed systems."
+    summary = "Cloud Infrastructure Engineer and 2nd-year CS student executing a public 1000-Day Mission to master AWS Architecture and automated deployments. Focused on building scalable, serverless, and production-grade systems using infrastructure-as-code principles. High-agency builder with a bias for action and shipping real-world distributed systems."
     pdf.multi_cell(0, 5, summary)
     pdf.ln(4)
     
@@ -105,7 +105,7 @@ def generate_resume():
     pdf.set_font("Helvetica", 'B', 10)
     pdf.cell(0, 5, "Jerusalem College of Engineering", new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("Helvetica", '', 10)
-    pdf.cell(0, 5, "B.E. Computer Science and Engineering | 1st Year", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 5, "B.E. Computer Science and Engineering | 2nd Year", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(4)
     
     # Certifications
