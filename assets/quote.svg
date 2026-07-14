@@ -1,4 +1,4 @@
-<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,7 +16,8 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"To know your Enemy, you must become your</text>
-<text x="50%" y="85" class="text">Enemy." — Sun Tzu</text>
+  <text x="50%" y="60" class="text">"The future belongs to those who learn more</text>
+<text x="50%" y="85" class="text">skills and combine them in creative ways." —</text>
+<text x="50%" y="110" class="text">Robert Greene</text>
 
 </svg>
