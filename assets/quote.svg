@@ -1,4 +1,4 @@
-<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,8 +16,7 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"Bad things are not the worst things that can</text>
-<text x="50%" y="85" class="text">happen to us. NOTHING is the worst thing that</text>
-<text x="50%" y="110" class="text">can happen to us." — Richard Bach</text>
+  <text x="50%" y="60" class="text">"Our life isn't how much we can take out, but</text>
+<text x="50%" y="85" class="text">how much we can put in." — Estee Lauder</text>
 
 </svg>
