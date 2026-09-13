@@ -1,4 +1,4 @@
-<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,9 +16,7 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"Look for 3 things in a person. Intelligence,</text>
-<text x="50%" y="85" class="text">Energy, & Integrity. If they don't have the</text>
-<text x="50%" y="110" class="text">last one, don't even bother with the first</text>
-<text x="50%" y="135" class="text">two." — Warren Buffett</text>
+  <text x="50%" y="60" class="text">"The smallest act of kindness is worth more</text>
+<text x="50%" y="85" class="text">than the greatest intention." — Kahlil Gibran</text>
 
 </svg>
