@@ -1,4 +1,4 @@
-<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,8 +16,9 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"The primary point of this existence is to</text>
-<text x="50%" y="85" class="text">live, and all living things move and grow." —</text>
-<text x="50%" y="110" class="text">Ming-Dao Deng</text>
+  <text x="50%" y="60" class="text">"It's not what you say out of your mouth that</text>
+<text x="50%" y="85" class="text">determines your life, it's what you whisper</text>
+<text x="50%" y="110" class="text">to yourself that has the most power!" —</text>
+<text x="50%" y="135" class="text">Robert Kiyosaki</text>
 
 </svg>
