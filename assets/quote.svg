@@ -1,4 +1,4 @@
-<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,8 +16,9 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"Everything that is made beautiful and fair</text>
-<text x="50%" y="85" class="text">and lovely is made for the eye of one who</text>
-<text x="50%" y="110" class="text">sees." — Rumi</text>
+  <text x="50%" y="60" class="text">"My actions are my only true belongings. I</text>
+<text x="50%" y="85" class="text">cannot escape the consequences of my actions.</text>
+<text x="50%" y="110" class="text">My actions are the ground upon which I</text>
+<text x="50%" y="135" class="text">stand." — Thich Nhat Hanh</text>
 
 </svg>
