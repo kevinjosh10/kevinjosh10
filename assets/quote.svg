@@ -1,4 +1,4 @@
-<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,8 +16,7 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"Determine never to be idle. No person will</text>
-<text x="50%" y="85" class="text">have occasion to complain of the want of time</text>
-<text x="50%" y="110" class="text">who never loses any." — Thomas Jefferson</text>
+  <text x="50%" y="60" class="text">"Honor is the foundation of courage." —</text>
+<text x="50%" y="85" class="text">Amelia Earhart</text>
 
 </svg>
