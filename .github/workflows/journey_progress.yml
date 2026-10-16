@@ -24,6 +24,8 @@ jobs:
         run: pip install requests
 
       - name: Run Generators (Journey & Joke)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/generate_about_me.py
           python scripts/update_journey.py

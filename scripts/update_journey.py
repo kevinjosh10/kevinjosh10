@@ -2,6 +2,9 @@ import datetime
 import os
 import re
 import urllib.request
+import json
+import subprocess
+import xml.etree.ElementTree as ET
 
 START_DATE = datetime.date(2026, 3, 1) 
 TOTAL_DAYS = 1000
@@ -109,52 +112,270 @@ def generate_svg(days_passed, total_days):
 
 
 
-def update_activity_graph():
-    """Downloads the activity graph and injects SMIL animations for GitHub rendering."""
-    print("Generating animated activity graph...")
-    url = 'https://github-readme-activity-graph.vercel.app/graph?username=kevinjosh10&bg_color=00000000&color=94a3b8&line=00f2fe&point=39ff14&area_color=00f2fe&area=true&hide_border=true&custom_title=Contribution%20Activity'
+def fetch_contributions(username="kevinjosh10"):
+    """Fetches the last 31 days of contribution data for the user."""
+    # 1. Try GraphQL API (GitHub Actions provides GITHUB_TOKEN, or local gh CLI)
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        try:
+            token = subprocess.check_output(["gh", "auth", "token"]).decode().strip()
+        except Exception:
+            token = ""
+
+    query = """
+    query($login: String!) {
+      user(login: $login) {
+        contributionsCollection {
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays {
+                contributionCount
+                date
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+    if token:
+        try:
+            req = urllib.request.Request(
+                "https://api.github.com/graphql",
+                data=json.dumps({"query": query, "variables": {"login": username}}).encode(),
+                headers={
+                    "Authorization": f"Bearer {token}",
+                    "User-Agent": "Mozilla/5.0",
+                    "Content-Type": "application/json"
+                }
+            )
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = json.loads(resp.read().decode())
+                cal = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+                days = [d for w in cal["weeks"] for d in w["contributionDays"]]
+                if len(days) >= 31:
+                    print(f"Successfully fetched {len(days)} days via GitHub GraphQL API")
+                    return days[-31:], cal["totalContributions"]
+        except Exception as e:
+            print(f"GraphQL fetch failed: {e}")
+
+    # 2. Fallback to public contributions API
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req) as response:
-            svg_data = response.read().decode('utf-8')
+        url = f"https://github-contributions-api.jogruber.de/v4/{username}"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode())
+            contributions = data.get("contributions", [])
+            today_str = datetime.date.today().isoformat()
+            past = [c for c in contributions if c["date"] <= today_str]
+            total = sum(data.get("total", {}).values())
+            res = [{"date": c["date"], "contributionCount": c["count"]} for c in past[-31:]]
+            if len(res) == 31:
+                print("Successfully fetched via public contributions API")
+                return res, total
+    except Exception as e:
+        print(f"Public API fetch failed: {e}")
 
-        # Add <defs> and <style> for the highly visible neon rendering
-        defs = """<defs>
-          <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.6" />
-            <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.0" />
-          </linearGradient>
-          <style>
-            .ct-line { stroke: #00f2fe !important; stroke-width: 3px !important; filter: drop-shadow(0 0 5px #00f2fe) !important; }
-            .ct-point { stroke: #39ff14 !important; stroke-width: 8px !important; stroke-linecap: round !important; filter: drop-shadow(0 0 5px #39ff14) !important; }
-            .ct-area { fill: url(#fadeGradient) !important; fill-opacity: 1 !important; }
-            .ct-grid { stroke: #1e293b !important; stroke-dasharray: 4 !important; }
-          </style>
-        </defs>"""
-        
-        # Inject defs right after <svg ...>
-        svg_data = re.sub(r'(<svg[^>]*>)', r'\1\n' + defs, svg_data, count=1)
+    return None, 0
 
-        # Remove the solid background card
-        svg_data = re.sub(r'<rect[^>]*id="cardBg"[^>]*>', '', svg_data)
-        
-        # Line animation - continuous drawing trace and pulse
-        svg_data = re.sub(
-            r'(<path[^>]*class="ct-line"[^>]*)></path>',
-            r'\1><animate attributeName="stroke-dashoffset" from="5000" to="0" dur="5s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" /></path>',
-            svg_data
+def get_nice_y_axis(max_val):
+    if max_val <= 0:
+        return 10, [0, 2, 4, 6, 8, 10]
+    
+    raw_step = max_val / 5.0
+    magnitude = 10 ** (len(str(int(raw_step))) - 1) if raw_step >= 1 else 1
+    norm = raw_step / magnitude
+    if norm <= 1.2:
+        step = 1 * magnitude
+    elif norm <= 2.5:
+        step = 2 * magnitude
+    elif norm <= 6:
+        step = 5 * magnitude
+    else:
+        step = 10 * magnitude
+    
+    step = max(1, int(step))
+    y_max = int((max_val + step - 1) // step) * step
+    if y_max == max_val:
+        y_max += step
+    
+    ticks = list(range(0, y_max + 1, step))
+    return y_max, ticks
+
+def generate_activity_svg(days):
+    width = 1200
+    height = 420
+    x_start = 90.0
+    x_end = 1150.0
+    y_top = 80.0
+    y_bottom = 350.0
+    chart_h = y_bottom - y_top
+    chart_w = x_end - x_start
+
+    n = len(days) # 31
+    step_x = chart_w / (n - 1)
+
+    max_count = max(d["contributionCount"] for d in days)
+    y_max, ticks = get_nice_y_axis(max_count)
+
+    # Compute points
+    points = []
+    for i, d in enumerate(days):
+        px = x_start + i * step_x
+        val = d["contributionCount"]
+        py = y_bottom - (val / y_max) * chart_h
+        points.append((px, py, val, d["date"]))
+
+    # Grid lines - vertical
+    grid_lines_h = []
+    for px, _, _, _ in points:
+        grid_lines_h.append(f'<line x1="{px:.2f}" x2="{px:.2f}" y1="{y_top}" y2="{y_bottom}" stroke="#1e293b" stroke-width="1" stroke-dasharray="4" class="ct-grid ct-horizontal"/>')
+
+    # Grid lines - horizontal & labels
+    grid_lines_v = []
+    y_labels = []
+    for val in ticks:
+        gy = y_bottom - (val / y_max) * chart_h
+        grid_lines_v.append(f'<line y1="{gy:.2f}" y2="{gy:.2f}" x1="{x_start}" x2="{x_end}" stroke="#1e293b" stroke-width="1" stroke-dasharray="4" class="ct-grid ct-vertical"/>')
+        y_labels.append(f'<text y="{gy + 4.5:.2f}" x="80" fill="#94a3b8" font-family="Segoe UI, Ubuntu, -apple-system, sans-serif" font-size="13" font-weight="500" text-anchor="end" class="ct-label ct-vertical ct-start">{val}</text>')
+
+    # Compute cubic Bezier spline
+    k = 0.2
+    curve_commands = [f"M{points[0][0]:.2f},{points[0][1]:.2f}"]
+    for i in range(n - 1):
+        p_prev = points[i - 1] if i > 0 else points[0]
+        p_curr = points[i]
+        p_next = points[i + 1]
+        p_after = points[i + 2] if i + 2 < n else points[i + 1]
+
+        cp1_x = p_curr[0] + k * (p_next[0] - p_prev[0])
+        cp1_y = min(y_bottom, max(y_top - 10, p_curr[1] + k * (p_next[1] - p_prev[1])))
+
+        cp2_x = p_next[0] - k * (p_after[0] - p_curr[0])
+        cp2_y = min(y_bottom, max(y_top - 10, p_next[1] - k * (p_after[1] - p_curr[1])))
+
+        curve_commands.append(f"C{cp1_x:.2f},{cp1_y:.2f} {cp2_x:.2f},{cp2_y:.2f} {p_next[0]:.2f},{p_next[1]:.2f}")
+
+    spline_d = "".join(curve_commands)
+    area_d = f"M{points[0][0]:.2f},{y_bottom} L{points[0][0]:.2f},{points[0][1]:.2f}" + "".join(curve_commands[1:]) + f" L{points[-1][0]:.2f},{y_bottom} Z"
+
+    # Points (bouncing dots)
+    point_lines = []
+    for px, py, val, _ in points:
+        point_lines.append(
+            f'<line x1="{px:.2f}" y1="{py:.2f}" x2="{px + 0.01:.2f}" y2="{py:.2f}" stroke="#39ff14" stroke-width="8" stroke-linecap="round" filter="drop-shadow(0 0 5px #39ff14)" class="ct-point" ct:value="{val}">'
+            f'<animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="2s" repeatCount="indefinite" />'
+            f'</line>'
         )
 
-        # Point animation - continuous bouncing
-        svg_data = re.sub(
-            r'(<line[^>]*class="ct-point"[^>]*)></line>',
-            r'\1><animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="2s" repeatCount="indefinite" /></line>',
-            svg_data
-        )
+    # X labels
+    x_labels = []
+    for px, _, _, date_str in points:
+        day_num = str(int(date_str.split("-")[2]))
+        x_labels.append(f'<text x="{px:.2f}" y="370" fill="#94a3b8" font-family="Segoe UI, Ubuntu, -apple-system, sans-serif" font-size="13" font-weight="500" text-anchor="middle" class="ct-label ct-horizontal ct-end">{day_num}</text>')
 
-        with open('assets/activity.svg', 'w', encoding='utf-8') as f:
-            f.write(svg_data)
-        print("Successfully generated assets/activity.svg")
+    svg = f"""<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:ct="http://gionkunz.github.com/chartist-js/ct">
+<defs>
+  <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.6" />
+    <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.0" />
+  </linearGradient>
+  <style>
+    .header {{
+      font: 600 22px 'Segoe UI', Ubuntu, Sans-Serif;
+      fill: #94a3b8;
+      text-anchor: middle;
+    }}
+    .ct-label {{
+      fill: #94a3b8;
+      font-family: 'Segoe UI', Ubuntu, Sans-Serif;
+      font-size: 13px;
+      line-height: 1;
+    }}
+    .ct-label.ct-horizontal.ct-end {{
+      text-anchor: middle;
+    }}
+    .ct-label.ct-vertical.ct-start {{
+      text-anchor: end;
+    }}
+    .ct-grid {{
+      stroke: #1e293b;
+      stroke-width: 1px;
+      stroke-dasharray: 4;
+    }}
+    .ct-line {{
+      fill: none;
+      stroke: #00f2fe;
+      stroke-width: 3.5px;
+      stroke-dasharray: 5000;
+      stroke-dashoffset: 5000;
+      filter: drop-shadow(0 0 6px #00f2fe);
+    }}
+    .ct-point {{
+      stroke: #39ff14;
+      stroke-width: 8px;
+      stroke-linecap: round;
+      filter: drop-shadow(0 0 5px #39ff14);
+    }}
+    .ct-area {{
+      fill: url(#fadeGradient);
+      fill-opacity: 1;
+    }}
+    .ct-axis-title {{
+      fill: #94a3b8;
+      font-family: 'Segoe UI', Ubuntu, Sans-Serif;
+      font-size: 14px;
+      font-weight: 600;
+    }}
+  </style>
+</defs>
+
+<!-- Title -->
+<text x="600" y="45" fill="#94a3b8" font-family="Segoe UI, Ubuntu, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" class="header">Contribution Activity</text>
+
+<!-- Chart container -->
+<g class="ct-grids">
+  {''.join(grid_lines_h)}
+  {''.join(grid_lines_v)}
+</g>
+
+<g class="ct-series ct-series-a">
+  <path d="{area_d}" fill="url(#fadeGradient)" fill-opacity="1" class="ct-area" />
+  <path d="{spline_d}" fill="none" stroke="#00f2fe" stroke-width="3.5" stroke-dasharray="5000" stroke-dashoffset="5000" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0 0 6px #00f2fe)" class="ct-line">
+    <animate attributeName="stroke-dashoffset" from="5000" to="0" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="3s" repeatCount="indefinite" />
+  </path>
+  {''.join(point_lines)}
+</g>
+
+<g class="ct-labels">
+  {''.join(x_labels)}
+  {''.join(y_labels)}
+</g>
+
+<!-- Axis titles -->
+<text class="ct-axis-title ct-label" x="620" y="400" dominant-baseline="text-after-edge" text-anchor="middle">Days</text>
+<text class="ct-axis-title ct-label" x="25" y="215" transform="rotate(-90, 25, 215)" dominant-baseline="hanging" text-anchor="middle">Contributions</text>
+
+</svg>
+"""
+    return svg
+
+def update_activity_graph():
+    """Generates the animated activity graph from real GitHub contribution data."""
+    print("Generating animated activity graph...")
+    try:
+        days, total = fetch_contributions("kevinjosh10")
+        if days:
+            svg_data = generate_activity_svg(days)
+            # Validate XML
+            ET.fromstring(svg_data)
+            with open('assets/activity.svg', 'w', encoding='utf-8') as f:
+                f.write(svg_data)
+            print("Successfully generated and validated assets/activity.svg")
+        else:
+            print("Warning: Could not fetch contribution days; keeping existing activity.svg")
     except Exception as e:
         print(f"Failed to generate animated activity graph: {e}")
 
@@ -165,16 +386,42 @@ def update_streak_stats():
     url = f'https://streak-stats.demolab.com/?user=kevinjosh10&theme=transparent&hide_border=true&ring=00f2fe&fire=39ff14&currStreakNum=39ff14&currStreakLabel=00f2fe&sideNums=e2e8f0&sideLabels=94a3b8&dates=94a3b8&_cache_buster={int(time.time())}'
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=10) as response:
             with open('assets/streak.svg', 'wb') as f:
                 f.write(response.read())
         print("Successfully cached assets/streak.svg")
     except Exception as e:
         print(f"Failed to cache streak stats: {e}")
 
+def update_readme_cache_busters(days_passed):
+    """Updates the cache buster query parameters in README.md so GitHub Camo reloads daily."""
+    try:
+        if not os.path.exists("README.md"):
+            return
+        with open("README.md", "r", encoding="utf-8") as f:
+            content = f.read()
+
+        new_content = re.sub(
+            r'src="assets/activity\.svg(\?[^"]*)?"',
+            f'src="assets/activity.svg?v=day_{days_passed}"',
+            content
+        )
+        new_content = re.sub(
+            r'src="assets/streak\.svg(\?[^"]*)?"',
+            f'src="assets/streak.svg?v=day_{days_passed}"',
+            new_content
+        )
+
+        if new_content != content:
+            with open("README.md", "w", encoding="utf-8") as f:
+                f.write(new_content)
+            print("Successfully updated README.md cache busters")
+    except Exception as e:
+        print(f"Failed to update README cache buster: {e}")
+
 def main():
     # Use UTC time and convert to IST (UTC +5:30)
-    utc_now = datetime.datetime.utcnow()
+    utc_now = datetime.datetime.now(datetime.timezone.utc)
     ist_now = utc_now + datetime.timedelta(hours=5, minutes=30)
     today = ist_now.date()
     
@@ -196,6 +443,9 @@ def main():
     
     # Cache Streak Stats
     update_streak_stats()
+
+    # Update README Cache Busters
+    update_readme_cache_busters(days_passed)
 
 if __name__ == "__main__":
     main()
