@@ -52,14 +52,14 @@
 <div align="center">
   <br>
   <a href="https://github.com/kevinjosh10">
-    <img src="assets/streak.svg?v=day_230" width="60%" alt="GitHub Streak Stats" />
+    <img src="assets/streak.svg?v=day_231" width="60%" alt="GitHub Streak Stats" />
   </a>
 </div>
 
 <div align="center">
   <br>
   <a href="https://github.com/kevinjosh10">
-    <img src="assets/activity.svg?v=day_230" width="98%" alt="Contribution Activity Graph" />
+    <img src="assets/activity.svg?v=day_231" width="98%" alt="Contribution Activity Graph" />
   </a>
 </div>
 
