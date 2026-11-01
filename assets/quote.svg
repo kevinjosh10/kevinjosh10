@@ -1,4 +1,4 @@
-<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="155" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
@@ -16,7 +16,8 @@
   
   <text x="50%" y="30" class="title">✨ Motivational Quote of the Day</text>
   
-  <text x="50%" y="60" class="text">"Don't try to be young. Just open your mind.</text>
-<text x="50%" y="85" class="text">Stay interested in stuff." — Betty White</text>
+  <text x="50%" y="60" class="text">"A man with outward courage dares to die: a</text>
+<text x="50%" y="85" class="text">man with inner courage dares to live." — Lao</text>
+<text x="50%" y="110" class="text">Tzu</text>
 
 </svg>
