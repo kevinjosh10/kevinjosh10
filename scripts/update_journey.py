@@ -402,13 +402,28 @@ def update_readme_cache_busters(days_passed):
             content = f.read()
 
         new_content = re.sub(
+            r'src="assets/progress\.svg(\?[^"]*)?"',
+            f'src="assets/progress.svg?v=day_{days_passed}"',
+            content
+        )
+        new_content = re.sub(
             r'src="assets/activity\.svg(\?[^"]*)?"',
             f'src="assets/activity.svg?v=day_{days_passed}"',
-            content
+            new_content
         )
         new_content = re.sub(
             r'src="assets/streak\.svg(\?[^"]*)?"',
             f'src="assets/streak.svg?v=day_{days_passed}"',
+            new_content
+        )
+        new_content = re.sub(
+            r'src="assets/quote\.svg(\?[^"]*)?"',
+            f'src="assets/quote.svg?v=day_{days_passed}"',
+            new_content
+        )
+        new_content = re.sub(
+            r'src="assets/views\.svg(\?[^"]*)?"',
+            f'src="assets/views.svg?v=day_{days_passed}"',
             new_content
         )
 

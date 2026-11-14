@@ -25,7 +25,7 @@
   <img src="assets/mission.svg" alt="1000 Day Mission Title" />
   <br>
   <p><i>A public 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design.<br>Daily commitment to building production-grade systems—bridging the gap between theory and real-world engineering.</i></p>
-  <img src="assets/progress.svg?v=1" alt="Animated Wave Progress Bar" />
+  <img src="assets/progress.svg?v=day_258" alt="Animated Wave Progress Bar" />
   <br>
 </div>
 
@@ -66,12 +66,12 @@
 
 <div align="center">
   <br>
-  <img src="assets/quote.svg" alt="Motivational Quote of the Day" />
+  <img src="assets/quote.svg?v=day_258" alt="Motivational Quote of the Day" />
 </div>
 
 <div align="center">
   <br>
-  <img src="assets/views.svg" alt="Profile Views" />
+  <img src="assets/views.svg?v=day_258" alt="Profile Views" />
 </div>
 
 ---
