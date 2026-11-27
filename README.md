@@ -25,7 +25,7 @@
   <img src="assets/mission.svg" alt="1000 Day Mission Title" />
   <br>
   <p><i>A public 1000-day journey to master Cloud Infrastructure, AWS Architecture, and Backend System Design.<br>Daily commitment to building production-grade systems—bridging the gap between theory and real-world engineering.</i></p>
-  <img src="assets/progress.svg?v=day_271" alt="Animated Wave Progress Bar" />
+  <img src="assets/progress.svg?v=day_272" alt="Animated Wave Progress Bar" />
   <br>
 </div>
 
@@ -52,26 +52,26 @@
 <div align="center">
   <br>
   <a href="https://github.com/kevinjosh10">
-    <img src="assets/streak.svg?v=day_271" width="60%" alt="GitHub Streak Stats" />
+    <img src="assets/streak.svg?v=day_272" width="60%" alt="GitHub Streak Stats" />
   </a>
 </div>
 
 <div align="center">
   <br>
   <a href="https://github.com/kevinjosh10">
-    <img src="assets/activity.svg?v=day_271" width="98%" alt="Contribution Activity Graph" />
+    <img src="assets/activity.svg?v=day_272" width="98%" alt="Contribution Activity Graph" />
   </a>
 </div>
 
 
 <div align="center">
   <br>
-  <img src="assets/quote.svg?v=day_271" alt="Motivational Quote of the Day" />
+  <img src="assets/quote.svg?v=day_272" alt="Motivational Quote of the Day" />
 </div>
 
 <div align="center">
   <br>
-  <img src="assets/views.svg?v=day_271" alt="Profile Views" />
+  <img src="assets/views.svg?v=day_272" alt="Profile Views" />
 </div>
 
 ---
